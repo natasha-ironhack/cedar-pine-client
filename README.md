@@ -1,70 +1,226 @@
-# Getting Started with Create React App
+DESCRIPTION:
+This is an app that allows you to buy candles.
+USER STORIES:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 404: As an anon/user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault
+- Signup: As an anon I can sign up in the platform so that I can start creating and managing my backlog
+- Login: As a user I can login to the platform so that I can start creating and managing my backlog
+- Logout: As a user I can logout from the platform so no one else can modify my information
+- Add elements: As a user, I can add elements to the shopping cart
+- Delete elements As a user I can delete elements from the shopping cart
+- Special Add elements: As an admin, I can add new candles
+- Special Edit elements: As an admin, I can edit candle entries
+- Special Delete elements: As an admin, I can delete candle entries
+- Check profile: As a user I can check my profile
+- Search: As a user, I can use the search function on the header/navBar
+- Contact (BACKLOG): As a user, I can contact the admins
 
-## Available Scripts
+BACKLOG:
+—shopping cart pop up
+—Contact Us form
+—candle filter
+--social media links
+--adding a stock amount available
 
-In the project directory, you can run:
+CLIENT:
+Routes: (MARINA)
+-> / Homepage
+-> /candles/:id | candles detail page
+-> /signup - Signup form
+-> /login form
+-> /user | user profile
+->/confirmation (?)
 
-### `npm start`
+[
+-> /shippingandreturn
+-> /faq
+-> contact-us
+-> about-us
+]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-> 404
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+COMPONENTS:
+--NavBar
+--Account (sign up button / sign in)
+--Sign Up / Create An Account
+--Shopping Cart
+--Checkout Page
+--Candle List
+--Individual Candle
+--Footer
+--Account/User Detail Page
+--Order Confirmation
+--Footer (shipping, faq, contact, about us, social media) (BACKLOG)
 
-### `npm test`
+IO
+Services:
+Auth Service
+auth.login(user)
+auth.signup(user)
+( auth.logout() )
+auth.me (for admin)
+auth.getUser() // synchronous
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Candle Service
+candle.list()
+candle.detail(id)
+candle.create(data or id?)
+candle.edit(id)
+candle.update(id)
+candle.delete(id)
 
-### `npm run build`
+backlog.filter(fragrance, price)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+SERVER:
+MODELS:
+Model #1:
+--User Model:
+{
+first-name: {type: String, required: true, unique: true},
+last-name: {type: String, required: true, unique: true},
+email: {type: String, required: true, unique: true},
+password: {type: String, required: true},
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Model #3:
+Candle Model:
+—Picture: file
+—Name: string
+—Price: number
+—Weight: number
+—Quantity: number
+—(Add to Cart button)
+—Description: String
+[RELATIONSHIP TO CREATING?]
+—Add to Cart button
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Model #3: Messages (contact us)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+API ENDPOINTS/BACKEND ROUTES:
+GET /candles
+(HOMEPAGE)
+body:
+list of candles (clicked? leads to GET /account)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+GET /candle/:id
+body: list
+name
+price
+weight
+amount
+Add to Cart button (adds to post/cart)
+Description
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+GET /auth/me
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+GET /account
+body:
+log in form
+log in button
+&
+create an account button (leads to post / auth/signup)
 
-## Learn More
+POST /auth/signup
+body:
+first name
+last name
+email
+password
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+POST /auth/login
+body:
+email
+password
+(login in button)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+POST /auth/me/create
+body:
+name
+price
+weight
+amount
+add to cart button
+description
 
-### Code Splitting
+PATCH /auth/me/:candleId/edit
+body: (empty)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+DELETE /user/me/:candleId
+body: (empty)
 
-### Analyzing the Bundle Size
+POST /cart
+body: form
+product
+price
+amount
+Cart totals section:
+subtotal
+shipping
+Continue to Checkout button
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+POST /(cart)/checkout
+body: form
+Billing Info:
+First Name
+Last Name
+Country
+Street and House Number
+Postal Code
+City
+Email Address
 
-### Making a Progressive Web App
+Delivery Address (same as above)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Payment
+iDEAL
+Visa
+Paypal
 
-### Advanced Configuration
+Place an order button
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+POST /(cart)/(checkout)/confirmation
+body: paragraph
 
-### Deployment
+GET /shippingandreturn
+body: paragraph
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+GET /faq
+body: paragraph
 
-### `npm run build` fails to minify
+GET /about-us
+body: paragraph
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GET /contact-us
+body: form
+name
+email
+message
+send button
+
+POST /contact-us/sent
+
+LINKS:
+Trello/Kanban
+Link to your trello board or picture of your physical board
+
+Git
+The url to your repository and to your deployed project
+
+Client Repository:
+https://github.com/natasha-ironhack/cedar-pine-client
+
+Server Repository:
+https://github.com/natasha-ironhack/cedar-pine-server
+
+Deploy Link
+
+README Example:
+https://gist.github.com/jorgeberrizbeitia/38e9b52b6b476c7823bd7d0628f794fd
+
+Slides
+The url to your presentation slides
+
+Slides Link
+https://docs.google.com/presentation/d/1wwPEDK9d4uEnxbc2l3OFqHso9MGXCpZYAOywJQAXV2g/edit#slide=id.ge3471791df_0_530
