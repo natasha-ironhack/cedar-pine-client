@@ -4,7 +4,7 @@ class AuthService {
   constructor() {
     //goes to backend auth route
     this.service = axios.create({
-      baseURL: `{process.env.REACT_APP_API_HOST}/auth`,
+      baseURL: `${process.env.REACT_APP_API_HOST}/auth`,
       withCredentials: true,
     });
   }
@@ -20,6 +20,18 @@ class AuthService {
       email,
       password,
     });
+  };
+
+  login = (email, password) => {
+    return this.service.post("/login", { email, password });
+  };
+
+  logout = () => {
+    return this.service.post("/logout");
+  };
+
+  loggedin = () => {
+    return this.service.get("/loggedin", { withCredentials: true });
   };
 }
 

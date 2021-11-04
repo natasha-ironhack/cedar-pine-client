@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-// import axios from "axios";
 import authService from "../services/auth-service";
 
-export default class SignUp extends Component {
+export default class Signup extends Component {
   state = {
     firstName: "",
     lastName: "",
@@ -12,8 +11,8 @@ export default class SignUp extends Component {
 
   //we're targeting the name key and wanting to replace it with
   //whatever value we assign it
-  handleChange = (event) => {
-    const { name, value } = event.target;
+  handleChange = ({ target }) => {
+    const { name, value } = target;
     this.setState({ [name]: value });
   };
 
@@ -22,11 +21,20 @@ export default class SignUp extends Component {
 
     const { firstName, lastName, email, password } = this.state;
 
-    //goes to services/auth-service folder, (goes to b)
+    //goes to services/auth-service folder, (goes to backend)
     //then to it's sign up method, and passes the info
     authService
       .signup(firstName, lastName, email, password)
-      .then((result) => console.log(result));
+      .then((response) => {
+        // console.log(response);
+        //(will make our state empty and re-set the form?)
+        this.setState({ firstName: "", lastName: "", email: "", password: "" });
+        this.props.setUser(response.data, true);
+        //this.props.setUser comes from App.js
+        //a method that takes two arguments
+        //lifting up the state
+        //b/c changing state of mother component (App.js) inside this component
+      });
   };
   //other method for authService.signup:
   // axios.post(
@@ -53,12 +61,26 @@ export default class SignUp extends Component {
             name="firstName"
             value={firstName}
             onChange={this.handleChange}
-            //see note at end
           />
-          <input type="text" name="lastName" value={lastName} />
-          <input type="text" name="email" value={email} />
-          <input type="text" name="password" value={password} />
-          <button type="submit">Sign Up</button>
+          <input
+            type="text"
+            name="lastName"
+            value={lastName}
+            onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            name="email"
+            value={email}
+            onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            name="password"
+            value={password}
+            onChange={this.handleChange}
+          />
+          <button type="submit">Signup</button>
         </form>
       </div>
     );
