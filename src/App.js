@@ -19,6 +19,18 @@ class App extends Component {
     //so need to store user
   };
 
+  // ---> CART STUF
+
+  setCart = (quantity, price, name, weight) => {
+    this.setState({
+      quantity,
+      price,
+      name,
+      weight,
+    });
+  };
+  // --------------
+
   //method for lifting state up
   //setting the user to something
   //receiving a user and boolean (loggedInStatus)
@@ -63,7 +75,13 @@ class App extends Component {
     return (
       <div>
         {/* passing user to the navBar with user={user} */}
-        <NavBar isLoggedIn={isLoggedIn} user={user} setUser={this.setUser} />
+        <NavBar
+          isLoggedIn={isLoggedIn}
+          user={user}
+          setUser={this.setUser}
+          setCart={this.setCart}
+        />
+
         <Switch>
           <Route
             exact

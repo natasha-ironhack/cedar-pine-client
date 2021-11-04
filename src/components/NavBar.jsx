@@ -37,7 +37,7 @@ const Navbar = ({ isLoggedIn, user, setUser }) => {
         </>
       )}
       <IconButton type="submit" color="success">
-        <AddShoppingCartIcon />
+        <AddShoppingCartIcon to="/cart" />
       </IconButton>
     </ul>
   );

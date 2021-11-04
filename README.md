@@ -53,19 +53,19 @@ POST /auth/logout DONE!
 
 GET /auth/loggedin DONE
 
-POST /auth/me/create   NATASHA
+POST /auth/me/create NATASHA
 
-PATCH /auth/me/:id/edit   NATASHA
+PATCH /auth/me/:id/edit NATASHA
 
-DELETE /auth/me/:id    NATASHA
+DELETE /auth/me/:id NATASHA
 
-POST /cart    MARINA
+POST /cart MARINA
 
-POST /(cart)/checkout
-
-Delivery Address (same as above)
+POST /(cart)/checkout -> separate from cart
 
 POST /(cart)/(checkout)/confirmation
+
+Delivery Address (same as above)
 
 GET /shippingandreturn
 
