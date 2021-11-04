@@ -17,8 +17,11 @@ export default class Login extends Component {
 
     const { email, password } = this.state;
 
+    //goes to services folder and to the login method
+    //goes to back end's login route
     authService.login(email, password).then((response) => {
       this.setState({ email: "", password: "" });
+      //sets the user on the main path
       this.props.setUser(response.data, true);
     });
   };

@@ -30,9 +30,13 @@ class App extends Component {
   //pass setUser to component below with
   //to pass props to a route: with a render prop: render={} etc
 
+  //below: another method which will check if we have a user in the session
+  //we do? then it will put it in the state
   getUser = () => {
     if (this.state.user === null) {
+      //if user = null, want to get the user in the session, or at least try
       authService
+      //authService.loggedin goes to back end's loggedin route
         .loggedin()
         .then((response) => {
           this.setState({
@@ -48,6 +52,7 @@ class App extends Component {
     }
   };
 
+  //when app mounts, want to check if we have a user logged in in the session
   componentDidMount() {
     this.getUser();
   }

@@ -83,7 +83,7 @@ export default class Signup extends Component {
             value={password}
             onChange={this.handleChange}
           />
-          <button type="submit">Signup</button>
+          <button type="submit" variant="contained">Create an Account</button>
         </form>
       </div>
     );

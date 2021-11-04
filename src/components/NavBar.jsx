@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import authService from "../services/auth-service";
+import IconButton from "@mui/material/IconButton";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 //passing props on line 6
 const Navbar = ({ isLoggedIn, user, setUser }) => {
@@ -34,6 +36,9 @@ const Navbar = ({ isLoggedIn, user, setUser }) => {
           </li>
         </>
       )}
+      <IconButton type="submit" color="success">
+        <AddShoppingCartIcon />
+      </IconButton>
     </ul>
   );
 };
