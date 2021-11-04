@@ -30,13 +30,6 @@ FRONT-END CLIENT ROUTES:
 -> /checkOut (?)
 ->/confirmation (?)
 
-[
--> /shippingandreturn
--> /faq
--> contact-us
--> about-us
-]
-
 -> 404
 
 API ENDPOINTS/BACKEND ROUTES:
