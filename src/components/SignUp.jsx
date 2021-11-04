@@ -34,7 +34,10 @@ export default class Signup extends Component {
         //a method that takes two arguments
         //lifting up the state
         //b/c changing state of mother component (App.js) inside this component
-      });
+        //(((when u get response of signup, saying we want to use that response and put
+        //it on app.js, the mother component. and want to put that info on that state
+        //b/c then all my comps might know about the user?)))
+    });
   };
   //other method for authService.signup:
   // axios.post(

@@ -18,16 +18,16 @@ class App extends Component {
     //so need to store user
   };
 
-    //method for lifting state up
-    //setting the user to something
-    //receiving a user and boolean (loggedInStatus)
+  //method for lifting state up
+  //setting the user to something
+  //receiving a user and boolean (loggedInStatus)
   setUser = (user, loggedInStatus) => {
     this.setState({
       user,
       isLoggedIn: loggedInStatus,
     });
   };
-  //pass setUser to component below with 
+  //pass setUser to component below with
   //to pass props to a route: with a render prop: render={} etc
 
   getUser = () => {
@@ -56,6 +56,7 @@ class App extends Component {
     const { user, isLoggedIn } = this.state;
     return (
       <div>
+        {/* passing user to the navBar with user={user} */}
         <NavBar isLoggedIn={isLoggedIn} user={user} setUser={this.setUser} />
         <Switch>
           <Route

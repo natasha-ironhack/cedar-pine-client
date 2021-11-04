@@ -22,7 +22,7 @@ BACKLOG:
 --social media links
 --stock backlog availability
 
-CLIENT ROUTES:
+FRONT-END CLIENT ROUTES:
 -> / Homepage
 -> /candles/:id | candles detail page
 -> /user | user profile
@@ -55,6 +55,10 @@ POST /auth/signup DONE!
 
 POST /auth/login DONE!
 
+POST /auth/logout DONE!
+
+GET /auth/loggedin DONE
+
 POST /auth/me/create
 
 PATCH /auth/me/:id/edit
@@ -80,9 +84,9 @@ GET /contact-us
 POST /contact-us/sent
 
 COMPONENTS:
---NavBar
+--NavBar PARTIALLY DONE
 --Account (sign up button / sign in)
---Sign Up / Create An Account
+--Sign Up / Create An Account PARTIALLY DONE
 --Shopping Cart
 --Checkout Page
 --Candle List

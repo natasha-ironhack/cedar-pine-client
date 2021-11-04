@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import authService from "../services/auth-service";
 
+//passing props on line 6
 const Navbar = ({ isLoggedIn, user, setUser }) => {
   const logoutUser = () => {
     authService.logout().then(() => {
@@ -11,9 +12,10 @@ const Navbar = ({ isLoggedIn, user, setUser }) => {
 
   return (
     <ul>
+      {/* //if user is logged in, want to show user and these list items */}
       {isLoggedIn && user && (
         <>
-          <li>{user.email}</li>
+          <li>{user.firstName}</li>
           <li>
             <NavLink to="/">
               <button onClick={() => logoutUser()}>Logout</button>
@@ -21,10 +23,11 @@ const Navbar = ({ isLoggedIn, user, setUser }) => {
           </li>
         </>
       )}
+      {/* //if user isn't logged in, we show these list items */}
       {!isLoggedIn && (
         <>
           <li>
-            <NavLink to="/signup">SignUp</NavLink>
+            <NavLink to="/signup">Sign Up</NavLink>
           </li>
           <li>
             <NavLink to="/login">Login</NavLink>
