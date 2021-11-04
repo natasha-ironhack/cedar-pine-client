@@ -1,17 +1,16 @@
 import React, { Component } from "react";
-// Import { Route, Switch } from 'react-router';
 import "./App.css";
-import Navbar from "./components/Navbar";
-//import Signup from "./components/Signup";
+//import NavBar from "./components/NavBar";
 //import Login from "./components/Login";
 import { Route, Switch } from "react-router";
 import SignUp from "./components/SignUp";
+//import authService from "./services/auth-service";
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        {/* <NavBar /> */}
         <Switch>
           <Route exact path="/signup" component={SignUp} />
         </Switch>
@@ -19,3 +18,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App;

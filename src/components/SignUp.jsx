@@ -55,7 +55,6 @@ export default class SignUp extends Component {
             onChange={this.handleChange}
             //see note at end
           />
-          <input type="text" name="lastName" value={firstName} />
           <input type="text" name="lastName" value={lastName} />
           <input type="text" name="email" value={email} />
           <input type="text" name="password" value={password} />
