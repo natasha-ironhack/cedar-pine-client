@@ -36,7 +36,7 @@ class App extends Component {
     if (this.state.user === null) {
       //if user = null, want to get the user in the session, or at least try
       authService
-      //authService.loggedin goes to back end's loggedin route
+        //authService.loggedin goes to back end's loggedin route
         .loggedin()
         .then((response) => {
           this.setState({

@@ -37,7 +37,7 @@ export default class Signup extends Component {
         //(((when u get response of signup, saying we want to use that response and put
         //it on app.js, the mother component. and want to put that info on that state
         //b/c then all my comps might know about the user?)))
-    });
+      });
   };
   //other method for authService.signup:
   // axios.post(
@@ -60,30 +60,36 @@ export default class Signup extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <input
+            placeholder="First Name"
             type="text"
             name="firstName"
             value={firstName}
             onChange={this.handleChange}
           />
           <input
+            placeholder="Last Name"
             type="text"
             name="lastName"
             value={lastName}
             onChange={this.handleChange}
           />
           <input
+            placeholder="Email"
             type="text"
             name="email"
             value={email}
             onChange={this.handleChange}
           />
           <input
+            placeholder="Password"
             type="text"
             name="password"
             value={password}
             onChange={this.handleChange}
           />
-          <button type="submit" variant="contained">Create an Account</button>
+          <button type="submit" variant="contained">
+            Create an Account
+          </button>
         </form>
       </div>
     );

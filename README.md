@@ -21,6 +21,7 @@ BACKLOG:
 —candle filter
 --social media links
 --stock backlog availability
+--loading symbol
 
 FRONT-END CLIENT ROUTES:
 -> / Homepage (BACKEND?)
@@ -52,13 +53,13 @@ POST /auth/logout DONE!
 
 GET /auth/loggedin DONE
 
-POST /auth/me/create
+POST /auth/me/create   NATASHA
 
-PATCH /auth/me/:id/edit
+PATCH /auth/me/:id/edit   NATASHA
 
-DELETE /auth/me/:id
+DELETE /auth/me/:id    NATASHA
 
-POST /cart
+POST /cart    MARINA
 
 POST /(cart)/checkout
 
@@ -130,7 +131,7 @@ Candle:
 —Description: String
 [RELATIONSHIP TO CREATING?]
 
-Model #7: Message (for Contact Us Form)
+Model #3: Message (for Contact Us Form)
 --name: string
 --email: string
 --message: string

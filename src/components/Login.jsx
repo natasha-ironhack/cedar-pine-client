@@ -32,14 +32,14 @@ export default class Login extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input
+          <input placeholder="Email"
             type="text"
             name="email"
             value={email}
             onChange={this.handleChange}
           />
-          <input
-            type="text"
+          <input placeholder="Password"
+            type="password"
             name="password"
             value={password}
             onChange={this.handleChange}
