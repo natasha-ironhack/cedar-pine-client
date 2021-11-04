@@ -14,6 +14,7 @@ class App extends Component {
   state = {
     isLoggedIn: null,
     user: null,
+    cart: [],
     //need to check if user is able to edit or see page
     //so need to store user
   };
