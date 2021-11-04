@@ -23,9 +23,9 @@ BACKLOG:
 --stock backlog availability
 
 FRONT-END CLIENT ROUTES:
--> / Homepage
--> /candles/:id | candles detail page
--> /user | user profile
+-> / Homepage (BACKEND?)
+-> /candles/:id | candles detail page (BACKEND?)
+-> /user | user profile (BACKEND?)
 -> /cart (NOTE: i think it's /auth/cart?)
 -> /checkOut (?)
 ->/confirmation (?)
