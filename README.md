@@ -20,15 +20,14 @@ BACKLOG:
 —Contact Us form
 —candle filter
 --social media links
---adding a stock amount available
+--stock backlog availability
 
-CLIENT:
-Routes: (MARINA)
+CLIENT ROUTES:
 -> / Homepage
 -> /candles/:id | candles detail page
--> /signup - Signup form
--> /login form
 -> /user | user profile
+-> /cart (NOTE: i think it's /auth/cart?)
+-> /checkOut (?)
 ->/confirmation (?)
 
 [
@@ -39,6 +38,46 @@ Routes: (MARINA)
 ]
 
 -> 404
+
+API ENDPOINTS/BACKEND ROUTES:
+GET /all
+body:
+display list of all candles (clicked? leads to GET /account)
+
+GET /:id
+
+((GET /auth/me))
+
+GET /account
+create an account button (leads to post / auth/signup)
+
+POST /auth/signup DONE!
+
+POST /auth/login DONE!
+
+POST /auth/me/create
+
+PATCH /auth/me/:id/edit
+
+DELETE /auth/me/:id
+
+POST /cart
+
+POST /(cart)/checkout
+
+Delivery Address (same as above)
+
+POST /(cart)/(checkout)/confirmation
+
+GET /shippingandreturn
+
+GET /faq
+
+GET /about-us
+
+GET /contact-us
+
+POST /contact-us/sent
 
 COMPONENTS:
 --NavBar
@@ -56,9 +95,9 @@ COMPONENTS:
 IO
 Services:
 Auth Service
-auth.login(user)
-auth.signup(user)
-( auth.logout() )
+auth.login(user) DONE!
+auth.signup(user) DONE!
+auth.logout() DONE!
 auth.me (for admin)
 auth.getUser() // synchronous
 
@@ -75,7 +114,7 @@ backlog.filter(fragrance, price)
 SERVER:
 MODELS:
 Model #1:
---User Model:
+--User Model (for signing up):
 {
 first-name: {type: String, required: true, unique: true},
 last-name: {type: String, required: true, unique: true},
@@ -83,8 +122,8 @@ email: {type: String, required: true, unique: true},
 password: {type: String, required: true},
 }
 
-Model #3:
-Candle Model:
+Model #2:
+Candle:
 —Picture: file
 —Name: string
 —Price: number
@@ -93,113 +132,14 @@ Candle Model:
 —(Add to Cart button)
 —Description: String
 [RELATIONSHIP TO CREATING?]
-—Add to Cart button
 
-Model #3: Messages (contact us)
+Model #7: Message (for Contact Us Form)
+--name: string
+--email: string
+--message: string
+--send button: button
 
-
-API ENDPOINTS/BACKEND ROUTES:
-GET /candles
-(HOMEPAGE)
-body:
-list of candles (clicked? leads to GET /account)
-
-GET /candle/:id
-body: list
-name
-price
-weight
-amount
-Add to Cart button (adds to post/cart)
-Description
-
-GET /auth/me
-
-GET /account
-body:
-log in form
-log in button
-&
-create an account button (leads to post / auth/signup)
-
-POST /auth/signup
-body:
-first name
-last name
-email
-password
-
-POST /auth/login
-body:
-email
-password
-(login in button)
-
-POST /auth/me/create
-body:
-name
-price
-weight
-amount
-add to cart button
-description
-
-PATCH /auth/me/:candleId/edit
-body: (empty)
-
-DELETE /user/me/:candleId
-body: (empty)
-
-POST /cart
-body: form
-product
-price
-amount
-Cart totals section:
-subtotal
-shipping
-Continue to Checkout button
-
-POST /(cart)/checkout
-body: form
-Billing Info:
-First Name
-Last Name
-Country
-Street and House Number
-Postal Code
-City
-Email Address
-
-Delivery Address (same as above)
-
-Payment
-iDEAL
-Visa
-Paypal
-
-Place an order button
-
-POST /(cart)/(checkout)/confirmation
-body: paragraph
-
-GET /shippingandreturn
-body: paragraph
-
-GET /faq
-body: paragraph
-
-GET /about-us
-body: paragraph
-
-GET /contact-us
-body: form
-name
-email
-message
-send button
-
-POST /contact-us/sent
+(WORK ON RELATIONSHIPS!)
 
 LINKS:
 Trello/Kanban
@@ -224,3 +164,5 @@ The url to your presentation slides
 
 Slides Link
 https://docs.google.com/presentation/d/1wwPEDK9d4uEnxbc2l3OFqHso9MGXCpZYAOywJQAXV2g/edit#slide=id.ge3471791df_0_530
+
+testing

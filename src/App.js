@@ -4,7 +4,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 //import Signup from "./components/Signup";
 //import Login from "./components/Login";
-import { Switch } from "react-router";
+import { Route, Switch } from "react-router";
+import SignUp from "./components/SignUp";
 
 export default class App extends Component {
   render() {
@@ -12,7 +13,7 @@ export default class App extends Component {
       <div>
         <Navbar />
         <Switch>
-          {/* <Route /> */}
+          <Route exact path="/signup" component={SignUp} />
         </Switch>
       </div>
     );
