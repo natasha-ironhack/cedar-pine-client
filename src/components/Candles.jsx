@@ -14,7 +14,7 @@ export default class TodoList extends Component {
   };
 
   componentDidMount() {
-    console.log(process.env.REACT_APP_SERVER_API);
+    //console.log(process.env.REACT_APP_SERVER_API);
     axios
       .get(`${process.env.REACT_APP_SERVER_API}/candles/all`)
       .then((response) => {
@@ -30,7 +30,7 @@ export default class TodoList extends Component {
 
     return (
       <div>
-        <h2>List of To dos</h2>
+        <h2>CANDLES</h2>
 
         {isLoading && <h1>...isLoading</h1>}
 
