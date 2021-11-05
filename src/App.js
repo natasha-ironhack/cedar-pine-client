@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import authService from "./services/auth-service";
+import Candles from "./components/Candles";
 
 //isLoggedIn is here b/c app.js is the mother component, so
 //the other components can know if the user is logged in
@@ -65,6 +66,7 @@ class App extends Component {
         {/* passing user to the navBar with user={user} */}
         <NavBar isLoggedIn={isLoggedIn} user={user} setUser={this.setUser} />
         <Switch>
+          <Route path="/all" exact component={Candles} />
           <Route
             exact
             path="/signup"

@@ -34,9 +34,7 @@ FRONT-END CLIENT ROUTES:
 -> 404
 
 API ENDPOINTS/BACKEND ROUTES:
-GET /all
-body:
-display list of all candles (clicked? leads to GET /account)
+GET /all DONE!
 
 GET /:id
 
@@ -53,13 +51,16 @@ POST /auth/logout DONE!
 
 GET /auth/loggedin DONE
 
-POST /auth/me/create   NATASHA
+POST /auth/me/create  
+ PARTIALLY DONE (only need admin priveleges)
 
-PATCH /auth/me/:id/edit   NATASHA
+PATCH /auth/me/:id/edit  
+ PARTIALLY DONE (only need admin priveleges)
 
-DELETE /auth/me/:id    NATASHA
+DELETE /auth/me/:id  
+ PARTIALLY DONE (only need admin priveleges)
 
-POST /cart    MARINA
+POST /cart MARINA
 
 POST /(cart)/checkout
 
