@@ -11,7 +11,7 @@ class CandleDetails extends Component {
   componentDidMount() {
     axios
       .get(
-        `${process.env.REACT_APP_SERVER_API}/candles/${this.props.match.params.id}`
+        `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`
       )
       .then((response) => {
         this.setState({ singleCandle: response.data, isLoading: false });
@@ -24,7 +24,7 @@ class CandleDetails extends Component {
   handleDelete = () => {
     axios
       .delete(
-        `${process.env.REACT_APP_SERVER_API}/candles/${this.props.match.params.id}`
+        `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`
       )
       .then(() => {
         this.props.history.push("/");
@@ -45,6 +45,9 @@ class CandleDetails extends Component {
             <h4>{singleCandle.image} </h4>
             <p>{singleCandle.name} </p>
             <p>{singleCandle.price}</p>
+            <p>{singleCandle.weight}</p>
+            <p>{singleCandle.quantity}</p>
+            <p>{singleCandle.description}</p>
 
             <button onClick={this.handleDelete}>DELETE</button>
             <Link to={`/candles/${singleCandle._id}/edit`}>

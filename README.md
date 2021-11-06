@@ -22,6 +22,7 @@ BACKLOG:
 --social media links
 --stock backlog availability
 --loading symbol
+--quantity buttons (DO!)
 
 FRONT-END CLIENT ROUTES:
 -> / Homepage (BACKEND?)

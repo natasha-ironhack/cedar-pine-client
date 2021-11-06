@@ -99,7 +99,7 @@ class App extends Component {
             //passing the function of the parent
             //since it's a prop, it'll be available on signup component page
           />
-          <Route exact path="/all" component={Candles} />
+          <Route exact path="/candles/all" component={Candles} />
           <Route exact path="/candles/:id/details" component={CandleDetails} />
           <Route exact path="/candles/:id/edit" component={CandleEdit} />
         </Switch>

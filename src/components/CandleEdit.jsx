@@ -20,7 +20,7 @@ export class CandleEdit extends Component {
     const { image, name, price, weight, quantity, description } = this.state;
     axios
       .patch(
-        `${process.env.REACT_APP_SERVER_API}/todos/${this.props.match.params.id}`,
+        `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`,
         {
           image,
           name,

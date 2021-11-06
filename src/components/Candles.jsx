@@ -7,7 +7,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 //in front end don't have access to this. backend person does.
-export default class TodoList extends Component {
+export default class Candles extends Component {
   state = {
     listOfCandles: null,
     isLoading: true,
@@ -16,7 +16,7 @@ export default class TodoList extends Component {
   componentDidMount() {
     //console.log(process.env.REACT_APP_SERVER_API);
     axios
-      .get(`${process.env.REACT_APP_SERVER_API}/candles/all`)
+      .get(`${process.env.REACT_APP_API_HOST}/candles/all`)
       .then((response) => {
         this.setState({ listOfCandles: response.data, isLoading: false });
       })
@@ -39,7 +39,7 @@ export default class TodoList extends Component {
             return (
               <div key={oneCandle._id}>
                 <Link to={`/candles/${oneCandle._id}/details`}>
-                  {oneCandle.title}
+                  {oneCandle.image} {oneCandle.name} {oneCandle.price}
                 </Link>
               </div>
             );

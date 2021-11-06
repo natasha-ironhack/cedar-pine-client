@@ -25,7 +25,7 @@
 //     event.preventDefault();
 //     const { title, description, doBefore } = this.state;
 //     axios
-//       .post(`${process.env.REACT_APP_SERVER_API}/todos/create`, {
+//       .post(`${process.env.REACT_APP_SERVER_API}/candles/create`, {
 //         title,
 //         description,
 //         doBefore,
@@ -39,33 +39,33 @@
 //   };
 
 //   render() {
-//     const { title, description, doBefore } = this.state;
+//     const { image, name, price, weight, quantity, description } = this.state;
 
 //     return (
 //       <div>
 //         <form onSubmit={this.handleSubmit}>
-//           <label htmlFor="title">Title</label>
+//           <label htmlFor="image">Image</label>
 //           <input
 //             onChange={this.handleChange}
 //             type="text"
-//             name="title"
-//             value={title}
+//             name="image"
+//             value={image}
 //           />
 //           <br />
-//           <label htmlFor="description">Description</label>
+//           <label htmlFor="name">Name</label>
 //           <input
 //             onChange={this.handleChange}
 //             type="text"
-//             name="description"
-//             value={description}
+//             name="name"
+//             value={name}
 //           />
 //           <br />
-//           <label htmlFor="doBefore">Do Before</label>
+//           <label htmlFor="price">Price</label>
 //           <input
 //             onChange={this.handleChange}
-//             type="date"
-//             name="doBefore"
-//             value={doBefore}
+//             type="price"
+//             name="price"
+//             value={price}
 //           />
 //           <br />
 //           <button type="submit">Add</button>
