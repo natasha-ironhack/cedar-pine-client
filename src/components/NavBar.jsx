@@ -17,7 +17,13 @@ const Navbar = ({ isLoggedIn, user, setUser }) => {
       {/* //if user is logged in, want to show user and these list items */}
       {isLoggedIn && user && (
         <>
-          <li>{user.firstName}</li>
+          <li>
+            <NavLink to="/candles/all">Cedar & Pine</NavLink>
+          </li>
+          {/* <li>{user.firstName}</li> */}
+          <li>
+            <NavLink to="/private">{user.firstName}'s Account</NavLink>
+          </li>
           <li>
             <NavLink to="/">
               <button onClick={() => logoutUser()}>Logout</button>

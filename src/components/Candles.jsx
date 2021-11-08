@@ -34,6 +34,10 @@ export default class Candles extends Component {
 
         {isLoading && <h1>...isLoading</h1>}
 
+        <Link to={`/candles/create`}>
+          <button>CREATE</button>
+        </Link>
+
         {!isLoading &&
           listOfCandles.map((oneCandle) => {
             return (

@@ -8,6 +8,8 @@ import authService from "./services/auth-service";
 import Candles from "./components/Candles";
 import CandleDetails from "./components/CandleDetails";
 import CandleEdit from "./components/CandleEdit";
+import Private from "./components/Private";
+import AddForm from "./components/AddForm";
 
 //isLoggedIn is here b/c app.js is the mother component, so
 //the other components can know if the user is logged in
@@ -18,6 +20,7 @@ class App extends Component {
     isLoggedIn: null,
     user: null,
     cart: [],
+    isOwner: null,
     //need to check if user is able to edit or see page
     //so need to store user
   };
@@ -41,6 +44,7 @@ class App extends Component {
     this.setState({
       user,
       isLoggedIn: loggedInStatus,
+      // isOwner: isOwnerStatus
     });
   };
   //pass setUser to component below with
@@ -58,6 +62,7 @@ class App extends Component {
           this.setState({
             user: response.data.user || null,
             isLoggedIn: true,
+            // isOwner: response.data.user
           });
         })
         .catch((error) => {
@@ -73,8 +78,27 @@ class App extends Component {
     this.getUser();
   }
 
+  //   const ProtectedRoute = ({showRoute, ...props}) => {
+  //   if (showRoute) {
+  //     return <Route {...props} />
+  //   } else {
+  //     // return null to simply not render the route if not logged in
+  //     return null;
+  //     // or you could return <Redirect to='/foo' /> to send them elsewhere
+  //   }
+  // }
+
+  // const App = () => {
+  //   const isLoggedIn = true;
+
+  //   return (
+  //     <Router>
+  //       <ProtectedRoute showRoute={isLoggedIn} path="/dashboard" component={Users} />
+  //     </Router>
+  //   );
+  // }
   render() {
-    const { user, isLoggedIn } = this.state;
+    const { user, isLoggedIn, isOwner } = this.state;
     return (
       <div>
         {/* passing user to the navBar with user={user} */}
@@ -99,7 +123,21 @@ class App extends Component {
             //passing the function of the parent
             //since it's a prop, it'll be available on signup component page
           />
+          <Route
+            exact
+            path="/private"
+            render={(props) => <Private {...props} isLoggedIn={isLoggedIn} />}
+          />
           <Route exact path="/candles/all" component={Candles} />
+
+          <Route
+            exact
+            path="/candles/create"
+            render={(props) => (
+              <AddForm {...props} isLoggedIn={isLoggedIn} isOwner={isOwner} />
+            )}
+          />
+
           <Route exact path="/candles/:id/details" component={CandleDetails} />
           <Route exact path="/candles/:id/edit" component={CandleEdit} />
         </Switch>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 //in front end don't have access to this. backend person does.
 export default class Cart extends Component {
@@ -34,7 +35,7 @@ export default class Cart extends Component {
   }
 
   render() {
-    const { isLoading, singleCandle } = this.state;
+    const { isLoading, listOfCandles } = this.state;
 
     return (
       <div>
