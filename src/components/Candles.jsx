@@ -27,7 +27,7 @@ export default class Candles extends Component {
 
   render() {
     const { isLoading, listOfCandles } = this.state;
-    const { isLoggedIn, isOwner, addToCart } = this.props;
+    const { isOwner, addToCart } = this.props;
 
     return (
       <div>

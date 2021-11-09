@@ -10,6 +10,7 @@ import CandleDetails from "./components/CandleDetails";
 import CandleEdit from "./components/CandleEdit";
 import Private from "./components/Private";
 import AddForm from "./components/AddForm";
+import Cart from "./components/Cart";
 
 //isLoggedIn is here b/c app.js is the mother component, so
 //the other components can know if the user is logged in
@@ -28,7 +29,7 @@ class App extends Component {
   // ---> CART STUF
 
   addToCart = (product, quantity) => {
-    this.setState({cart: [...this.state.cart, { product, quantity }]});
+    this.setState({ cart: [...this.state.cart, { product, quantity }] });
   };
   // --------------
 
@@ -89,7 +90,7 @@ class App extends Component {
   //   );
   // }
   render() {
-    const { user, isLoggedIn, isOwner } = this.state;
+    const { user, isLoggedIn, isOwner, cart } = this.state;
     return (
       <div>
         {/* passing user to the navBar with user={user} */}
@@ -144,6 +145,14 @@ class App extends Component {
 
           <Route exact path="/candles/:id/details" component={CandleDetails} />
           <Route exact path="/candles/:id/edit" component={CandleEdit} />
+
+          {/* <Route exact path="/cart" component={Cart} /> */}
+
+          <Route
+            exact
+            path="/cart"
+            render={(props) => <Cart {...props} cart={cart} />}
+          />
         </Switch>
       </div>
     );
