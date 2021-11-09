@@ -17,7 +17,7 @@ export default class Cart extends Component {
   componentDidMount() {
     axios
       .get(
-        `${process.env.REACT_APP_SERVER_API}/candles/${this.props.match.params.id}`
+        `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`
       )
       .then((response) => {
         this.setState({
@@ -39,7 +39,7 @@ export default class Cart extends Component {
 
     return (
       <div>
-        <h2>My cart</h2>
+        <h2>My Cart</h2>
 
         {isLoading && <h1>...isLoading</h1>}
 

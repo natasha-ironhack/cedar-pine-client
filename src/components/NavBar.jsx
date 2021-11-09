@@ -4,6 +4,7 @@ import authService from "../services/auth-service";
 import IconButton from "@mui/material/IconButton";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Cart from "../components/Cart";
+
 //passing props on line 6
 const Navbar = ({ isLoggedIn, user, setUser }) => {
   const logoutUser = () => {
@@ -29,6 +30,7 @@ const Navbar = ({ isLoggedIn, user, setUser }) => {
               <button onClick={() => logoutUser()}>Logout</button>
             </NavLink>
           </li>
+          <li></li>
         </>
       )}
       {/* //if user isn't logged in, we show these list items */}

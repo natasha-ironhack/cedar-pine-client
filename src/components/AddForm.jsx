@@ -9,8 +9,8 @@ export class AddForm extends Component {
     weight: "",
     quantity: "",
     description: "",
-    user: true,
-    isOwner: true,
+    // user: true,
+    // isOwner: true,
   };
   //method we'll use every time we have onChange , that the value
   //is coming from state, and that the name matches
@@ -53,12 +53,12 @@ export class AddForm extends Component {
   };
 
   render() {
-    const { image, name, price, weight, quantity, description, user, isOwner } =
+    const { image, name, price, weight, quantity, description } =
       this.state;
 
     return (
       <div>
-        {user && isOwner (
+        
           <div>
             <h2>CREATE A CANDLE</h2>
             <form onSubmit={this.handleSubmit}>
@@ -113,7 +113,7 @@ export class AddForm extends Component {
               <button type="submit">Add</button>
             </form>
           </div>
-        )}
+        
       </div>
     );
   }

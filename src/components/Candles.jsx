@@ -27,16 +27,18 @@ export default class Candles extends Component {
 
   render() {
     const { isLoading, listOfCandles } = this.state;
+    const { isLoggedIn, isOwner, addToCart } = this.props;
 
     return (
       <div>
         <h2>CANDLES</h2>
 
         {isLoading && <h1>...isLoading</h1>}
-
-        <Link to={`/candles/create`}>
-          <button>CREATE</button>
-        </Link>
+        {isOwner && (
+          <Link to={`/candles/create`}>
+            <button>CREATE</button>
+          </Link>
+        )}
 
         {!isLoading &&
           listOfCandles.map((oneCandle) => {
@@ -45,6 +47,9 @@ export default class Candles extends Component {
                 <Link to={`/candles/${oneCandle._id}/details`}>
                   {oneCandle.image} {oneCandle.name} {oneCandle.price}
                 </Link>
+                <button onClick={() => addToCart(oneCandle, 1)}>
+                  Add to cart
+                </button>
               </div>
             );
           })}

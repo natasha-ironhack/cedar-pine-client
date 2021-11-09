@@ -27,24 +27,19 @@ class App extends Component {
 
   // ---> CART STUF
 
-  setCart = (quantity, price, name, weight) => {
-    this.setState({
-      quantity,
-      price,
-      name,
-      weight,
-    });
+  addToCart = (product, quantity) => {
+    this.setState({cart: [...this.state.cart, { product, quantity }]});
   };
   // --------------
 
   //method for lifting state up
   //setting the user to something
   //receiving a user and boolean (loggedInStatus)
-  setUser = (user, loggedInStatus, isOwnerStatus) => {
+  setUser = (user, loggedInStatus) => {
     this.setState({
       user,
       isLoggedIn: loggedInStatus,
-      isOwner: isOwnerStatus,
+      isOwner: (user && user.isOwner) || false,
     });
   };
   //pass setUser to component below with
@@ -59,11 +54,7 @@ class App extends Component {
         //authService.loggedin goes to back end's loggedin route
         .loggedin()
         .then((response) => {
-          this.setState({
-            user: response.data.user || null,
-            isLoggedIn: true,
-            isOwner: response.data.user,
-          });
+          this.setUser(response.data.user, true);
         })
         .catch((error) => {
           this.setState({
@@ -129,7 +120,19 @@ class App extends Component {
             path="/private"
             render={(props) => <Private {...props} isLoggedIn={isLoggedIn} />}
           />
-          <Route exact path="/candles/all" component={Candles} />
+
+          <Route
+            exact
+            path="/candles/all"
+            render={(props) => (
+              <Candles
+                {...props}
+                isLoggedIn={isLoggedIn}
+                isOwner={isOwner}
+                addToCart={this.addToCart}
+              />
+            )}
+          />
 
           <Route
             exact
