@@ -25,9 +25,9 @@ BACKLOG:
 --quantity buttons (DO!)
 
 FRONT-END CLIENT ROUTES:
--> / Homepage (BACKEND?)
--> /candles/:id | candles detail page (BACKEND?)
--> /user | user profile (BACKEND?)
+-> / Homepage DONE!!!
+-> /candles/:id | candles detail page DONE!!!!
+-> /user | user profile DONE!
 -> /cart (NOTE: i think it's /auth/cart?)
 -> /checkOut (?)
 ->/confirmation (?)
@@ -37,12 +37,9 @@ FRONT-END CLIENT ROUTES:
 API ENDPOINTS/BACKEND ROUTES:
 GET /all DONE!
 
-GET /:id
+GET /:id DONE!
 
-((GET /auth/me))
-
-GET /account
-create an account button (leads to post / auth/signup)
+GET /account DONE!
 
 POST /auth/signup DONE!
 
@@ -61,7 +58,7 @@ PATCH /auth/me/:id/edit
 DELETE /auth/me/:id  
  PARTIALLY DONE (only need admin priveleges)
 
-POST /cart MARINA
+POST /cart
 
 POST /(cart)/checkout -> separate from cart
 
@@ -69,6 +66,7 @@ POST /(cart)/(checkout)/confirmation
 
 Delivery Address (same as above)
 
+backlog--
 GET /shippingandreturn
 
 GET /faq
@@ -85,36 +83,35 @@ COMPONENTS:
 --Sign Up / Create An Account PARTIALLY DONE
 --Shopping Cart
 --Checkout Page
---Candle List
---Individual Candle
+--Candles DONE!
+--CandleDetails DONE!
 --Footer
---Account/User Detail Page
+--Account/User Detail Page (Private.jsx) DONE!
 --Order Confirmation
 --Footer (shipping, faq, contact, about us, social media) (BACKLOG)
 
 IO
 Services:
-Auth Service
+Auth Service PARTIALLY DONE!
 auth.login(user) DONE!
 auth.signup(user) DONE!
 auth.logout() DONE!
-auth.me (for admin)
-auth.getUser() // synchronous
+auth.me (for admin) PARTIALLY DONE!
+auth.getUser() // synchronous DONE!
 
 Candle Service
-candle.list()
-candle.detail(id)
-candle.create(data or id?)
-candle.edit(id)
-candle.update(id)
-candle.delete(id)
+candle.list() DONE!
+candle.detail(id) DONE!
+candle.create(data or id?) DONE!
+candle.edit(id) DONE!
+candle.delete(id) DONE!
 
 backlog.filter(fragrance, price)
 
 SERVER:
 MODELS:
-Model #1:
---User Model (for signing up):
+Model #1: DONE!
+--User Model (for signing up):  
 {
 first-name: {type: String, required: true, unique: true},
 last-name: {type: String, required: true, unique: true},
@@ -122,7 +119,7 @@ email: {type: String, required: true, unique: true},
 password: {type: String, required: true},
 }
 
-Model #2:
+Model #2: DONE!
 Candle:
 —Picture: file
 —Name: string
@@ -133,7 +130,7 @@ Candle:
 —Description: String
 [RELATIONSHIP TO CREATING?]
 
-Model #3: Message (for Contact Us Form)
+Model #3: Message (for Contact Us Form) DONE!  
 --name: string
 --email: string
 --message: string
