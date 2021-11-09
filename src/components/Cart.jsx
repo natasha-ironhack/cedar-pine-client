@@ -5,13 +5,7 @@ import { Link } from "react-router-dom";
 //in front end don't have access to this. backend person does.
 export default class Cart extends Component {
   state = {
-    image: "",
-    name: "",
-    price: "",
-    weight: "",
-    // I think quantity here means something diferent
-    // we want how many the client buys, not how many are in stock
-    quantity: "",
+    
   };
 
   componentDidMount() {
@@ -35,7 +29,7 @@ export default class Cart extends Component {
   }
 
   render() {
-    const { isLoading, listOfCandles } = this.state;
+    const { isLoading, listOfProducts } = this.state;
 
     return (
       <div>
@@ -44,12 +38,12 @@ export default class Cart extends Component {
         {isLoading && <h1>...isLoading</h1>}
 
         {!isLoading &&
-          listOfCandles.map((oneCandle) => {
+          listOfProducts.map((oneProduct) => {
             return (
-              <div key={oneCandle._id}>
+              <div key={oneProduct._id}>
                 {/* do we need several LINK to show the number of candles chosen by the clien??? */}
-                <Link to={`/candles/${oneCandle._id}/details`}>
-                  {oneCandle.title}
+                <Link to={`/candles/${oneProduct._id}/details`}>
+                  {oneProduct.title}
                 </Link>
               </div>
             );
