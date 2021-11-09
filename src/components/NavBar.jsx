@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import authService from "../services/auth-service";
 import IconButton from "@mui/material/IconButton";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import Cart from "../components/Cart";
 
 //passing props on line 6
 const Navbar = ({ isLoggedIn, user, setUser }) => {
@@ -44,10 +43,9 @@ const Navbar = ({ isLoggedIn, user, setUser }) => {
           </li>
         </>
       )}
+      <NavLink to="/cart">Cart</NavLink>
       <IconButton type="submit" color="success">
-        <AddShoppingCartIcon>
-          <Cart to="/cart" />
-        </AddShoppingCartIcon>
+        <AddShoppingCartIcon></AddShoppingCartIcon>
       </IconButton>
     </ul>
   );
