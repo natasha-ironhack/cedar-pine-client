@@ -9,7 +9,8 @@ export class AddForm extends Component {
     weight: "",
     quantity: "",
     description: "",
-    isOwner: false,
+    user: true,
+    isOwner: true,
   };
   //method we'll use every time we have onChange , that the value
   //is coming from state, and that the name matches
@@ -29,14 +30,20 @@ export class AddForm extends Component {
     event.preventDefault();
     const { image, name, price, weight, quantity, description } = this.state;
     axios
-      .post(`${process.env.REACT_APP_API_HOST}/candles/create`, {
-        image,
-        name,
-        price,
-        weight,
-        quantity,
-        description,
-      })
+      .post(
+        `${process.env.REACT_APP_API_HOST}/candles/create`,
+        {
+          image,
+          name,
+          price,
+          weight,
+          quantity,
+          description,
+        },
+        {
+          withCredentials: true,
+        }
+      )
       .then((data) => {
         this.props.history.push("/");
       })
@@ -46,70 +53,70 @@ export class AddForm extends Component {
   };
 
   render() {
-    const { image, name, price, weight, quantity, description, isOwner } = this.state;
+    const { image, name, price, weight, quantity, description, user, isOwner } =
+      this.state;
 
-      return (
-        <div>
-    {!isOwner && 
+    return (
       <div>
-        <h2>CREATE A CANDLE</h2>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="image">Image</label>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="image"
-            value={image}
-          />
-          <br />
-          <label htmlFor="name">Name</label>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="name"
-            value={name}
-          />
-          <br />
-          <label htmlFor="price">Price</label>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="price"
-            value={price}
-          />
-          <br />
-          <label htmlFor="weight">Weight</label>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="weight"
-            value={weight}
-          />
-          <br />
-          <label htmlFor="quantity">Quantity</label>
-          <input
-            onChange={this.handleChange}
-            type="number"
-            name="quantity"
-            value={quantity}
-          />
-          <br />
-          <label htmlFor="description">Description</label>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="description"
-            value={description}
-          />
-          <br />
-          <button type="submit">Add</button>
-        </form>
+        {user && isOwner (
+          <div>
+            <h2>CREATE A CANDLE</h2>
+            <form onSubmit={this.handleSubmit}>
+              <label htmlFor="image">Image</label>
+              <input
+                onChange={this.handleChange}
+                type="text"
+                name="image"
+                value={image}
+              />
+              <br />
+              <label htmlFor="name">Name</label>
+              <input
+                onChange={this.handleChange}
+                type="text"
+                name="name"
+                value={name}
+              />
+              <br />
+              <label htmlFor="price">Price</label>
+              <input
+                onChange={this.handleChange}
+                type="text"
+                name="price"
+                value={price}
+              />
+              <br />
+              <label htmlFor="weight">Weight</label>
+              <input
+                onChange={this.handleChange}
+                type="text"
+                name="weight"
+                value={weight}
+              />
+              <br />
+              <label htmlFor="quantity">Quantity</label>
+              <input
+                onChange={this.handleChange}
+                type="number"
+                name="quantity"
+                value={quantity}
+              />
+              <br />
+              <label htmlFor="description">Description</label>
+              <input
+                onChange={this.handleChange}
+                type="text"
+                name="description"
+                value={description}
+              />
+              <br />
+              <button type="submit">Add</button>
+            </form>
+          </div>
+        )}
       </div>
-    }
-    </div>)
-    }
+    );
   }
-  
-
+}
 
 export default AddForm;

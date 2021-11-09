@@ -40,11 +40,11 @@ class App extends Component {
   //method for lifting state up
   //setting the user to something
   //receiving a user and boolean (loggedInStatus)
-  setUser = (user, loggedInStatus) => {
+  setUser = (user, loggedInStatus, isOwnerStatus) => {
     this.setState({
       user,
       isLoggedIn: loggedInStatus,
-      // isOwner: isOwnerStatus
+      isOwner: isOwnerStatus,
     });
   };
   //pass setUser to component below with
@@ -62,7 +62,7 @@ class App extends Component {
           this.setState({
             user: response.data.user || null,
             isLoggedIn: true,
-            // isOwner: response.data.user
+            isOwner: response.data.user,
           });
         })
         .catch((error) => {
@@ -105,6 +105,7 @@ class App extends Component {
         <NavBar
           isLoggedIn={isLoggedIn}
           user={user}
+          isOwner={isOwner}
           setUser={this.setUser}
           setCart={this.setCart}
         />
