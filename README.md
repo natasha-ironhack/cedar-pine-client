@@ -16,19 +16,23 @@ USER STORIES:
 - Contact (BACKLOG): As a user, I can contact the admins
 
 BACKLOG:
-—shopping cart pop up
+—shopping cart pop up /number pop up
 —Contact Us form
 —candle filter
 --social media links
 --stock backlog availability
 --loading symbol
 --quantity buttons (DO!)
+--on the cart page, fix the lack of space between the message words "candles" and "here". 
+--when deleting items in cart and nothing left, show "you have no items in your cart..."
+--for the edit page: make it so it's okay to only edit
+one part and it changes just that part
 
 FRONT-END CLIENT ROUTES:
 -> / Homepage DONE!!!
 -> /candles/:id | candles detail page DONE!!!!
--> /user | user profile DONE!
--> /cart (NOTE: i think it's /auth/cart?)
+-> /user | user profile DONE!!!!
+-> /cart (NOTE: i think it's /auth/cart?) DONE!!!!!
 -> /checkOut (?)
 ->/confirmation (?)
 
@@ -47,10 +51,9 @@ POST /auth/login DONE!
 
 POST /auth/logout DONE!
 
-GET /auth/loggedin DONE
+GET /auth/loggedin DONE!!
 
-POST /auth/me/create  
- PARTIALLY DONE (only need admin priveleges)
+POST /auth/me/create DONE!!
 
 PATCH /auth/me/:id/edit  
  PARTIALLY DONE (only need admin priveleges)
@@ -58,7 +61,7 @@ PATCH /auth/me/:id/edit
 DELETE /auth/me/:id  
  PARTIALLY DONE (only need admin priveleges)
 
-POST /cart
+POST /cart DONE!!
 
 POST /(cart)/checkout -> separate from cart
 
@@ -79,9 +82,8 @@ POST /contact-us/sent
 
 COMPONENTS:
 --NavBar PARTIALLY DONE
---Account (sign up button / sign in)
---Sign Up / Create An Account PARTIALLY DONE
---Shopping Cart
+--Account (sign up button / sign in)     PARTIALLY DONE
+--Shopping Cart     DONE!
 --Checkout Page
 --Candles DONE!
 --CandleDetails DONE!

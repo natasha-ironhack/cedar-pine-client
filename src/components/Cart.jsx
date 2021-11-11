@@ -26,14 +26,20 @@ export default class Cart extends Component {
 
   render() {
     const { isLoading } = this.state;
-    const { cart } = this.props;
+    const { cart, goToCheckout } = this.props;
 
     return (
       <div>
         <h2>My Cart</h2>
 
         {isLoading && <h1>...isLoading</h1>}
-        {cart.length === 0 && <div>Hey no products here</div>}
+        {cart.length === 0 && (
+          <div>
+            You have no products in your cart. You can browse our collection of
+            candles
+            <Link to={`/candles/all`}>here</Link>.
+          </div>
+        )}
         {!isLoading &&
           cart.map((item) => {
             const { product, quantity } = item;
@@ -43,6 +49,10 @@ export default class Cart extends Component {
                 <Link to={`/candles/${product._id}/details`}>
                   {quantity}x {product.name}
                 </Link>
+                <button onClick={() => goToCheckout(item, 1)}>
+                  Go To Checkout
+                  {/* NEED TO LINK CHECKOUT COMPONENT HERE!! */}
+                </button>
               </div>
             );
           })}

@@ -11,6 +11,7 @@ import CandleEdit from "./components/CandleEdit";
 import Private from "./components/Private";
 import AddForm from "./components/AddForm";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 
 //isLoggedIn is here b/c app.js is the mother component, so
 //the other components can know if the user is logged in
@@ -22,6 +23,7 @@ class App extends Component {
     user: null,
     cart: [],
     isOwner: null,
+    checkout: [],
     //need to check if user is able to edit or see page
     //so need to store user
   };
@@ -31,7 +33,12 @@ class App extends Component {
   addToCart = (product, quantity) => {
     this.setState({ cart: [...this.state.cart, { product, quantity }] });
   };
-  // --------------
+
+  goToCheckout = (product, quantity) => {
+    this.setState({
+      checkout: [...this.state.checkout, { product, quantity }],
+    });
+  };
 
   //method for lifting state up
   //setting the user to something
@@ -70,27 +77,8 @@ class App extends Component {
     this.getUser();
   }
 
-  //   const ProtectedRoute = ({showRoute, ...props}) => {
-  //   if (showRoute) {
-  //     return <Route {...props} />
-  //   } else {
-  //     // return null to simply not render the route if not logged in
-  //     return null;
-  //     // or you could return <Redirect to='/foo' /> to send them elsewhere
-  //   }
-  // }
-
-  // const App = () => {
-  //   const isLoggedIn = true;
-
-  //   return (
-  //     <Router>
-  //       <ProtectedRoute showRoute={isLoggedIn} path="/dashboard" component={Users} />
-  //     </Router>
-  //   );
-  // }
   render() {
-    const { user, isLoggedIn, isOwner, cart } = this.state;
+    const { user, isLoggedIn, isOwner, cart, goToCheckout } = this.state;
     return (
       <div>
         {/* passing user to the navBar with user={user} */}
@@ -100,6 +88,8 @@ class App extends Component {
           isOwner={isOwner}
           setUser={this.setUser}
           setCart={this.setCart}
+          setCheckout={this.setCheckout}
+          // goToCheckout={this.goToCheckout}
         />
 
         <Switch>
@@ -131,6 +121,7 @@ class App extends Component {
                 isLoggedIn={isLoggedIn}
                 isOwner={isOwner}
                 addToCart={this.addToCart}
+                goToCheckout={this.goToCheckout}
               />
             )}
           />
@@ -144,14 +135,28 @@ class App extends Component {
           />
 
           <Route exact path="/candles/:id/details" component={CandleDetails} />
-          <Route exact path="/candles/:id/edit" component={CandleEdit} />
+          {/* <Route exact path="/candles/:id/edit" component={CandleEdit} /> */}
 
-          {/* <Route exact path="/cart" component={Cart} /> */}
+          <Route
+            exact
+            path="/candles/:id/edit"
+            render={(props) => (
+              <CandleEdit {...props} isLoggedIn={isLoggedIn} isOwner={isOwner} />
+            )}
+          />
 
           <Route
             exact
             path="/cart"
             render={(props) => <Cart {...props} cart={cart} />}
+          />
+
+          <Route
+            exact
+            path="/checkout"
+            render={(props) => (
+              <Checkout {...props} goToCheckout={goToCheckout} />
+            )}
           />
         </Switch>
       </div>

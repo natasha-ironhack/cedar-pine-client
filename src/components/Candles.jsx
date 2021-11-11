@@ -45,7 +45,13 @@ export default class Candles extends Component {
             return (
               <div key={oneCandle._id}>
                 <Link to={`/candles/${oneCandle._id}/details`}>
-                  {oneCandle.image} {oneCandle.name} {oneCandle.price}
+                  <ul>
+                    {/* <li> */}
+                    {oneCandle.image}
+                    {/* </li> */}
+                    <li>{oneCandle.name}</li>
+                    <li>{oneCandle.price}</li>
+                  </ul>
                 </Link>
                 <button onClick={() => addToCart(oneCandle, 1)}>
                   Add to cart

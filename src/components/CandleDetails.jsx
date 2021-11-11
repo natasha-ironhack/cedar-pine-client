@@ -36,10 +36,13 @@ class CandleDetails extends Component {
 
   render() {
     const { isLoading, singleCandle } = this.state;
+    const { isOwner, addToCart } = this.props;
+
     return (
       <div>
         <h2>Candle Details</h2>
         {isLoading && <h1>...Loading</h1>}
+
         {!isLoading && (
           <div>
             <h4>{singleCandle.image} </h4>
@@ -49,12 +52,25 @@ class CandleDetails extends Component {
             <p>{singleCandle.quantity}</p>
             <p>{singleCandle.description}</p>
 
+            <button onClick={() => addToCart(singleCandle, 1)}>
+              ADD TO CART
+            </button>
+
+            {/* <button onClick={this.handleDelete}>DELETE</button>
+            <Link to={`/candles/${singleCandle._id}/edit`}>
+              <button>EDIT</button>
+            </Link> */}
+            {/* both button links are the same, just diff. ways of 
+            doin it */}
+          </div>
+        )}
+
+        {isOwner && (
+          <div>
             <button onClick={this.handleDelete}>DELETE</button>
             <Link to={`/candles/${singleCandle._id}/edit`}>
               <button>EDIT</button>
             </Link>
-            {/* both button links are the same, just diff. ways of 
-            doin it */}
           </div>
         )}
       </div>
