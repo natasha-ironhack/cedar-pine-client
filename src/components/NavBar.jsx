@@ -5,11 +5,17 @@ import IconButton from "@mui/material/IconButton";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 //passing props on line 6
-const Navbar = ({ isLoggedIn, user, setUser }) => {
+const Navbar = ({ isLoggedIn, user, setUser, cart }) => {
   const logoutUser = () => {
     authService.logout().then(() => {
       setUser(null, false);
     });
+  };
+
+  const calculateCartItems = (anyCart) => {
+    return anyCart.length === 0
+      ? 0
+      : anyCart.reduce((total, item) => total + item.quantity, 0);
   };
 
   return (
@@ -43,7 +49,7 @@ const Navbar = ({ isLoggedIn, user, setUser }) => {
           </li>
         </>
       )}
-      <NavLink to="/cart">Cart</NavLink>
+      <NavLink to="/cart">Cart {calculateCartItems(cart)}</NavLink>
       <IconButton type="submit" color="success">
         <AddShoppingCartIcon></AddShoppingCartIcon>
       </IconButton>

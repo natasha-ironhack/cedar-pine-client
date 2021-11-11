@@ -24,7 +24,7 @@ class CandleDetails extends Component {
   handleDelete = () => {
     axios
       .delete(
-        `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`
+        `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`, {withCredentials: true}
       )
       .then(() => {
         this.props.history.push("/");
@@ -62,15 +62,14 @@ class CandleDetails extends Component {
             </Link> */}
             {/* both button links are the same, just diff. ways of 
             doin it */}
-          </div>
-        )}
-
-        {isOwner && (
-          <div>
-            <button onClick={this.handleDelete}>DELETE</button>
-            <Link to={`/candles/${singleCandle._id}/edit`}>
-              <button>EDIT</button>
-            </Link>
+            {isOwner && (
+              <div>
+                <button onClick={this.handleDelete}>DELETE</button>
+                <Link to={`/candles/${singleCandle._id}/edit`}>
+                  <button>EDIT</button>
+                </Link>
+              </div>
+            )}
           </div>
         )}
       </div>

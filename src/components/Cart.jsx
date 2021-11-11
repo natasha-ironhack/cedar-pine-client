@@ -6,6 +6,34 @@ import { Link } from "react-router-dom";
 export default class Cart extends Component {
   state = {};
 
+  //want to remove indivdual products in cart
+  // removeFromCart = (itemId) => {
+  //   itemToBeDeleted = this.state.
+  // }
+
+
+//REFERENCE:
+// removeItemFromBasket(itemId) {
+//   const items = this.stat.items.filter(item => item.id !== itemId)
+
+//   this.setState({ items })
+// }
+
+  //REFERENCE FOR REMOVEFROMCART METHOD:
+  // handleDelete = () => {
+  //   axios
+  //     .delete(
+  //       `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`,
+  //       { withCredentials: true }
+  //     )
+  //     .then(() => {
+  //       this.props.history.push("/");
+  //     })
+  //     .catch(() => {
+  //       this.props.history.push("/500");
+  //     });
+  // };
+
   // componentDidMount() {
   //   axios
   //     .get(
@@ -49,13 +77,11 @@ export default class Cart extends Component {
                 <Link to={`/candles/${product._id}/details`}>
                   {quantity}x {product.name}
                 </Link>
-                <button onClick={() => goToCheckout(item, 1)}>
-                  Go To Checkout
-                  {/* NEED TO LINK CHECKOUT COMPONENT HERE!! */}
-                </button>
+                <button onClick={this.removeFromCart}>Remove From Cart</button>
               </div>
             );
           })}
+        <Link to="/checkout">Checkout</Link>
       </div>
     );
   }

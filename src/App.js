@@ -87,7 +87,7 @@ class App extends Component {
           user={user}
           isOwner={isOwner}
           setUser={this.setUser}
-          setCart={this.setCart}
+          cart={cart}
           setCheckout={this.setCheckout}
           // goToCheckout={this.goToCheckout}
         />
@@ -134,14 +134,30 @@ class App extends Component {
             )}
           />
 
-          <Route exact path="/candles/:id/details" component={CandleDetails} />
+          <Route
+            exact
+            path="/candles/:id/details"
+            render={(props) => (
+              <CandleDetails
+                {...props}
+                addToCart={this.addToCart}
+                isLoggedIn={isLoggedIn}
+                isOwner={isOwner}
+              />
+            )}
+          />
+
           {/* <Route exact path="/candles/:id/edit" component={CandleEdit} /> */}
 
           <Route
             exact
             path="/candles/:id/edit"
             render={(props) => (
-              <CandleEdit {...props} isLoggedIn={isLoggedIn} isOwner={isOwner} />
+              <CandleEdit
+                {...props}
+                isLoggedIn={isLoggedIn}
+                isOwner={isOwner}
+              />
             )}
           />
 
