@@ -23,7 +23,7 @@ BACKLOG:
 --stock backlog availability
 --loading symbol
 --quantity buttons (DO!)
---on the cart page, fix the lack of space between the message words "candles" and "here". 
+--on the cart page, fix the lack of space between the message words "candles" and "here".
 --when deleting items in cart and nothing left, show "you have no items in your cart..."
 --for the edit page: make it so it's okay to only edit
 one part and it changes just that part
@@ -33,8 +33,8 @@ FRONT-END CLIENT ROUTES:
 -> /candles/:id | candles detail page DONE!!!!
 -> /user | user profile DONE!!!!
 -> /cart (NOTE: i think it's /auth/cart?) DONE!!!!!
--> /checkOut (?)
-->/confirmation (?)
+-> /checkOut PARTIALLY DONE
+->/confirmation DONE!
 
 -> 404
 
@@ -55,19 +55,17 @@ GET /auth/loggedin DONE!!
 
 POST /auth/me/create DONE!!
 
-PATCH /auth/me/:id/edit  
- PARTIALLY DONE (only need admin priveleges)
+PATCH /auth/me/:id/edit DONE!!
 
-DELETE /auth/me/:id  
- PARTIALLY DONE (only need admin priveleges)
+DELETE /auth/me/:id DONE!!
 
-POST /cart DONE!!
+POST /cart PARTIALLY DONE!! (work on design and quantity)
 
-POST /(cart)/checkout -> separate from cart
+POST /(cart)/checkout PARTIALLY DONE!! (need payment)
 
-POST /(cart)/(checkout)/confirmation
+POST /(cart)/(checkout)/confirmation DONE
 
-Delivery Address (same as above)
+Delivery Address (same as above) DONE
 
 backlog--
 GET /shippingandreturn
@@ -82,23 +80,23 @@ POST /contact-us/sent
 
 COMPONENTS:
 --NavBar PARTIALLY DONE
---Account (sign up button / sign in)     PARTIALLY DONE
---Shopping Cart     DONE!
---Checkout Page
+--Account (sign up button / sign in) PARTIALLY DONE
+--Shopping Cart PARTIALLY DONE!
+--Checkout Page PARTIALLY DONE!
 --Candles DONE!
 --CandleDetails DONE!
 --Footer
 --Account/User Detail Page (Private.jsx) DONE!
---Order Confirmation
+--Order Confirmation DONE!
 --Footer (shipping, faq, contact, about us, social media) (BACKLOG)
 
 IO
 Services:
-Auth Service PARTIALLY DONE!
+Auth Service DONE!
 auth.login(user) DONE!
 auth.signup(user) DONE!
 auth.logout() DONE!
-auth.me (for admin) PARTIALLY DONE!
+auth.me (for admin) DONE!
 auth.getUser() // synchronous DONE!
 
 Candle Service

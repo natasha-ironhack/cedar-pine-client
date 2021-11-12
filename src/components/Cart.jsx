@@ -1,60 +1,62 @@
 import React, { Component } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Link } from "react-router-dom";
+// import Table from "@mui/material/Table";
+// import TableBody from "@mui/material/TableBody";
+// import TableCell from "@mui/material/TableCell";
+// import TableContainer from "@mui/material/TableContainer";
+// import TableHead from "@mui/material/TableHead";
+// import TableRow from "@mui/material/TableRow";
+// import Paper from "@mui/material/Paper";
+// import Candles from "./components/Candles";
+
 
 //in front end don't have access to this. backend person does.
 export default class Cart extends Component {
   state = {};
 
   //want to remove indivdual products in cart
-  // removeFromCart = (itemId) => {
-  //   itemToBeDeleted = this.state.
+  removeFromCart = () => {};
+
+  //REFERENCE:
+  // removeItemFromBasket(itemId) {
+  //   const items = this.stat.items.filter(item => item.id !== itemId)
+
+  //   this.setState({ items })
   // }
-
-
-//REFERENCE:
-// removeItemFromBasket(itemId) {
-//   const items = this.stat.items.filter(item => item.id !== itemId)
-
-//   this.setState({ items })
-// }
-
-  //REFERENCE FOR REMOVEFROMCART METHOD:
-  // handleDelete = () => {
-  //   axios
-  //     .delete(
-  //       `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`,
-  //       { withCredentials: true }
-  //     )
-  //     .then(() => {
-  //       this.props.history.push("/");
-  //     })
-  //     .catch(() => {
-  //       this.props.history.push("/500");
-  //     });
+  // ccyFormat = (num) => {
+  //   return `${num.toFixed(2)}`;
   // };
 
-  // componentDidMount() {
-  //   axios
-  //     .get(
-  //       `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`
-  //     )
-  //     .then((response) => {
-  //       this.setState({
-  //         image: response.data.image,
-  //         name: response.data.name,
-  //         price: response.data.price,
-  //         quantity: response.data.quantity,
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       this.props.history.push("/500");
-  //     });
+  // priceRow = (qty, prc) => {
+  //   return qty * prc;
+  // };
+
+  // createRow = (desc, qty, prc) => {
+  //   const price = this.priceRow(qty, prc);
+  //   return { desc, qty, prc, price };
+  // };
+
+  // subtotal(items) {
+  //   return this.props.listOfCandles.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
   // }
+
+  // //insert product name here, as well as price and quantity
+  // rows = [
+  //   this.createRow("Paperclips (Box)", 100, 1.15),
+  //   this.createRow("Paper (Case)", 10, 45.99),
+  //   this.createRow("Waste Basket", 2, 17.99),
+  // ];
 
   render() {
     const { isLoading } = this.state;
-    const { cart, goToCheckout } = this.props;
+    const { cart } = this.props;
+
+    // const invoiceSubtotal = this.subtotal(rows);
+    // const TAX_RATE = 0.07;
+
+    // const invoiceTaxes = TAX_RATE * invoiceSubtotal;
+    // const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
     return (
       <div>
@@ -74,14 +76,68 @@ export default class Cart extends Component {
             return (
               <div key={product._id}>
                 {/* do we need several LINK to show the number of candles chosen by the clien??? */}
+
                 <Link to={`/candles/${product._id}/details`}>
-                  {quantity}x {product.name}
+                  {product.name} x {product.price} x {quantity}
                 </Link>
                 <button onClick={this.removeFromCart}>Remove From Cart</button>
+                {/* <TableContainer component={Paper}>
+                  <Table sx={{ minWidth: 700 }} aria-label="spanning table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell align="center" colSpan={3}>
+                          Details
+                        </TableCell>
+                        <TableCell align="right">Price</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>Desc</TableCell>
+                        <TableCell align="right">Qty.</TableCell>
+                        <TableCell align="right">Unit</TableCell>
+                        <TableCell align="right">Sum</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {this.rows.map((row) => (
+                        <TableRow key={row.desc}>
+                          <TableCell>{row.desc}</TableCell>
+                          <TableCell align="right">{row.qty}</TableCell>
+                          <TableCell align="right">{row.unit}</TableCell>
+                          <TableCell align="right">
+                            {this.state.ccyFormat(row.price)}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+
+                      <TableRow>
+                        <TableCell rowSpan={3} />
+                        <TableCell colSpan={2}>Subtotal</TableCell>
+                        <TableCell align="right">
+                          {this.state.ccyFormat(invoiceSubtotal)}
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>Tax</TableCell>
+                        <TableCell align="right">{`${(TAX_RATE * 100).toFixed(
+                          0
+                        )} %`}</TableCell>
+                        <TableCell align="right">
+                          {this.state.ccyFormat(invoiceTaxes)}
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell colSpan={2}>Total</TableCell>
+                        <TableCell align="right">
+                          {this.state.ccyFormat(invoiceTotal)}
+                        </TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </TableContainer> */}
               </div>
             );
           })}
-        <Link to="/checkout">Checkout</Link>
+        <Link to="/checkout">Continue to Checkout</Link>
       </div>
     );
   }
