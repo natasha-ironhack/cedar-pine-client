@@ -47,11 +47,20 @@ class App extends Component {
         },
       });
     } else {
+      const removeProduct = this.state.cart[product._id];
       this.setState({
-        cart: { ...this.state.cart, [product._id]: { product, quantity } },
+        cart: {
+          ...this.state.cart,
+          [product._id]: {
+            ...removeProduct,
+            quantity: delete removeProduct.product,
+          },
+        },
       });
     }
   };
+
+  // delete newProps.b;
 
   addToCart = (product, quantity) => {
     // const isProductInsideCart = this.state.cart.some(
@@ -207,7 +216,12 @@ class App extends Component {
             exact
             path="/cart"
             render={(props) => (
-              <Cart {...props} addToCart={this.addToCart} cart={cart} />
+              <Cart
+                {...props}
+                addToCart={this.addToCart}
+                decreaseFromCart={this.decreaseFromCart}
+                cart={cart}
+              />
             )}
           />
 
