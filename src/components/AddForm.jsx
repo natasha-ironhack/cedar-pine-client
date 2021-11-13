@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import "../style/general.css";
 export class AddForm extends Component {
   state = {
     image: "",
@@ -53,67 +53,64 @@ export class AddForm extends Component {
   };
 
   render() {
-    const { image, name, price, weight, quantity, description } =
-      this.state;
+    const { image, name, price, weight, quantity, description } = this.state;
 
     return (
-      <div>
-        
-          <div>
-            <h2>CREATE A CANDLE</h2>
-            <form onSubmit={this.handleSubmit}>
-              <label htmlFor="image">Image</label>
-              <input
-                onChange={this.handleChange}
-                type="text"
-                name="image"
-                value={image}
-              />
-              <br />
-              <label htmlFor="name">Name</label>
-              <input
-                onChange={this.handleChange}
-                type="text"
-                name="name"
-                value={name}
-              />
-              <br />
-              <label htmlFor="price">Price</label>
-              <input
-                onChange={this.handleChange}
-                type="text"
-                name="price"
-                value={price}
-              />
-              <br />
-              <label htmlFor="weight">Weight</label>
-              <input
-                onChange={this.handleChange}
-                type="text"
-                name="weight"
-                value={weight}
-              />
-              <br />
-              <label htmlFor="quantity">Quantity</label>
-              <input
-                onChange={this.handleChange}
-                type="number"
-                name="quantity"
-                value={quantity}
-              />
-              <br />
-              <label htmlFor="description">Description</label>
-              <input
-                onChange={this.handleChange}
-                type="text"
-                name="description"
-                value={description}
-              />
-              <br />
-              <button type="submit">Add</button>
-            </form>
-          </div>
-        
+      <div class="form-container">
+        <div>
+          <h2>CREATE A CANDLE</h2>
+          <form onSubmit={this.handleSubmit}>
+            <label htmlFor="image">Image</label>
+            <input
+              onChange={this.handleChange}
+              type="text"
+              name="image"
+              value={image}
+            />
+            <br />
+            <label htmlFor="name">Name</label>
+            <input
+              onChange={this.handleChange}
+              type="text"
+              name="name"
+              value={name}
+            />
+            <br />
+            <label htmlFor="price">Price</label>
+            <input
+              onChange={this.handleChange}
+              type="text"
+              name="price"
+              value={price}
+            />
+            <br />
+            <label htmlFor="weight">Weight</label>
+            <input
+              onChange={this.handleChange}
+              type="text"
+              name="weight"
+              value={weight}
+            />
+            <br />
+            <label htmlFor="quantity">Quantity</label>
+            <input
+              onChange={this.handleChange}
+              type="number"
+              name="quantity"
+              value={quantity}
+            />
+            <br />
+            <label htmlFor="description">Description</label>
+            <input
+              onChange={this.handleChange}
+              type="text"
+              name="description"
+              value={description}
+            />
+            <br />
+            <button type="submit">Add</button>
+          </form>
+        </div>
       </div>
     );
   }

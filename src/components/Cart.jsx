@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 // import Paper from "@mui/material/Paper";
 // import Candles from "./components/Candles";
 
+import "../style/general.css";
+
 //in front end don't have access to this. backend person does.
 export default class Cart extends Component {
   state = {
@@ -39,7 +41,7 @@ export default class Cart extends Component {
 
     return (
       <div>
-        <h2>My Cart</h2>
+        <h2 class="cart-title">My Cart</h2>
 
         {isLoading && <h1>...isLoading</h1>}
         {Object.keys(cart).length === 0 && (

@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg-color: brown;
+  --color-button: rgb(96, 96, 138);
+}
+
+.cart-title {
+  background: var(--color-button);
+}
