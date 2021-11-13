@@ -13,9 +13,12 @@ const Navbar = ({ isLoggedIn, user, setUser, cart }) => {
   };
 
   const calculateCartItems = (anyCart) => {
-    return anyCart.length === 0
+    return Object.keys(anyCart).length === 0
       ? 0
-      : anyCart.reduce((total, item) => total + item.quantity, 0);
+      : Object.keys(anyCart).reduce(
+          (total, item) => total + anyCart[item].quantity,
+          0
+        );
   };
 
   return (

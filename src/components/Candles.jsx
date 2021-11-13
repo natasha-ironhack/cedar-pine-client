@@ -5,6 +5,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+// import Cart from "./Cart";
 
 //in front end don't have access to this. backend person does.
 export default class Candles extends Component {
@@ -55,6 +56,9 @@ export default class Candles extends Component {
                   </ul>
                 </Link>
                 <button onClick={() => addToCart(oneCandle, 1)}>
+                  {/* Maybe need to transfer 1 or oneCandle to state in cart, then when updating with 
+                  this.setState for the button, it'll change the state in cart.jsx from oneCandle: 1 to
+                  2 or 3 or 10 */}
                   {/* want to make it so when clicked, adds to the quantity button on the 
                 cart page, instead of adding multiple listings of the same candle */}
                   Add to Cart

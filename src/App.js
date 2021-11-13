@@ -26,7 +26,7 @@ class App extends Component {
   state = {
     isLoggedIn: null,
     user: null,
-    cart: [],
+    cart: {},
     isOwner: null,
     checkout: [],
     //need to check if user is able to edit or see page
@@ -34,9 +34,46 @@ class App extends Component {
   };
 
   // ---> CART STUF
+  decreaseFromCart = (product, quantity) => {
+    if (this.state.cart[product._id]) {
+      const productInfo = this.state.cart[product._id];
+      this.setState({
+        cart: {
+          ...this.state.cart,
+          [product._id]: {
+            ...productInfo,
+            quantity: productInfo.quantity - quantity,
+          },
+        },
+      });
+    } else {
+      this.setState({
+        cart: { ...this.state.cart, [product._id]: { product, quantity } },
+      });
+    }
+  };
 
   addToCart = (product, quantity) => {
-    this.setState({ cart: [...this.state.cart, { product, quantity }] });
+    // const isProductInsideCart = this.state.cart.some(
+    //   (item) => item.product._id === product._id
+    // );
+    if (this.state.cart[product._id]) {
+      console.log("is alreday inside");
+      const productInfo = this.state.cart[product._id];
+      this.setState({
+        cart: {
+          ...this.state.cart,
+          [product._id]: {
+            ...productInfo,
+            quantity: productInfo.quantity + quantity,
+          },
+        },
+      });
+    } else {
+      this.setState({
+        cart: { ...this.state.cart, [product._id]: { product, quantity } },
+      });
+    }
   };
 
   goToCheckout = (product, quantity) => {
@@ -169,7 +206,9 @@ class App extends Component {
           <Route
             exact
             path="/cart"
-            render={(props) => <Cart {...props} cart={cart} />}
+            render={(props) => (
+              <Cart {...props} addToCart={this.addToCart} cart={cart} />
+            )}
           />
 
           <Route
