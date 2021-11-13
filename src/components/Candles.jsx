@@ -48,13 +48,16 @@ export default class Candles extends Component {
                   <ul>
                     {/* <li> */}
                     {oneCandle.image}
+                    {/* <img src={this.props.picture} /> */}
                     {/* </li> */}
                     <li>{oneCandle.name}</li>
                     <li>{oneCandle.price}</li>
                   </ul>
                 </Link>
                 <button onClick={() => addToCart(oneCandle, 1)}>
-                  Add to cart
+                  {/* want to make it so when clicked, adds to the quantity button on the 
+                cart page, instead of adding multiple listings of the same candle */}
+                  Add to Cart
                 </button>
               </div>
             );

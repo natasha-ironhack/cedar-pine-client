@@ -27,6 +27,7 @@ BACKLOG:
 --when deleting items in cart and nothing left, show "you have no items in your cart..."
 --for the edit page: make it so it's okay to only edit
 one part and it changes just that part
+--hide checkout button until after products are added to cart
 
 FRONT-END CLIENT ROUTES:
 -> / Homepage DONE!!!

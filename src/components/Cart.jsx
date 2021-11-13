@@ -10,10 +10,11 @@ import { Link } from "react-router-dom";
 // import Paper from "@mui/material/Paper";
 // import Candles from "./components/Candles";
 
-
 //in front end don't have access to this. backend person does.
 export default class Cart extends Component {
-  state = {};
+  state = {
+    quantity: null,
+  };
 
   //want to remove indivdual products in cart
   removeFromCart = () => {};
@@ -48,6 +49,13 @@ export default class Cart extends Component {
   //   this.createRow("Waste Basket", 2, 17.99),
   // ];
 
+  changeNumber = (btn) => {
+    this.setState({
+      quantity:
+        btn === "increase" ? this.state.quantity + 1 : this.state.quantity - 1,
+    });
+  };
+
   render() {
     const { isLoading } = this.state;
     const { cart } = this.props;
@@ -78,12 +86,24 @@ export default class Cart extends Component {
                 {/* do we need several LINK to show the number of candles chosen by the clien??? */}
 
                 <Link to={`/candles/${product._id}/details`}>
-                  {product.name} x {product.price} x {quantity}
+                  Name: {product.name} | Price: {product.price} |
+                  <button
+                    style={{
+                      background: "gray",
+                    }}
+                    onClick={() => this.changeNumber("increase")}
+                  >
+                    {/* {this.state.number}  */}+
+                  </button>
+                  Quantity: {quantity}
+                  <button onClick={() => this.changeNumber("decrease")}>
+                    -
+                  </button>
                 </Link>
                 <button onClick={this.removeFromCart}>Remove From Cart</button>
                 {/* <TableContainer component={Paper}>
                   <Table sx={{ minWidth: 700 }} aria-label="spanning table">
-                    <TableHead>
+                    <TableHead>g
                       <TableRow>
                         <TableCell align="center" colSpan={3}>
                           Details
