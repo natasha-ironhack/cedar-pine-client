@@ -142,6 +142,7 @@ Model #3: Message (for Contact Us Form) DONE!
 LINKS:
 Trello/Kanban
 Link to your trello board or picture of your physical board
+https://docs.google.com/document/d/1wf5IG7UZBTb6v9HWaossFWlXxypiyPNdzYnDfHbn8SM/edit
 
 Git
 The url to your repository and to your deployed project

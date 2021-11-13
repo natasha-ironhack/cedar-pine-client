@@ -35,28 +35,23 @@ class App extends Component {
 
   // ---> CART STUF
   decreaseFromCart = (product, quantity) => {
-    if (this.state.cart[product._id]) {
-      const productInfo = this.state.cart[product._id];
-      this.setState({
-        cart: {
-          ...this.state.cart,
-          [product._id]: {
-            ...productInfo,
-            quantity: productInfo.quantity - quantity,
+    const cartItem = this.state.cart[product._id];
+    if (cartItem) {
+      if (cartItem.quantity - quantity <= 0) {
+        const newCart = { ...this.state.cart };
+        delete newCart[product._id];
+        this.setState({ cart: newCart });
+      } else {
+        this.setState({
+          cart: {
+            ...this.state.cart,
+            [product._id]: {
+              ...cartItem,
+              quantity: cartItem.quantity - quantity,
+            },
           },
-        },
-      });
-    } else {
-      const removeProduct = this.state.cart[product._id];
-      this.setState({
-        cart: {
-          ...this.state.cart,
-          [product._id]: {
-            ...removeProduct,
-            quantity: delete removeProduct.product,
-          },
-        },
-      });
+        });
+      }
     }
   };
 

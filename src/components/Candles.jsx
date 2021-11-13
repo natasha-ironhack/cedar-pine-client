@@ -17,7 +17,7 @@ export default class Candles extends Component {
   componentDidMount() {
     //console.log(process.env.REACT_APP_SERVER_API);
     axios
-      .get(`${process.env.REACT_APP_API_HOST}/candles/all`)
+      .get(`${process.env.REACT_APP_API_HOST}/candles/all`, {withCredentials: true})
       .then((response) => {
         this.setState({ listOfCandles: response.data, isLoading: false });
       })

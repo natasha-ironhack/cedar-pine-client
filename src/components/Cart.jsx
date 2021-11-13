@@ -63,6 +63,9 @@ export default class Cart extends Component {
                 <button onClick={() => addToCart(product, 1)}>+</button>
                 Quantity: {quantity}
                 <button onClick={() => decreaseFromCart(product, 1)}>-</button>
+                <button onClick={() => decreaseFromCart(product, quantity)}>
+                  Remove
+                </button>
                 {/* <button onClick={() => addToCart(product, -1)}>
                   Remove From Cart
                 </button> */}
