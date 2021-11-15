@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../style/general.css";
+
 export class AddForm extends Component {
   state = {
     image: "",
