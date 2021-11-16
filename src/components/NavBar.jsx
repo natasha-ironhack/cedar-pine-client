@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import authService from "../services/auth-service";
-import IconButton from "@mui/material/IconButton";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 //passing props on line 6
@@ -38,7 +37,6 @@ const Navbar = ({ isLoggedIn, user, setUser, cart }) => {
               <button onClick={() => logoutUser()}>Logout</button>
             </NavLink>
           </li>
-          <li></li>
         </>
       )}
       {/* //if user isn't logged in, we show these list items */}
@@ -53,9 +51,7 @@ const Navbar = ({ isLoggedIn, user, setUser, cart }) => {
         </>
       )}
       <NavLink to="/cart">Cart {calculateCartItems(cart)}</NavLink>
-      <IconButton type="submit" color="success">
-        <AddShoppingCartIcon></AddShoppingCartIcon>
-      </IconButton>
+      <AddShoppingCartIcon></AddShoppingCartIcon>
     </ul>
   );
 };
