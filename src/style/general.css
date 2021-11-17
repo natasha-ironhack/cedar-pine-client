@@ -8,6 +8,9 @@
   --color-button: rgb(96, 96, 138);
 }
 
+a {
+  color: black;
+}
 .cart-title {
   background: var(--color-button);
 }

@@ -75,7 +75,6 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
               <button onClick={() => logoutUser()}>Logout</button>
             </NavLink>
           </li>
-          <li></li>
         </>
       )}
       {/* //if user isn't logged in, we show these list items */}
@@ -90,9 +89,13 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
         </>
       )}
       <NavLink to="/cart">Cart {calculateCartItems(cart)}</NavLink>
+<<<<<<< HEAD
       {/* <IconButton type="submit" color="success"> */}
       <AddShoppingCartIcon></AddShoppingCartIcon>
       {/* </IconButton> */}
+=======
+      <AddShoppingCartIcon></AddShoppingCartIcon>
+>>>>>>> 654f456c794536525f46392006d6efb3cdddd60a
     </ul>
   );
 };

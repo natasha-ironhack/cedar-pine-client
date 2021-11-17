@@ -13,11 +13,20 @@ import AddForm from "./components/AddForm";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Confirmation from "./components/Confirmation";
+<<<<<<< HEAD
 import Payment from "./components/Payment";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // import Footer from "./components/Footer";
 // import "@coreui/coreui/dist/css/coreui.min.css";
+=======
+// Bootstrp
+import "bootstrap/dist/css/bootstrap.css";
+
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
+// import Footer from "./components/Footer";
+>>>>>>> 654f456c794536525f46392006d6efb3cdddd60a
 
 //isLoggedIn is here b/c app.js is the mother component, so
 //the other components can know if the user is logged in
