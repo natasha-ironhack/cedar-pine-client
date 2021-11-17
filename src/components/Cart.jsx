@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 // import Paper from "@mui/material/Paper";
 // import Candles from "./components/Candles";
 
+// https://mui.com/components/tables/
+
 import "../style/general.css";
 
 //in front end don't have access to this. backend person does.

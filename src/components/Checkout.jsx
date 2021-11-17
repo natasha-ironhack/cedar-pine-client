@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+// import Payment from "./Payment";
 
 //in front end don't have access to this. backend person does.
 export default class Checkout extends Component {
@@ -91,7 +92,7 @@ export default class Checkout extends Component {
               // defaultValue="type here"
               onChange={this.handleChange}
               type="text"
-              name="First Name"
+              name="firstName"
               value={firstName}
             />
             <TextField
@@ -101,7 +102,7 @@ export default class Checkout extends Component {
               // defaultValue="type here"
               onChange={this.handleChange}
               type="text"
-              name="Last Name"
+              name="lastName"
               value={lastName}
             />
             <TextField
@@ -111,7 +112,7 @@ export default class Checkout extends Component {
               // defaultValue="type here"
               onChange={this.handleChange}
               type="text"
-              name="Country"
+              name="country"
               value={country}
             />
             <TextField
@@ -121,7 +122,7 @@ export default class Checkout extends Component {
               // defaultValue="type here"
               onChange={this.handleChange}
               type="text"
-              name="Street and House Number"
+              name="streetNHouseNumber"
               value={streetNHouseNumber}
             />
             <TextField
@@ -131,7 +132,8 @@ export default class Checkout extends Component {
               // defaultValue="type here"
               onChange={this.handleChange}
               type="text"
-              name="Postal Code"
+              name="postCode"
+              //change to state name
               value={postCode}
             />
             <TextField
@@ -141,9 +143,9 @@ export default class Checkout extends Component {
               // defaultValue="type here"
               onChange={this.handleChange}
               type="text"
-              name="City"
+              name="city"
               value={city}
-            />{" "}
+            />
             <TextField
               required
               id="outlined-required"
@@ -151,7 +153,7 @@ export default class Checkout extends Component {
               // defaultValue="type here"
               onChange={this.handleChange}
               type="text"
-              name="Email Address"
+              name="email"
               value={email}
             />
           </div>
@@ -205,7 +207,11 @@ export default class Checkout extends Component {
           </div>
         </Box>
         <button type="submit">
-          <Link to="/confirmation">Place an Order</Link>
+          <Link to="/payment">Go to Payment
+          {/* <Payment /> */}
+          </Link>
+
+          {/* <Link to="/confirmation">Place an Order</Link> */}
         </button>
       </div>
     );

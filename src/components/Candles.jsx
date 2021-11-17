@@ -48,7 +48,8 @@ export default class Candles extends Component {
                 <Link to={`/candles/${oneCandle._id}/details`}>
                   <ul>
                     {/* <li> */}
-                    {oneCandle.image}
+                    {/* {oneCandle.image} */}
+                    {oneCandle.image && <img src={oneCandle.image} alt="imagePic"/>}
                     {/* <img src={this.props.picture} /> */}
                     {/* </li> */}
                     <li>{oneCandle.name}</li>

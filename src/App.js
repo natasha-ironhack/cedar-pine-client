@@ -13,10 +13,11 @@ import AddForm from "./components/AddForm";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Confirmation from "./components/Confirmation";
-// import Footer from "./components/Footer";
+import Payment from "./components/Payment";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+// import Footer from "./components/Footer";
 // import "@coreui/coreui/dist/css/coreui.min.css";
-//import 'bootstrap/dist/css/bootstrap.min.css'
 
 //isLoggedIn is here b/c app.js is the mother component, so
 //the other components can know if the user is logged in
@@ -226,6 +227,12 @@ class App extends Component {
             render={(props) => (
               <Checkout {...props} goToCheckout={goToCheckout} />
             )}
+          />
+
+          <Route
+            exact
+            path="/payment"
+            render={(props) => <Payment {...props} />}
           />
 
           <Route

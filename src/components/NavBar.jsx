@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import authService from "../services/auth-service";
-import IconButton from "@mui/material/IconButton";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+// import IconButton from "@mui/icons-material/IconButton";
+// import Navbar from "react-bootstrap/Navbar"
 
 //passing props on line 6
-const Navbar = ({ isLoggedIn, user, setUser, cart }) => {
+const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
   const logoutUser = () => {
     authService.logout().then(() => {
       setUser(null, false);
@@ -22,6 +23,42 @@ const Navbar = ({ isLoggedIn, user, setUser, cart }) => {
   };
 
   return (
+    //     <Navbar bg="light" expand="lg">
+    //   <Container fluid>
+    //     <Navbar.Brand href="/candles/all">Cedar & Pine</Navbar.Brand>
+    //     <Navbar.Toggle aria-controls="navbarScroll" />
+    //     <Navbar.Collapse id="navbarScroll">
+    //       <Nav
+    //         className="me-auto my-2 my-lg-0"
+    //         style={{ maxHeight: '100px' }}
+    //         navbarScroll
+    //       >
+    //         <Nav.Link href="#action2">Link</Nav.Link>
+    //          <NavDropdown title="Link" id="navbarScrollingDropdown">
+    //           <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+    //           <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+    //           <NavDropdown.Divider />
+    //           <NavDropdown.Item href="#action5">
+    //             Something else here
+    //           </NavDropdown.Item>
+    //         </NavDropdown>
+    //         <Nav.Link href="#" disabled>
+    //           Link
+    //         </Nav.Link>
+    //       </Nav>
+    //       <Form className="d-flex">
+    //         <FormControl
+    //           type="search"
+    //           placeholder="Search"
+    //           className="me-2"
+    //           aria-label="Search"
+    //         />
+    //         <Button variant="outline-success">Search</Button>
+    //       </Form>
+    //     </Navbar.Collapse>
+    //   </Container>
+    // </Navbar>
+
     <ul>
       {/* //if user is logged in, want to show user and these list items */}
       {isLoggedIn && user && (
@@ -53,11 +90,11 @@ const Navbar = ({ isLoggedIn, user, setUser, cart }) => {
         </>
       )}
       <NavLink to="/cart">Cart {calculateCartItems(cart)}</NavLink>
-      <IconButton type="submit" color="success">
-        <AddShoppingCartIcon></AddShoppingCartIcon>
-      </IconButton>
+      {/* <IconButton type="submit" color="success"> */}
+      <AddShoppingCartIcon></AddShoppingCartIcon>
+      {/* </IconButton> */}
     </ul>
   );
 };
 
-export default Navbar;
+export default NavBar;

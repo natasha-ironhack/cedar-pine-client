@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../style/general.css";
+import service from "../services/service.js";
 
 export class AddForm extends Component {
   state = {
+    // imageUrl
     image: "",
     name: "",
     price: "",
@@ -25,6 +27,26 @@ export class AddForm extends Component {
   //when working with input field, .name is a property
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+  };
+
+  // ******** this method handles just the file upload ********
+  handleFileUpload = (e) => {
+    // console.log("The file to be uploaded is: ", e.target.files[0]);
+
+    const uploadData = new FormData();
+
+    // imageUrl => this name has to be the same as in the model since we pass
+    // req.body to .create() method when creating a new thing in '/api/things/create' POST route
+    uploadData.append("image", e.target.files[0]);
+
+    service
+      .handleUpload(uploadData)
+      .then((response) => {
+        // console.log("response is: ", response);
+        // after the console.log we can see that response carries 'secure_url' which we can use to update the state
+        this.setState({ image: response.secure_url });
+      })
+      .catch((err) => console.log("Error while uploading the file: ", err));
   };
 
   handleSubmit = (event) => {
@@ -62,12 +84,8 @@ export class AddForm extends Component {
           <h2>CREATE A CANDLE</h2>
           <form onSubmit={this.handleSubmit}>
             <label htmlFor="image">Image</label>
-            <input
-              onChange={this.handleChange}
-              type="text"
-              name="image"
-              value={image}
-            />
+            {image && <img src={image} alt="imagePic"/>}
+            <input onChange={this.handleFileUpload} type="file" name="image" />
             <br />
             <label htmlFor="name">Name</label>
             <input

@@ -22,9 +22,8 @@ BACKLOG:
 --social media links
 --stock backlog availability
 --loading symbol
---quantity buttons (DO!)
+--—button to fill in delivery address if same as billing address
 --on the cart page, fix the lack of space between the message words "candles" and "here".
---when deleting items in cart and nothing left, show "you have no items in your cart..."
 --for the edit page: make it so it's okay to only edit
 one part and it changes just that part
 --hide checkout button until after products are added to cart
@@ -60,7 +59,7 @@ PATCH /auth/me/:id/edit DONE!!
 
 DELETE /auth/me/:id DONE!!
 
-POST /cart PARTIALLY DONE!! (work on design and quantity)
+POST /cart DONE!! (work on design and quantity)
 
 POST /(cart)/checkout PARTIALLY DONE!! (need payment)
 
