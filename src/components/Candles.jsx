@@ -6,6 +6,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 // import Cart from "./Cart";
+// import Card from "react-bootstrap/Card";
 
 //in front end don't have access to this. backend person does.
 export default class Candles extends Component {
@@ -17,7 +18,9 @@ export default class Candles extends Component {
   componentDidMount() {
     //console.log(process.env.REACT_APP_SERVER_API);
     axios
-      .get(`${process.env.REACT_APP_API_HOST}/candles/all`, {withCredentials: true})
+      .get(`${process.env.REACT_APP_API_HOST}/candles/all`, {
+        withCredentials: true,
+      })
       .then((response) => {
         this.setState({ listOfCandles: response.data, isLoading: false });
       })
@@ -45,11 +48,31 @@ export default class Candles extends Component {
           listOfCandles.map((oneCandle) => {
             return (
               <div key={oneCandle._id}>
+                {/* <Row xs={1} md={2} className="g-4">
+                  {Array.from({ length: 4 }).map((_, idx) => (
+                    <Col>
+                      <Card>
+                        <Card.Img variant="top" src="holder.js/100px160" />
+                        <Card.Body>
+                          <Card.Title>Card title</Card.Title>
+                          <Card.Text>
+                            This is a longer card with supporting text below as
+                            a natural lead-in to additional content. This
+                            content is a little bit longer.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row> */}
+
                 <Link to={`/candles/${oneCandle._id}/details`}>
                   <ul>
                     {/* <li> */}
                     {/* {oneCandle.image} */}
-                    {oneCandle.image && <img src={oneCandle.image} alt="imagePic"/>}
+                    {oneCandle.image && (
+                      <img src={oneCandle.image} alt="imagePic" />
+                    )}
                     {/* <img src={this.props.picture} /> */}
                     {/* </li> */}
                     <li>{oneCandle.name}</li>
