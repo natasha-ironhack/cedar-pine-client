@@ -202,9 +202,9 @@ export default class Checkout extends Component {
               // defaultValue="type here"
             />
           </div>
-          <div>
+          {/* <div>
             <h4>METHOD OF PAYMENT</h4>
-          </div>
+          </div> */}
         </Box>
         <button type="submit">
           <Link to="/payment">Go to Payment
