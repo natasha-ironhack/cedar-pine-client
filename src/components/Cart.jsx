@@ -19,6 +19,7 @@ export default class Cart extends Component {
   state = {
     // quantity: null,
     oneCandle: 1,
+    itemsToBuy: null
   };
 
   // changeNumber = (btn) => {
@@ -32,7 +33,7 @@ export default class Cart extends Component {
   // };
 
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, itemsToBuy } = this.state;
     const { cart, addToCart, decreaseFromCart } = this.props;
 
     // const invoiceSubtotal = this.subtotal(rows);
@@ -44,7 +45,7 @@ export default class Cart extends Component {
     return (
       <div>
         <h2 class="cart-title">My Cart</h2>
-
+ 
         {isLoading && <h1>...isLoading</h1>}
         {Object.keys(cart).length === 0 && (
           <div>
@@ -66,6 +67,8 @@ export default class Cart extends Component {
                 Price: {product.price}
                 <button onClick={() => addToCart(product, 1)}>+</button>
                 Quantity: {quantity}
+                {/* <button onClick={() => this.handleClick(eachProduct)}>Buy</button>
+              { itemToBuy && itemToBuy._id === eachProduct._id && <Payment itemToBuy={itemToBuy}/> } */}
                 <button onClick={() => decreaseFromCart(product, 1)}>-</button>
                 <button onClick={() => decreaseFromCart(product, quantity)}>
                   Remove
