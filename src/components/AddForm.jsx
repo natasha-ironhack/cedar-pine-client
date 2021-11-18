@@ -84,8 +84,13 @@ export class AddForm extends Component {
           <h2>CREATE A CANDLE</h2>
           <form onSubmit={this.handleSubmit}>
             <label htmlFor="image">Image</label>
-            {image && <img src={image} alt="imagePic"/>}
-            <input onChange={this.handleFileUpload} type="file" name="image" />
+            {image && <img src={image} alt="imagePic" />}
+            <input
+              onChange={this.handleFileUpload}
+              type="file"
+              name="image"
+              // value={image}
+            />
             <br />
             <label htmlFor="name">Name</label>
             <input

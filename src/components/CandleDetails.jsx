@@ -24,7 +24,8 @@ class CandleDetails extends Component {
   handleDelete = () => {
     axios
       .delete(
-        `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`, {withCredentials: true}
+        `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`,
+        { withCredentials: true }
       )
       .then(() => {
         this.props.history.push("/");
@@ -47,10 +48,10 @@ class CandleDetails extends Component {
           <div>
             <h4>{singleCandle.image} </h4>
             <p>{singleCandle.name} </p>
-            <p>{singleCandle.price}</p>
-            <p>{singleCandle.weight}</p>
-            <p>{singleCandle.quantity}</p>
-            <p>{singleCandle.description}</p>
+            <p>Price: {singleCandle.price}</p>
+            <p>Weight: {singleCandle.weight}</p>
+            <p>Amount on Stock: {singleCandle.quantity}</p>
+            <p>Description: {singleCandle.description}</p>
 
             <button onClick={() => addToCart(singleCandle, 1)}>
               ADD TO CART

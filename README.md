@@ -27,6 +27,7 @@ BACKLOG:
 --for the edit page: make it so it's okay to only edit
 one part and it changes just that part
 --hide checkout button until after products are added to cart
+--after adding a candle, redirect back to candle page
 
 FRONT-END CLIENT ROUTES:
 -> / Homepage DONE!!!
