@@ -14,7 +14,8 @@ import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Confirmation from "./components/Confirmation";
 import Payment from "./components/Payment";
-// import "bootstrap/dist/css/bootstrap.min.css";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // import Footer from "./components/Footer";
 // import "@coreui/coreui/dist/css/coreui.min.css";
