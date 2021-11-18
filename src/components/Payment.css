@@ -1,4 +1,4 @@
-#root {
+/* #root {
     display: flex;
     align-items: center;
 }
@@ -35,10 +35,10 @@ form {
 
 #payment-element {
     margin-bottom: 24px;
-}
+} */
 
 /* Buttons and links */
-button {
+/* button {
     background: #5469d4;
     font-family: Arial, sans-serif;
     color: #ffffff;
@@ -52,19 +52,19 @@ button {
     transition: all 0.2s ease;
     box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
     width: 100%;
-}
+} */
 
-button:hover {
+/* button:hover {
     filter: contrast(115%);
 }
 
 button:disabled {
     opacity: 0.5;
     cursor: default;
-}
+} */
 
 /* spinner/processing state, errors */
-.spinner,
+/* .spinner,
 .spinner:before,
 .spinner:after {
     border-radius: 50%;
@@ -133,4 +133,4 @@ button:disabled {
         width: 80vw;
         min-width: initial;
     }
-}
+} */

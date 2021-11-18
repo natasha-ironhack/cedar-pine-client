@@ -4,12 +4,12 @@ import authService from "../services/auth-service";
 // import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 // import IconButton from "@mui/icons-material/IconButton";
 // import Navbar from "react-bootstrap/Navbar"
-import ButtonGroup from "@material-ui/core/ButtonGroup";
+// import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Badge from "@material-ui/core/Badge";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import Button from "@material-ui/core/Button";
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
+// import Button from "@material-ui/core/Button";
+// import AddIcon from "@material-ui/icons/Add";
+// import RemoveIcon from "@material-ui/icons/Remove";
 
 //passing props on line 6
 const NavBar = ({ isLoggedIn, user, setUser, cart }) => {

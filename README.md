@@ -16,7 +16,7 @@ USER STORIES:
 - Contact (BACKLOG): As a user, I can contact the admins
 
 BACKLOG:
-—shopping cart pop up /number pop up
+—shopping cart pop up /number pop up PARTIALLY DONE
 —Contact Us form
 —candle filter
 --social media links
