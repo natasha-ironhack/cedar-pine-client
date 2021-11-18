@@ -14,6 +14,7 @@ export default class Candles extends Component {
   state = {
     listOfCandles: null,
     isLoading: true,
+    itemsToBuy: null
   };
 
   componentDidMount() {
