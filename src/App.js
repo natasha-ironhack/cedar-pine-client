@@ -16,7 +16,7 @@ import Confirmation from "./components/Confirmation";
 import Payment from "./components/Payment";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
-import Carousel from "./components/Carousel";
+import CarouselImage from "./components/CarouselImage";
 
 // / import "@coreui/coreui/dist/css/coreui.min.css";
 
@@ -139,7 +139,6 @@ class App extends Component {
           setCheckout={this.setCheckout}
           // goToCheckout={this.goToCheckout}
         />
-        <Carousel />
 
         <Switch>
           <Route

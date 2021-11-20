@@ -45,7 +45,11 @@ export default class Cart extends Component {
     return (
       <div>
         <h2 class="cart-title">My Cart</h2>
-
+        {Object.keys(cart).reduce(
+          (total, item) =>
+            total + cart[item].product.price * cart[item].quantity,
+          0
+        )}
         {isLoading && <h1>...isLoading</h1>}
         {Object.keys(cart).length === 0 && (
           <div>
@@ -64,7 +68,8 @@ export default class Cart extends Component {
                 <Link to={`/candles/${product._id}/details`}>
                   Name: {product.name}
                 </Link>
-                Price: {product.price}
+                Price: {product.currency || "$"}
+                {product.price / 100}
                 <button onClick={() => addToCart(product, 1)}>+</button>
                 Quantity: {quantity}
                 {/* <button onClick={() => this.handleClick(eachProduct)}>Buy</button>

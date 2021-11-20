@@ -46,7 +46,7 @@ class CandleDetails extends Component {
 
         {!isLoading && (
           <div>
-            <h4>{singleCandle.image} </h4>
+            <img src={singleCandle.image} />
             <p>{singleCandle.name} </p>
             <p>Price: {singleCandle.price}</p>
             <p>Weight: {singleCandle.weight}</p>
