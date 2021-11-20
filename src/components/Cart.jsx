@@ -19,7 +19,7 @@ export default class Cart extends Component {
   state = {
     // quantity: null,
     oneCandle: 1,
-    itemsToBuy: null
+    itemsToBuy: null,
   };
 
   // changeNumber = (btn) => {
@@ -45,7 +45,7 @@ export default class Cart extends Component {
     return (
       <div>
         <h2 class="cart-title">My Cart</h2>
- 
+
         {isLoading && <h1>...isLoading</h1>}
         {Object.keys(cart).length === 0 && (
           <div>

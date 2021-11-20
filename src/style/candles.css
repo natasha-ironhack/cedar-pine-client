@@ -1,0 +1,35 @@
+/* .card-img,
+.card-img-bottom,
+.card-img-top {
+  width: 38% !important;
+} */
+
+.card-container {
+  display: flex;
+  /*! max-width: 92%; */
+  /* width: 72%; */
+  background: pink;
+  /*! object-fit: contain; */
+  /*! height: 92vh; */
+  flex-wrap: wrap;
+  /*! justify-self: center; */
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  /*! align-content: center; */
+}
+
+.candles-title {
+  text-align: center;
+}
+
+.cards {
+  width: 30%;
+}
+.card-img-top {
+  object-fit: contain;
+  /*! align-content: center; */
+  /*! align-items: center; */
+  align-self: center;
+}

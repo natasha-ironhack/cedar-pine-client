@@ -9,32 +9,10 @@
 }
 
 a {
-  color: black;
-}
-.cart-title {
-  background: var(--color-button);
+  color: black !important;
+  text-decoration: none !important;
 }
 
-.candleImage {
-  min-width: 300px;
-
+li {
+  list-style: none;
 }
-
-
-Cards .cards {
-    color: black;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1 px solid rgba(0, 0, 0, .125);
-    border-radius: 0.25 rem;
-  }
-
-  .Card {
-    color: brown;
-  }

@@ -14,11 +14,11 @@ import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Confirmation from "./components/Confirmation";
 import Payment from "./components/Payment";
-
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/Footer";
+import Carousel from "./components/Carousel";
 
-// import Footer from "./components/Footer";
-// import "@coreui/coreui/dist/css/coreui.min.css";
+// / import "@coreui/coreui/dist/css/coreui.min.css";
 
 //isLoggedIn is here b/c app.js is the mother component, so
 //the other components can know if the user is logged in
@@ -139,6 +139,7 @@ class App extends Component {
           setCheckout={this.setCheckout}
           // goToCheckout={this.goToCheckout}
         />
+        <Carousel />
 
         <Switch>
           <Route
@@ -243,7 +244,7 @@ class App extends Component {
           />
         </Switch>
 
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }
