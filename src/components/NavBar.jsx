@@ -61,7 +61,9 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
             </>
             {isLoggedIn && user && (
               <>
-                <Nav.Link href="/private">{user.firstName}'s Account</Nav.Link>
+                <Nav.Link>
+                <NavLink to="/private">{user.firstName}'s Account</NavLink>
+                </Nav.Link>
               </>
             )}
             {!isLoggedIn && (
