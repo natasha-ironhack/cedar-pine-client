@@ -16,7 +16,10 @@ import Confirmation from "./components/Confirmation";
 import Payment from "./components/Payment";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
-import CarouselImage from "./components/CarouselImage";
+// import CarouselImage from "./components/CarouselImage";
+import Shipping from "./components/Shipping";
+import FAQ from "./components/FAQ";
+import ContactUs from "./components/ContactUs";
 
 // / import "@coreui/coreui/dist/css/coreui.min.css";
 
@@ -240,6 +243,24 @@ class App extends Component {
             exact
             path="/confirmation"
             render={(props) => <Confirmation {...props} />}
+          />
+
+          <Route
+            exact
+            path="/shipping"
+            render={(props) => <Shipping {...props} />}
+          />
+
+          <Route
+            exact
+            path="/faq"
+            render={(props) => <FAQ {...props} />}
+          />
+
+          <Route
+            exact
+            path="/contact-us"
+            render={(props) => <ContactUs {...props} />}
           />
         </Switch>
 

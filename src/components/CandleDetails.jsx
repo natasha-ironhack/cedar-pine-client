@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 class CandleDetails extends Component {
   state = {
@@ -42,13 +44,22 @@ class CandleDetails extends Component {
     return (
       <div>
         <h2>Candle Details</h2>
-        {isLoading && <h1>...Loading</h1>}
+        {isLoading && (
+          <h1>
+            <Box sx={{ display: "flex" }}>
+              <CircularProgress />
+            </Box>
+          </h1>
+        )}
 
         {!isLoading && (
           <div>
             <img src={singleCandle.image} />
             <p>{singleCandle.name} </p>
-            <p>Price: {singleCandle.price}</p>
+            <p>
+              Price: {singleCandle.currency}
+              {singleCandle.price / 100}
+            </p>
             <p>Weight: {singleCandle.weight}</p>
             <p>Amount on Stock: {singleCandle.quantity}</p>
             <p>Description: {singleCandle.description}</p>

@@ -8,6 +8,8 @@ import Col from "react-bootstrap/Col";
 import "../style/candles.css";
 import "../style/general.css";
 import CarouselImage from "./CarouselImage";
+import Box from "@mui/material/Box";
+import LinearProgress from "@mui/material/LinearProgress";
 
 //in front end don't have access to this. backend person does.
 export default class Candles extends Component {
@@ -40,10 +42,16 @@ export default class Candles extends Component {
         <CarouselImage />
 
         <div className="card">
-          <h2 className="candles-title">CANDLES</h2>
+          {/* <h2 className="candles-title">CANDLES</h2> */}
 
           <div className="card-container">
-            {isLoading && <h1>...isLoading</h1>}
+            {isLoading && (
+              <h1>
+                <Box sx={{ width: "100%" }}>
+                  <LinearProgress />
+                </Box>
+              </h1>
+            )}
             {isOwner && (
               <Link to={`/candles/create`}>
                 <button>CREATE</button>

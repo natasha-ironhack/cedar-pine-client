@@ -86,13 +86,12 @@ export default function CheckoutForm() {
         <span id="button-text">
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
         </span>
-      </button> 
+      </button>
       {message && (
         <div id="payment-message">
           {message} <Link to="/confirmation">Place an Order</Link>
         </div>
       )}
-      {/* <Link to="/confirmation">Place an Order</Link> */}
     </form>
   );
 }

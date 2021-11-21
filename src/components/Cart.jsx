@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 // import TableRow from "@mui/material/TableRow";
 // import Paper from "@mui/material/Paper";
 // import Candles from "./components/Candles";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 // https://mui.com/components/tables/
 
@@ -76,7 +77,7 @@ export default class Cart extends Component {
               { itemToBuy && itemToBuy._id === eachProduct._id && <Payment itemToBuy={itemToBuy}/> } */}
                 <button onClick={() => decreaseFromCart(product, 1)}>-</button>
                 <button onClick={() => decreaseFromCart(product, quantity)}>
-                  Remove
+                  <DeleteIcon />
                 </button>
                 {/* <button onClick={() => addToCart(product, -1)}>
                   Remove From Cart

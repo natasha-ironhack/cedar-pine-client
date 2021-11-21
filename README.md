@@ -16,18 +16,28 @@ USER STORIES:
 - Contact (BACKLOG): As a user, I can contact the admins
 
 BACKLOG:
-—shopping cart pop up /number pop up PARTIALLY DONE
-—Contact Us form
+—shopping cart pop up /number pop up DONE
+--install an account icon for account link    DONE
+--stock backlog availability  DONE
+--do social media icons    DONE
+--do footer links    DONE
+--loading symbol     PARTIALLY DONE (make sure all pages have it)
+
+
+--show logout button
+--make instagram icon bigger
+--fix payment info in url
+--put shopping cart on right side of browser
 —candle filter
---social media links
---stock backlog availability
---loading symbol
+--Make footer stick to bottom of browser
 --—button to fill in delivery address if same as billing address
 --on the cart page, fix the lack of space between the message words "candles" and "here".
---for the edit page: make it so it's okay to only edit
-one part and it changes just that part
 --hide checkout button until after products are added to cart
 --after adding a candle, redirect back to candle page
+--random number on confirmation page
+--for the edit page: make it so it's okay to only edit
+one part and it changes just that part
+--put sign up and log in on same page
 
 FRONT-END CLIENT ROUTES:
 -> / Homepage DONE!!!
