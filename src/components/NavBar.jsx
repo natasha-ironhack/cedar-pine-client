@@ -17,7 +17,7 @@ import Button from "@material-ui/core/Button";
 // import RemoveIcon from "@material-ui/icons/Remove";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 // import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import "../style/general.css";
+// import "../style/general.css";
 import "../style/navBar.css";
 
 //passing props on line 6

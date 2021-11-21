@@ -1,7 +1,6 @@
 .bg-light {
     --bs-bg-opacity: 1;
-    /* background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important; */
-    background-color: rgb(37, 36, 36) !important;
+    background-color: rgb(172, 66, 66) !important;
 }
 
 .navbar {
@@ -12,32 +11,4 @@
     justify-content: space-between;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    /* background-color: rgb(53, 52, 52) !important; */
 }
-
-/* .navbar>.container,
-.navbar>.container-fluid,
-.navbar>.container-lg,
-.navbar>.container-md,
-.navbar>.container-sm,
-.navbar>.container-xl,
-.navbar>.container-xxl {
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-    width: 100%;
-    padding-right: var(--bs-gutter-x, .75rem);
-    padding-left: var(--bs-gutter-x, .75rem);
-    margin-right: auto;
-    margin-left: auto;
-} */

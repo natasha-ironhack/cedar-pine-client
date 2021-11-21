@@ -23,7 +23,7 @@ BACKLOG:
 --do footer links    DONE
 --loading symbol     PARTIALLY DONE (make sure all pages have it)
 
-
+--make green outline for cedar and pine logo
 --show logout button
 --make instagram icon bigger
 --fix payment info in url

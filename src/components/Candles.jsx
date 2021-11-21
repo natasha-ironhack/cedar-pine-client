@@ -76,7 +76,9 @@ export default class Candles extends Component {
                                 className="link"
                                 to={`/candles/${oneCandle._id}/details`}
                               >
+                              {/* <li> */}
                                 {oneCandle.name}
+                                {/* </li> */}
                               </Link>
                             </Card.Title>
 

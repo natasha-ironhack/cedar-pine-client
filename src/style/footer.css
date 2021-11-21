@@ -14,7 +14,17 @@
 
 .footer-card .p {
   text-align: center;
+  /* color: white; */
 }
+
+/* .footer-card .li {
+  color: white;
+} */
+
 footer-card {
   margin: 25px;
+}
+
+a {
+  color: white !important;
 }
