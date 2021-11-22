@@ -57,7 +57,7 @@ export default class CarouselImage extends Component {
             <br />
             <p>
               Learn more about us and how we began our company right
-              <Link to={`/about-us`}> here</Link>
+              <Link to={`/about-us`}> here.</Link>
             </p>
           </Carousel.Caption>
         </Carousel.Item>

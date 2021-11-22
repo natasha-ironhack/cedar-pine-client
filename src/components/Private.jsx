@@ -52,7 +52,7 @@ class Private extends Component {
             {privateData.message} <br />
             <br />
             <Button
-              variant="outline-success"
+              variant="outline-secondary"
               onClick={() => (
                 <Link className="candle-link" to={`/candles/all`}></Link>
               )}

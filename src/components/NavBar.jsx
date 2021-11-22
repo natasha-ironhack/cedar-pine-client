@@ -76,18 +76,20 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
                 {/* {user.firstName}'s Account */}
                 <NavLink to="/">
                   {/* <button onClick={() => logoutUser()}> */}
-                    <AiOutlineLogout onClick={() => logoutUser()} />
+                  <AiOutlineLogout onClick={() => logoutUser()} />
                   {/* </button> */}
                 </NavLink>
               </>
             )}
             {!isLoggedIn && (
               <>
-                <Nav.Link>
+                {/* <Nav.Link>
                   <NavLink to="/signup">Sign Up</NavLink>
-                </Nav.Link>
+                </Nav.Link> */}
                 <Nav.Link>
-                  <NavLink to="/login">Login</NavLink>
+                  <NavLink to="/login">
+                    <AccountCircleOutlinedIcon />
+                  </NavLink>
                 </Nav.Link>
               </>
             )}

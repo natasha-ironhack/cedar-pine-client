@@ -17,14 +17,16 @@ USER STORIES:
 
 BACKLOG:
 —shopping cart pop up /number pop up DONE
---install an account icon for account link    DONE
---stock backlog availability  DONE
---do social media icons    DONE
---do footer links    DONE
---loading symbol     PARTIALLY DONE (make sure all pages have it)
---on the cart page, fix the lack of space between the message words "candles" and "here".   DONE
---show logout button
+--install an account icon for account link DONE
+--stock backlog availability DONE
+--do social media icons DONE
+--do footer links DONE
+--loading symbol PARTIALLY DONE (make sure all pages have it)
+--on the cart page, fix the lack of space between the message words "candles" and "here". DONE
+--show logout button DONE
+--after logging in, redirect to user page    DONE
 
+--hide checkout button until after products are added to cart
 --make green outline for cedar and pine logo
 --make instagram icon bigger
 --fix payment info in url
@@ -32,8 +34,6 @@ BACKLOG:
 —candle filter
 --Make footer stick to bottom of browser
 --—button to fill in delivery address if same as billing address
-
---hide checkout button until after products are added to cart
 --after adding a candle, redirect back to candle page
 --random number on confirmation page
 --for the edit page: make it so it's okay to only edit
@@ -71,36 +71,36 @@ PATCH /auth/me/:id/edit DONE!!
 
 DELETE /auth/me/:id DONE!!
 
-POST /cart DONE!! (work on design and quantity)
+POST /cart DONE!!
 
-POST /(cart)/checkout PARTIALLY DONE!! (need payment)
+POST /(cart)/checkout DONE!!
 
 POST /(cart)/(checkout)/confirmation DONE
 
 Delivery Address (same as above) DONE
 
 backlog--
-GET /shippingandreturn
+GET /shippingandreturn DONE!!
 
-GET /faq
+GET /faq DONE!
 
-GET /about-us
+GET /about-us DONE!
 
-GET /contact-us
+GET /contact-us DONE!
 
 POST /contact-us/sent
 
 COMPONENTS:
---NavBar PARTIALLY DONE
+--NavBar DONE
 --Account (sign up button / sign in) PARTIALLY DONE
---Shopping Cart PARTIALLY DONE!
---Checkout Page PARTIALLY DONE!
+--Shopping Cart DONE!
+--Checkout Page DONE!
 --Candles DONE!
 --CandleDetails DONE!
---Footer
+--Footer DONE!
 --Account/User Detail Page (Private.jsx) DONE!
 --Order Confirmation DONE!
---Footer (shipping, faq, contact, about us, social media) (BACKLOG)
+--Footer (shipping, faq, contact, about us, social media) DONE!
 
 IO
 Services:
@@ -147,8 +147,6 @@ Model #3: Message (for Contact Us Form) DONE!
 --email: string
 --message: string
 --send button: button
-
-(WORK ON RELATIONSHIPS!)
 
 LINKS:
 Trello/Kanban

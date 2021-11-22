@@ -56,8 +56,8 @@ class CandleDetails extends Component {
         )}
 
         {!isLoading && (
-          <div>
-            <img src={singleCandle.image} />
+          <div className="candle">
+            <img src={singleCandle.image} alt="candle-pic"/>
             <p>{singleCandle.name} </p>
             <p>
               Price: {singleCandle.currency}

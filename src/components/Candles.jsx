@@ -101,7 +101,7 @@ export default class Candles extends Component {
                             </li>
 
                             <Button
-                              variant="outline-success"
+                              variant="outline-secondary"
                               onClick={() => addToCart(oneCandle, 1)}
                             >
                               Add to Cart
