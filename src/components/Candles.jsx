@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import Cart from "./Cart";
 import "../style/candles.css";
 import "../style/general.css";
 import CarouselImage from "./CarouselImage";
 import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
+// import { DataGrid } from "@mui/x-data-grid";
+import Button from "react-bootstrap/Button";
 
 //in front end don't have access to this. backend person does.
 export default class Candles extends Component {
@@ -40,6 +41,18 @@ export default class Candles extends Component {
     return (
       <div>
         <CarouselImage />
+
+        {/* <DataGrid
+          filterModel={{
+            items: [
+              {
+                columnField: "commodity",
+                operatorValue: "contains",
+                value: "",
+              },
+            ],
+          }}
+        /> */}
 
         <div className="card">
           {/* <h2 className="candles-title">CANDLES</h2> */}
@@ -76,7 +89,7 @@ export default class Candles extends Component {
                                 className="link"
                                 to={`/candles/${oneCandle._id}/details`}
                               >
-                              {/* <li> */}
+                                {/* <li> */}
                                 {oneCandle.name}
                                 {/* </li> */}
                               </Link>
@@ -87,9 +100,12 @@ export default class Candles extends Component {
                               {oneCandle.price / 100}
                             </li>
 
-                            <button onClick={() => addToCart(oneCandle, 1)}>
+                            <Button
+                              variant="outline-success"
+                              onClick={() => addToCart(oneCandle, 1)}
+                            >
                               Add to Cart
-                            </button>
+                            </Button>
                           </Card.Text>
                         </Card.Body>
                       </Card>

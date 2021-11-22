@@ -3,11 +3,18 @@
     right: 15%;
     bottom: 1.25rem;
     left: 15%;
-    top: 15%;
+    top: 20%;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     color: #fff;
+    text-shadow: 1px 1px rgb(1, 53, 1);
     text-align: center;
+    line-height: 20px;
+    font-size: large;
+    font-family:Palatino Linotype;
+    /* -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(3, 73, 46); */
 }
 
 .carousel-item {
@@ -20,4 +27,14 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: transform .6s ease-in-out;
+}
+
+.carousel Image {
+    
+}
+
+.carousel {
+    position: relative;
+        border-bottom: 1px solid #333333;
+
 }

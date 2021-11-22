@@ -1,0 +1,9 @@
+.cart-container {
+    text-align: center;
+    margin: 20px 30px 30px 30px;
+    line-height: 40px;
+}
+
+.cart-link {
+    color: black !important;
+}

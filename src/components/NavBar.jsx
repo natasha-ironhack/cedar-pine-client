@@ -17,8 +17,10 @@ import Button from "@material-ui/core/Button";
 // import RemoveIcon from "@material-ui/icons/Remove";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 // import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-// import "../style/general.css";
+import "../style/general.css";
 import "../style/navBar.css";
+import { AiOutlineLogout } from "react-icons/ai";
+
 
 //passing props on line 6
 
@@ -72,6 +74,11 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
                   </NavLink>
                 </Nav.Link>
                 {/* {user.firstName}'s Account */}
+                <NavLink to="/">
+                  {/* <button onClick={() => logoutUser()}> */}
+                    <AiOutlineLogout onClick={() => logoutUser()} />
+                  {/* </button> */}
+                </NavLink>
               </>
             )}
             {!isLoggedIn && (

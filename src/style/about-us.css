@@ -1,0 +1,11 @@
+.aboutUs-container {
+    text-align: center;
+    margin: 20px 40px 30px 40px;
+    padding: 0% 10% 0% 10%;
+    line-height: 25px;
+}
+
+.about-us-pic {
+    width: auto;
+    height: 400px;
+}

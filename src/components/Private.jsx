@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router";
+import "../style/general.css";
+import "../style/private.css";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 class Private extends Component {
   state = {
@@ -33,10 +39,28 @@ class Private extends Component {
     if (!this.props.isLoggedIn) return <Redirect to="/login" />;
 
     return (
-      <div>
-        {isLoading && <h1>...isLoading</h1>}
+      <div className="private-container">
+        {isLoading && (
+          <h1>
+            <Box sx={{ display: "flex" }}>
+              <CircularProgress />
+            </Box>
+          </h1>
+        )}
         {!isLoading && <h4>Welcome Back {user.firstName}</h4> && (
-          <h3>{privateData.message}</h3>
+          <h3>
+            {privateData.message} <br />
+            <br />
+            <Button
+              variant="outline-success"
+              onClick={() => (
+                <Link className="candle-link" to={`/candles/all`}></Link>
+              )}
+            >
+              CANDLE COLLECTION
+            </Button>
+            {/* <Button variant="outline-success">Success</Button>{" "} */}
+          </h3>
         )}
       </div>
     );

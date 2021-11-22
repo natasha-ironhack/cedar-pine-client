@@ -22,16 +22,17 @@ BACKLOG:
 --do social media icons    DONE
 --do footer links    DONE
 --loading symbol     PARTIALLY DONE (make sure all pages have it)
+--on the cart page, fix the lack of space between the message words "candles" and "here".   DONE
+--show logout button
 
 --make green outline for cedar and pine logo
---show logout button
 --make instagram icon bigger
 --fix payment info in url
 --put shopping cart on right side of browser
 —candle filter
 --Make footer stick to bottom of browser
 --—button to fill in delivery address if same as billing address
---on the cart page, fix the lack of space between the message words "candles" and "here".
+
 --hide checkout button until after products are added to cart
 --after adding a candle, redirect back to candle page
 --random number on confirmation page

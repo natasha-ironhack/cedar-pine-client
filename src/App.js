@@ -20,7 +20,7 @@ import Footer from "./components/Footer";
 import Shipping from "./components/Shipping";
 import FAQ from "./components/FAQ";
 import ContactUs from "./components/ContactUs";
-
+import AboutUs from "./components/AboutUs";
 // / import "@coreui/coreui/dist/css/coreui.min.css";
 
 //isLoggedIn is here b/c app.js is the mother component, so
@@ -251,16 +251,18 @@ class App extends Component {
             render={(props) => <Shipping {...props} />}
           />
 
-          <Route
-            exact
-            path="/faq"
-            render={(props) => <FAQ {...props} />}
-          />
+          <Route exact path="/faq" render={(props) => <FAQ {...props} />} />
 
           <Route
             exact
             path="/contact-us"
             render={(props) => <ContactUs {...props} />}
+          />
+
+          <Route
+            exact
+            path="/about-us"
+            render={(props) => <AboutUs {...props} />}
           />
         </Switch>
 

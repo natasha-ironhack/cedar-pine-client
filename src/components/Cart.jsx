@@ -4,6 +4,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import "../style/general.css";
+import "../style/cart.css";
+import Button from "react-bootstrap/Button";
 
 //in front end don't have access to this. backend person does.
 export default class Cart extends Component {
@@ -23,7 +25,7 @@ export default class Cart extends Component {
     // const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
     return (
-      <div>
+      <div className="cart-container">
         <h2 class="cart-title">My Cart</h2>
 
         {isLoading && (
@@ -35,7 +37,7 @@ export default class Cart extends Component {
           <div>
             You have no products in your cart. You can browse our collection of
             candles
-            <Link to={`/candles/all`}>here</Link>.
+            <Link className="cart-link" to={`/candles/all`}> here</Link>.
           </div>
         )}
         {!isLoading &&
@@ -54,10 +56,10 @@ export default class Cart extends Component {
                 Quantity: {quantity}
                 {/* <button onClick={() => this.handleClick(eachProduct)}>Buy</button>
               { itemToBuy && itemToBuy._id === eachProduct._id && <Payment itemToBuy={itemToBuy}/> } */}
-                <button onClick={() => decreaseFromCart(product, 1)}>-</button>
-                <button onClick={() => decreaseFromCart(product, quantity)}>
-                  <DeleteIcon />
-                </button>
+                <Button variant="outline-success" onClick={() => decreaseFromCart(product, 1)}>-</Button>
+                  <DeleteIcon
+                    onClick={() => decreaseFromCart(product, quantity)}
+                  />
                 <hr />
                 {product.currency || "€"}
                 {Object.keys(cart).reduce(
