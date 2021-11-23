@@ -9,10 +9,13 @@
 }
 
 a {
-  color: white !important;
+  /* color: white !important; */
   text-decoration: none !important;
 }
 
 li {
   list-style: none;
+}
+.candleImage {
+  min-width: 300px;
 }

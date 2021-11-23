@@ -10,7 +10,7 @@ import { FiTwitter } from "react-icons/fi";
 export default class Footer extends Component {
   render() {
     return (
-      <div className="container footer">
+      <div id="footer" className="container footer">
         <div className="footer-container">
           <div className="footer-card contact-info">
             <p>Contact Information</p>

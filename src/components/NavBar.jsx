@@ -21,7 +21,6 @@ import "../style/general.css";
 import "../style/navBar.css";
 import { AiOutlineLogout } from "react-icons/ai";
 
-
 //passing props on line 6
 
 const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
@@ -47,12 +46,21 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
+            // className="me-auto my-2 my-lg-0"
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
+            <Form className="d-flex">
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
             <>
-              <div style={{ display: "block", padding: 15 }}>
+              <div style={{ display: "block", padding: 8 }}>
                 <div>
                   <Badge
                     color="secondary"
@@ -94,7 +102,7 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
               </>
             )}
           </Nav>
-          <Form className="d-flex">
+          {/* <Form className="d-flex">
             <FormControl
               type="search"
               placeholder="Search"
@@ -102,7 +110,7 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
