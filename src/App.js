@@ -160,7 +160,7 @@ class App extends Component {
           <Route
             exact
             path="/private"
-            render={(props) => <Private {...props} isLoggedIn={isLoggedIn} />}
+            render={(props) => <Private {...props} user={user} isLoggedIn={isLoggedIn} />}
           />
 
           <Route

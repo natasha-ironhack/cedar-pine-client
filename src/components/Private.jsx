@@ -12,7 +12,6 @@ class Private extends Component {
   state = {
     privateData: null,
     isLoading: true,
-    user: true,
   };
 
   componentDidMount() {
@@ -32,7 +31,8 @@ class Private extends Component {
   }
 
   render() {
-    const { privateData, isLoading, user } = this.state;
+    const { privateData, isLoading } = this.state;
+    const { user } = this.props;
 
     // authorization in the Frontend. Optional if you have backend authorization.
     // Redirect is like a Link but automatically clicked when read
@@ -47,7 +47,8 @@ class Private extends Component {
             </Box>
           </h1>
         )}
-        {!isLoading && <h4>Welcome Back {user.firstName}</h4> && (
+        {!isLoading && <h4>Welcome Back {user.firstName}</h4>}
+        {!isLoading && (
           <h3>
             {privateData.message} <br />
             <br />

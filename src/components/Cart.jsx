@@ -14,10 +14,20 @@ export default class Cart extends Component {
     itemsToBuy: null,
   };
 
+  calculateTotalPrice = (cart) => {
+    return (
+      Object.keys(cart).reduce(
+        (total, item) => total + cart[item].product.price * cart[item].quantity,
+        0
+      ) / 100
+    );
+  };
+
   render() {
     const { isLoading, itemsToBuy } = this.state;
     const { cart, addToCart, decreaseFromCart } = this.props;
-
+    const cartItems = Object.keys(cart);
+    const cartIsEmpty = cartItems.length === 0;
     // const invoiceSubtotal = this.subtotal(rows);
     // const TAX_RATE = 0.07;
 
@@ -27,21 +37,24 @@ export default class Cart extends Component {
     return (
       <div className="cart-container">
         <h2 class="cart-title">My Cart</h2>
-
         {isLoading && (
           <Box sx={{ display: "flex" }}>
             <CircularProgress />
           </Box>
         )}
-        {Object.keys(cart).length === 0 && (
+        {cartIsEmpty && (
           <div>
             You have no products in your cart. You can browse our collection of
             candles
-            <Link className="cart-link" to={`/candles/all`}> here</Link>.
+            <Link className="cart-link" to={`/candles/all`}>
+              {" "}
+              here
+            </Link>
+            .
           </div>
         )}
         {!isLoading &&
-          Object.keys(cart).map((item) => {
+          cartItems.map((item) => {
             const { product, quantity } = cart[item];
             console.log(quantity, "this is quantity");
             return (
@@ -56,21 +69,24 @@ export default class Cart extends Component {
                 Quantity: {quantity}
                 {/* <button onClick={() => this.handleClick(eachProduct)}>Buy</button>
               { itemToBuy && itemToBuy._id === eachProduct._id && <Payment itemToBuy={itemToBuy}/> } */}
-                <Button variant="outline-success" onClick={() => decreaseFromCart(product, 1)}>-</Button>
-                  <DeleteIcon
-                    onClick={() => decreaseFromCart(product, quantity)}
-                  />
-                <hr />
-                {product.currency || "€"}
-                {Object.keys(cart).reduce(
-                  (total, item) =>
-                    total + cart[item].product.price * cart[item].quantity,
-                  0
-                ) / 100}
+                <Button
+                  variant="outline-success"
+                  onClick={() => decreaseFromCart(product, 1)}
+                >
+                  -
+                </Button>
+                <DeleteIcon
+                  onClick={() => decreaseFromCart(product, quantity)}
+                />
               </div>
             );
           })}
-        <Link to="/checkout">Continue to Checkout</Link>
+        {!cartIsEmpty && (
+          <>
+            €{this.calculateTotalPrice(cart)}
+            <Link to="/checkout">Continue to Checkout</Link>
+          </>
+        )}
       </div>
     );
   }
