@@ -40,7 +40,7 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
   };
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg">
       <Container fluid>
         <Navbar.Brand href="/candles/all">Cedar & Pine</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

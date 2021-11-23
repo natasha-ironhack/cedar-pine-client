@@ -17,8 +17,21 @@
     color: black;
 } */
 
+nav {
+  background-color: #252424;
+  color: white;
+}
+
 .me-auto {
   margin-right: 0 !important;
+}
+.navbar-light .navbar-brand {
+  color: white !important;
+}
+.MuiButton-root {
+  color: white !important;
+  background-color: grey !important;
+  border: 1px solid white;
 }
 
 @media (min-width: 992px) {
@@ -82,5 +95,5 @@
   justify-content: end !important;
 }
 #navbarScroll a {
-  color: black;
+  color: white;
 }

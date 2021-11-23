@@ -1,7 +1,11 @@
+hr {
+  height: 42em;
+  width: 3px;
+}
 .login-container {
-    text-align: center;
-    margin: 20px 30px 30px 30px;
-    line-height: 40px;
-    font-family: Palatino Linotype;
-
+  text-align: center;
+  margin: 20px 30px 30px 30px;
+  line-height: 40px;
+  font-family: Palatino Linotype;
+  display: flex;
 }

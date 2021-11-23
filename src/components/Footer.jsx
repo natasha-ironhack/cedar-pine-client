@@ -37,30 +37,22 @@ export default class Footer extends Component {
           </div>
           <div className="footer-card follow">
             <p>Follow Us</p>
-            <ul>
-              <li>
-                <a href={`https://www.facebook.com`}>
-                  <FacebookOutlinedIcon></FacebookOutlinedIcon>
-                </a>
-              </li>
-              <li>
-                {/* <a href={`https://www.facebook.com`}>
-                  <img
-                    className="instagram-pic"
-                    src="/instagram-icon.png"
-                    alt="instagram icon"
-                  />
-                </a> */}
-                <a href={`https://www.instagram.com/`}>
-                  <BsInstagram></BsInstagram>
-                </a>
-              </li>
-              <li>
-                <a href={`https://twitter.com/?lang=en`}>
-                  <FiTwitter></FiTwitter>
-                </a>
-              </li>
-            </ul>
+            <br />
+            <div>
+              <a href={`https://www.facebook.com`}>
+                <FacebookOutlinedIcon></FacebookOutlinedIcon>
+              </a>
+            </div>
+            <div>
+              <a href={`https://www.instagram.com/`}>
+                <BsInstagram></BsInstagram>
+              </a>
+            </div>
+            <div>
+              <a href={`https://twitter.com/?lang=en`}>
+                <FiTwitter></FiTwitter>
+              </a>
+            </div>
           </div>
         </div>
       </div>

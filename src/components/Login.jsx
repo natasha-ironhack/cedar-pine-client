@@ -40,35 +40,41 @@ export default class Login extends Component {
 
     return (
       <div className="login-container">
-        <h3>SIGN IN</h3>
+        <div className="signin-container">
+          <h3>SIGN IN</h3>
+          <form onSubmit={this.handleSubmit}>
+            <input
+              placeholder="Email"
+              type="text"
+              name="email"
+              value={email}
+              onChange={this.handleChange}
+            />
+            <br />
+            <input
+              placeholder="Password"
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleChange}
+            />
 
-        <form onSubmit={this.handleSubmit}>
-          <input
-            placeholder="Email"
-            type="text"
-            name="email"
-            value={email}
-            onChange={this.handleChange}
-          />
-          <br />
-          <input
-            placeholder="Password"
-            type="password"
-            name="password"
-            value={password}
-            onChange={this.handleChange}
-          />
-          <button type="submit">Login</button>
-        </form>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+
         <hr />
-        <h3>SIGN UP</h3>
-        <p>
-          Creating an account has many benefits: seasonal member discounts,
-          access to special candles, and more.
-        </p>
-        <Link to={`/signup`}>
-          <Button variant="outline-success">Create An Account</Button>
-        </Link>
+
+        <div className="signup-container">
+          <h3>SIGN UP</h3>
+          <p className="signup-p">
+            Creating an account has many benefits: seasonal member discounts,
+            access to special candles, and more.
+          </p>
+          <Link to={`/signup`}>
+            <Button variant="outline-success">Create An Account</Button>
+          </Link>
+        </div>
       </div>
     );
   }
