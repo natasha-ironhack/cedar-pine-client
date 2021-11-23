@@ -1,6 +1,6 @@
 #footer {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   max-width: 100%;
   width: 100%;
   display: flex;
@@ -26,4 +26,10 @@
 
 .footer-card {
   text-align: center;
+}
+
+.footer-card .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

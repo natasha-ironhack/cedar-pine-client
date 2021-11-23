@@ -37,18 +37,13 @@ export default class Footer extends Component {
           </div>
           <div className="footer-card follow">
             <p>Follow Us</p>
-            <br />
-            <div>
+            <div className="social-links">
               <a href={`https://www.facebook.com`}>
                 <FacebookOutlinedIcon></FacebookOutlinedIcon>
               </a>
-            </div>
-            <div>
               <a href={`https://www.instagram.com/`}>
                 <BsInstagram></BsInstagram>
               </a>
-            </div>
-            <div>
               <a href={`https://twitter.com/?lang=en`}>
                 <FiTwitter></FiTwitter>
               </a>
