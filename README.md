@@ -24,7 +24,9 @@ BACKLOG:
 --loading symbol PARTIALLY DONE (make sure all pages have it)
 --on the cart page, fix the lack of space between the message words "candles" and "here". DONE
 --show logout button DONE
---after logging in, redirect to user page    DONE
+--after logging in, redirect to user page DONE
+--random number on confirmation page DONE
+--put sign up and log in on same page DONE
 
 --hide checkout button until after products are added to cart
 --make green outline for cedar and pine logo
@@ -35,10 +37,8 @@ BACKLOG:
 --Make footer stick to bottom of browser
 --—button to fill in delivery address if same as billing address
 --after adding a candle, redirect back to candle page
---random number on confirmation page
 --for the edit page: make it so it's okay to only edit
 one part and it changes just that part
---put sign up and log in on same page
 
 FRONT-END CLIENT ROUTES:
 -> / Homepage DONE!!!

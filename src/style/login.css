@@ -1,11 +1,7 @@
-.cart-container {
+.login-container {
     text-align: center;
     margin: 20px 30px 30px 30px;
     line-height: 40px;
     font-family: Palatino Linotype;
 
-}
-
-.cart-link {
-    color: black !important;
 }

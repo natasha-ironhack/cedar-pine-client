@@ -7,8 +7,10 @@ import Col from "react-bootstrap/Col";
 import "../style/candles.css";
 import "../style/general.css";
 import CarouselImage from "./CarouselImage";
+import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-import LinearProgress from "@mui/material/LinearProgress";
+// import Box from "@mui/material/Box";
+// import LinearProgress from "@mui/material/LinearProgress";
 // import { DataGrid } from "@mui/x-data-grid";
 import Button from "react-bootstrap/Button";
 
@@ -53,15 +55,16 @@ export default class Candles extends Component {
             ],
           }}
         /> */}
-
+        
         <div className="card">
-          {/* <h2 className="candles-title">CANDLES</h2> */}
+          <h2 className="candles-title">CANDLES</h2>
+          <hr />
 
           <div className="card-container">
             {isLoading && (
               <h1>
-                <Box sx={{ width: "100%" }}>
-                  <LinearProgress />
+                <Box sx={{ display: "flex" }}>
+                  <CircularProgress />
                 </Box>
               </h1>
             )}

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import authService from "../services/auth-service";
+import "../style/general.css";
+import "../style/sign-up.css";
 
 export default class Signup extends Component {
   state = {
@@ -57,7 +59,8 @@ export default class Signup extends Component {
     const { firstName, lastName, email, password } = this.state;
 
     return (
-      <div>
+      <div className="signup-container">
+      <h3>PERSONAL INFORMATION</h3>
         <form onSubmit={this.handleSubmit}>
           <input
             placeholder="First Name"
@@ -66,6 +69,7 @@ export default class Signup extends Component {
             value={firstName}
             onChange={this.handleChange}
           />
+          <br />
           <input
             placeholder="Last Name"
             type="text"
@@ -73,6 +77,7 @@ export default class Signup extends Component {
             value={lastName}
             onChange={this.handleChange}
           />
+          <br />
           <input
             placeholder="Email"
             type="text"
@@ -80,6 +85,7 @@ export default class Signup extends Component {
             value={email}
             onChange={this.handleChange}
           />
+          <br />
           <input
             placeholder="Password"
             type="text"
@@ -87,6 +93,7 @@ export default class Signup extends Component {
             value={password}
             onChange={this.handleChange}
           />
+          <br />
           <button type="submit" variant="contained">
             Create an Account
           </button>

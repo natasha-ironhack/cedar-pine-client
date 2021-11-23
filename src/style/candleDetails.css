@@ -1,8 +1,21 @@
 .candleDetails-container {
     display: flex;
+    position: relative;
     text-align: center;
     margin: 20px 30px 30px 30px;
     line-height: 40px;
+         font-family:Palatino Linotype;
+
+}
+
+.candle {
+    display: flex;
+    position: relative;
+    text-align: center;
+    margin: 20px 30px 30px 30px;
+    line-height: 40px;
+    font-family: Palatino Linotype;
+
 }
 
 /* NOTE: Was looking at bath and body works individual candle detail
