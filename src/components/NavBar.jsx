@@ -26,7 +26,9 @@ import { AiOutlineLogout } from "react-icons/ai";
 const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
   const logoutUser = () => {
     authService.logout().then(() => {
-      setUser(null, false);
+      setUser(null, false).then(() => {
+        this.props.history.push("/home");
+      });
     });
   };
 
@@ -40,9 +42,17 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
   };
 
   return (
+        <div className="navBar">
     <Navbar expand="lg">
       <Container fluid>
-        <Navbar.Brand className="navBar-logo" href="/home">Cedar & Pine</Navbar.Brand>
+        <Navbar.Brand className="navBar-logo" href="/home">
+          Cedar & Pine
+        </Navbar.Brand>
+        <div className="main-nav-links">
+        <NavLink to="/candles/all">Candles</NavLink>
+        <NavLink to="/waxmelts">Wax Melts</NavLink>
+        <NavLink to="/diffusers">Diffusers</NavLink>
+        </div>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -114,6 +124,8 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+        </div>
+
   );
 };
 

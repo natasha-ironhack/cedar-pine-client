@@ -1,1 +1,15 @@
+.create-account-container {
+    text-align: center;
+    margin: 20px 200px 30px 200px;
+    line-height: 30px;
+    PADDING: 5PX;
+    font-family: Palatino Linotype;
+}
 
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+        margin: 20px 200px 30px 200px;
+
+}

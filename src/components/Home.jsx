@@ -16,12 +16,15 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
-
 //in front end don't have access to this. backend person does.
 export default class Home extends Component {
   state = {
     isLoading: true,
   };
+
+  // imageClick( {
+  //   .then
+  // })
 
   componentDidMount() {
     //console.log(process.env.REACT_APP_SERVER_API);
@@ -34,11 +37,17 @@ export default class Home extends Component {
 
     return (
       <div className="home-container">
-        <div className="home-navbar2">
+        {/* <div className="home-navbar2">
           <NavLink to="/candles/all">Candles</NavLink>
           <NavLink to="/waxmelts">Wax Melts</NavLink>
           <NavLink to="/diffusers">Diffusers</NavLink>
-        </div>
+        </div> */}
+        <p>
+          *Exclusive: Click{" "}
+          <a href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}>here</a> to
+          get 90% off your next purchase.
+        </p>
+
         <div>
           <CarouselImage />
 
@@ -61,7 +70,7 @@ export default class Home extends Component {
                   </h3>
                   <hr />
                   <h5>
-                    Whether you are looking for a classic lavendar candle, a
+                    Whether you are looking for a classic lavender candle, a
                     seasonal candle, or want to try your hand at wax melts, you
                     will find it all with us.
                   </h5>
@@ -75,19 +84,27 @@ export default class Home extends Component {
                         <Image src="/how-to-candle.jpg" rounded />
                       </Col> */}
                         <Col xs={6} md={4}>
-                          <Image src="/how-to-candle.jpg" thumbnail />
+                          <Link to="/candles/all">
+                            <Image src="/candle44.jpg" thumbnail />
+                          </Link>
                         </Col>
 
                         <Col xs={6} md={4}>
-                          <Image src="/how-to-candle.jpg" thumbnail />
+                          <Link to="/about-us">
+                            <Image src="/about-us-home-pic.jpg" thumbnail />
+                          </Link>
+                          {/* <Image src="/about-us-home-pic.jpg" thumbnail /> */}
                         </Col>
                         <Col xs={6} md={4}>
-                          <Image
-                            src="/how-to-candle.jpg"
-                            label="test"
-                            thumbnail
-                          />
-                          <div class="text-on-image3">
+                          <a href="https://www.candlescience.com/learning/how-to-make-a-soy-candle/">
+                            <Image
+                              src="/how-to-candle1.jpg"
+                              label="test"
+                              thumbnail
+                            />{" "}
+                          </a>
+
+                          {/* <div class="text-on-image3">
                             <h3>
                               {" "}
                               Learn how to make candles
@@ -97,8 +114,9 @@ export default class Home extends Component {
                               </Link>
                               here!{" "}
                             </h3>
-                          </div>
+                          </div> */}
                         </Col>
+                        <br />
                       </Row>
                     </Container>
                   </div>

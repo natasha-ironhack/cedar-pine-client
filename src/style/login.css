@@ -9,7 +9,7 @@
 }
 .signup-container {
   text-align: center;
-  margin: 20px 30px 30px 30px;
+  margin: 20px 50px 30px 50px;
   line-height: 40px;
   font-family: Palatino Linotype;
   max-width: 25em;
@@ -26,5 +26,6 @@
 
 .login-form {
   width: 22em;
-  display: flex;
+  margin: 30px 30px 30px 30px;
+
 }

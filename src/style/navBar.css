@@ -16,6 +16,16 @@
 .container-fluid {
     color: black;
 } */
+/* .main-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+} */
+
+/* .container-fluid .main-nav-links {
+display: flex;
+justify-content: space-between;
+} */
 
 nav {
   background-color: #252424;

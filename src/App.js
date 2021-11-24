@@ -1,8 +1,7 @@
 import { Component } from "react";
-import { Route, Switch } from "react-router";
+import { Route, Switch, Redirect } from "react-router";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import NavBar2 from "./components/NavBar2";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import authService from "./services/auth-service";
@@ -148,6 +147,15 @@ class App extends Component {
         />
 
         <Switch>
+          {/* <Route path={process.env.PUBLIC_URL} components={App}> */}
+          {/* <Route path={process.env.REACT_APP_API_HOST} components={Home} /> */}
+
+          {/* <Router basename={"/home"}>
+            <Route path="/home" component={Home} />
+          </Router> */}
+
+          <Redirect exact from="/" to="/home" />
+
           <Route
             exact
             path="/home"

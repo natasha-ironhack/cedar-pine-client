@@ -2,6 +2,12 @@
    background-color: white !important;
 }
 
+.home-container p{
+    text-align: center;
+    margin: 10px;
+    font-family: Palatino Linotype;
+}
+
 .card-container {
        background-color: white !important;
 
@@ -28,6 +34,8 @@
 
 .home-links-container {
     position: relative;
+    padding-top: 20px;
+    padding-bottom: 80px;
 }
 
 .text-on-image3 {
