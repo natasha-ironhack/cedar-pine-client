@@ -44,10 +44,9 @@ export default class Confirmation extends Component {
           <div className="confirmation-container">
             <h3>CONFIRMATION MESSAGE</h3>
             <h4>
-              Your purchase was successful! 
-              <br /> 
-              Please check your inbox for the
-              confirmation email. 
+              Your purchase was successful!
+              <br />
+              Please check your inbox for your confirmation email.
               <br />
               ORDER NUMBER: #{this.state.random}
             </h4>
