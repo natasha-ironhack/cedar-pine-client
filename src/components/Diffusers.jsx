@@ -3,14 +3,13 @@ import React from "react";
 // import { Link } from "react-router-dom";
 // import Footer from "./components/Footer";
 import "../style/general.css";
-import "../style/shipping.css";
+import "../style/diffusers.css";
 
 function Shipping() {
   return (
-    <div className="shipping-container">
-      <h3>SHIPPING</h3>
-      <p>The cost for shipping within the Netherlands is €4.99.</p>
-      <p>For Belgium and Germany, the cost of shipping is €8.99.</p>
+    <div className="diffuser-container">
+      <h3>Diffusers</h3>
+      <p>Coming Soon!</p>
     </div>
   );
 }

@@ -97,3 +97,7 @@ nav {
 #navbarScroll a {
   color: white;
 }
+
+.navBar-logo {
+  text-stroke: 2px green;
+}

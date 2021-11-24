@@ -47,19 +47,14 @@ class Private extends Component {
             </Box>
           </h1>
         )}
-        {!isLoading && <h4>Welcome Back {user.firstName}</h4>}
+        {!isLoading && <h2>Your Account</h2>}
         {!isLoading && (
           <h3>
-            {privateData.message} <br />
+            Welcome back {user.firstName}! {privateData.message} <br />
             <br />
-            <Button
-              variant="outline-secondary"
-              onClick={() => (
-                <Link className="candle-link" to={`/candles/all`}></Link>
-              )}
-            >
-              CANDLE COLLECTION
-            </Button>
+            <Link to={`/candles/all`}>
+              <Button variant="outline-success">CANDLE COLLECTION</Button>
+            </Link>
             {/* <Button variant="outline-success">Success</Button>{" "} */}
           </h3>
         )}

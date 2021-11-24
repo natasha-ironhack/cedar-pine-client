@@ -13,6 +13,7 @@ import Box from "@mui/material/Box";
 // import LinearProgress from "@mui/material/LinearProgress";
 // import { DataGrid } from "@mui/x-data-grid";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 //in front end don't have access to this. backend person does.
 export default class Candles extends Component {
@@ -55,10 +56,29 @@ export default class Candles extends Component {
             ],
           }}
         /> */}
-        
+
         <div className="card">
           <h2 className="candles-title">CANDLES</h2>
           <hr />
+
+          <Row className="g-2">
+            <Col md>
+              <Form.Select aria-label="Floating label select example">
+                <option>Filter</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </Form.Select>
+            </Col>
+            <Col md>
+              <Form.Select aria-label="Floating label select example">
+                <option>Sort</option>
+                <option value="1">Price: Low to High</option>
+                <option value="2">Price: High to Low</option>
+                <option value="3">Availability</option>
+              </Form.Select>
+            </Col>
+          </Row>
 
           <div className="card-container">
             {isLoading && (

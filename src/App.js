@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Route, Switch } from "react-router";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import NavBar2 from "./components/NavBar2";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import authService from "./services/auth-service";
@@ -21,6 +22,11 @@ import Shipping from "./components/Shipping";
 import FAQ from "./components/FAQ";
 import ContactUs from "./components/ContactUs";
 import AboutUs from "./components/AboutUs";
+import ContactConfirmation from "./components/ContactConfirmation";
+import Home from "./components/Home";
+import WaxMelts from "./components/WaxMelts";
+import Diffusers from "./components/Diffusers";
+
 // / import "@coreui/coreui/dist/css/coreui.min.css";
 
 //isLoggedIn is here b/c app.js is the mother component, so
@@ -60,14 +66,12 @@ class App extends Component {
     }
   };
 
-  // delete newProps.b;
-
   addToCart = (product, quantity) => {
     // const isProductInsideCart = this.state.cart.some(
     //   (item) => item.product._id === product._id
     // );
     if (this.state.cart[product._id]) {
-      console.log("is alreday inside");
+      console.log("is already inside");
       const productInfo = this.state.cart[product._id];
       this.setState({
         cart: {
@@ -146,6 +150,12 @@ class App extends Component {
         <Switch>
           <Route
             exact
+            path="/home"
+            render={(props) => <Home {...props} setUser={this.setUser} />}
+          />
+
+          <Route
+            exact
             path="/signup"
             render={(props) => <SignUp {...props} setUser={this.setUser} />}
           />
@@ -160,7 +170,9 @@ class App extends Component {
           <Route
             exact
             path="/private"
-            render={(props) => <Private {...props} user={user} isLoggedIn={isLoggedIn} />}
+            render={(props) => (
+              <Private {...props} user={user} isLoggedIn={isLoggedIn} />
+            )}
           />
 
           <Route
@@ -263,6 +275,24 @@ class App extends Component {
             exact
             path="/about-us"
             render={(props) => <AboutUs {...props} />}
+          />
+
+          <Route
+            exact
+            path="/contact-confirmation"
+            render={(props) => <ContactConfirmation {...props} />}
+          />
+
+          <Route
+            exact
+            path="/waxmelts"
+            render={(props) => <WaxMelts {...props} />}
+          />
+
+          <Route
+            exact
+            path="/diffusers"
+            render={(props) => <Diffusers {...props} />}
           />
         </Switch>
 

@@ -1,6 +1,8 @@
 .private-container {
     text-align: center;
-    margin: 5%;
-        font-family: Palatino Linotype;
+    margin: 20px 200px 30px 200px;
+    padding: 10px;
+    line-height: 40px;
+    font-family: Palatino Linotype;
 
 }

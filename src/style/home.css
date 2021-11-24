@@ -1,0 +1,38 @@
+.home-container {
+   background-color: white !important;
+}
+
+.card-container {
+       background-color: white !important;
+
+}
+
+.home-navbar2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home-navbar2 a {
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+}
+.home-introduction-container {
+        text-align: center;
+        margin: 20px 250px 30px 250px;
+        line-height: 20px;
+        PADDING: 5PX;
+        font-family: Palatino Linotype;
+        color: black;
+}
+
+.home-links-container {
+    position: relative;
+}
+
+.text-on-image3 {
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 15%;
+}

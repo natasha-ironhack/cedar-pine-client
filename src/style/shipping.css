@@ -1,5 +1,13 @@
 .shipping-container {
     text-align: center;
-     margin: 20px 30px 30px 30px;
-     line-height: 40px;
+     margin: 20px 200px 30px 200px;
+     line-height: 20px;
+     PADDING: 5PX;
+     font-family: Palatino Linotype;
+}
+
+.shipping-container p {
+    text-align: center;
+    margin-top: 20px;
+
 }

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "../style/general.css";
+import "../style/candleEdit.css";
 
 export class CandleEdit extends Component {
   state = {
@@ -60,53 +62,53 @@ export class CandleEdit extends Component {
     const { image, name, price, weight, quantity, description } = this.state;
 
     return (
-      <div>
+      <div className="candleedit-container">
         <h2>Candle Edit</h2>
-
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="image">Image</label>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="image"
-            value={image}
-          />
+          {image && <img src={image} alt="imagePic" />}
+          <input onChange={this.handleFileUpload} type="file" name="image" />
           <br />
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Name: </label>
           <input
             onChange={this.handleChange}
+            placeholder="Japanese Cherry Blossoms"
             type="text"
             name="name"
             value={name}
           />
           <br />
-          <label htmlFor="price">Price</label>
+          <label htmlFor="price">Price: </label>
           <input
             onChange={this.handleChange}
+            placeholder="1300 for €13.00"
             type="text"
             name="price"
             value={price}
           />
           <br />
-          <label htmlFor="weight">Weight</label>
+          <label htmlFor="weight">Weight: </label>
           <input
             onChange={this.handleChange}
             type="text"
+            placeholder="400g"
             name="weight"
             value={weight}
           />
           <br />
-          <label htmlFor="quantity">Quantity</label>
+          <label htmlFor="quantity">Quantity: </label>
           <input
             onChange={this.handleChange}
+            placeholder="25"
             type="text"
             name="quantity"
             value={quantity}
           />
           <br />
-          <label htmlFor="description">Description</label>
+          <label htmlFor="description">Description: </label>
           <input
             onChange={this.handleChange}
+            placeholder="Enjoy the smell of..."
             type="text"
             name="description"
             value={description}

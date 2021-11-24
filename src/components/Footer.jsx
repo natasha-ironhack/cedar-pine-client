@@ -13,17 +13,20 @@ export default class Footer extends Component {
       <div id="footer" className="container footer">
         <div className="footer-container">
           <div className="footer-card contact-info">
-            <p>Contact Information</p>
             <ul>
+              <p>Contact Information</p>
+
               <li>Number +31 6 8014 3228</li>
               <li>Email: cedar&pine@live.nl</li>
-              <li>Address: Oude Koeien 49C, 5223KD Vught, Nederland</li>
+              <li>Address: Oude Koeien 49C, </li>
+              <li>5223KD Vught, Nederland</li>
             </ul>
           </div>
 
           <div className="footer-card customer-service">
-            <p>Customer Service </p>
             <ul>
+              <p>Customer Service </p>
+
               <li>
                 <Link to="/shipping">Shipping & Return</Link>
               </li>

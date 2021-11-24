@@ -67,8 +67,8 @@ export class AddForm extends Component {
           withCredentials: true,
         }
       )
-      .then((data) => {
-        this.props.history.push("/");
+      .then(() => {
+        this.props.history.push("/candles/all");
       })
       .catch((err) => {
         this.props.history.push("/500");

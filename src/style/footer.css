@@ -10,6 +10,7 @@
   background: rgb(37, 36, 36);
   font-family: Palatino Linotype;
   color: white;
+  padding: 20px;
 }
 
 #footer a {
@@ -32,4 +33,5 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-block: 5px;
 }
