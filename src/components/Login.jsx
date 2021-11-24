@@ -39,10 +39,10 @@ export default class Login extends Component {
     const { email, password } = this.state;
 
     return (
-      <div className="login-container">
+      <div className="login-container page-height">
         <div className="signin-container">
           <h3>SIGN IN</h3>
-          <form onSubmit={this.handleSubmit}>
+          <form className="login-form" onSubmit={this.handleSubmit}>
             <input
               placeholder="Email"
               type="text"
@@ -59,11 +59,13 @@ export default class Login extends Component {
               onChange={this.handleChange}
             />
 
-            <button type="submit">Login</button>
+            <button className="general-button" type="submit">
+              Login
+            </button>
           </form>
         </div>
 
-        <hr />
+        <hr className="hr-vertical" />
 
         <div className="signup-container">
           <h3>SIGN UP</h3>
@@ -72,7 +74,9 @@ export default class Login extends Component {
             access to special candles, and more.
           </p>
           <Link to={`/signup`}>
-            <Button variant="outline-success">Create An Account</Button>
+            <button className="general-button" variant="outline-success">
+              Create An Account
+            </button>
           </Link>
         </div>
       </div>

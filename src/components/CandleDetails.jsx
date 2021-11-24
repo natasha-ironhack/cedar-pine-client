@@ -45,8 +45,7 @@ class CandleDetails extends Component {
     const { isOwner, addToCart } = this.props;
 
     return (
-      <div className="candleDetails-container">
-        <h2>Candle Details</h2>
+      <div className="candleDetails-container page-height">
         {isLoading && (
           <h1>
             <Box sx={{ display: "flex" }}>
@@ -56,30 +55,30 @@ class CandleDetails extends Component {
         )}
 
         {!isLoading && (
-          <div className="candle">
-            <img src={singleCandle.image} alt="candle-pic"/>
-            <p>{singleCandle.name} </p>
-            <p>
-              Price: {singleCandle.currency}
-              {singleCandle.price / 100}
-            </p>
-            <p>Weight: {singleCandle.weight}</p>
-            <p>Amount on Stock: {singleCandle.quantity}</p>
-            <p>Description: {singleCandle.description}</p>
+          <div className="candles-details">
+            <div className="candle-img">
+              <img src={singleCandle.image} alt="candle-pic" />
+            </div>
+            <div className="candle-description">
+              <h2>Candle Details</h2>
+              <p>{singleCandle.name} </p>
+              <p>
+                Price: {singleCandle.currency}
+                {singleCandle.price / 100}
+              </p>
+              <p>Weight: {singleCandle.weight}</p>
+              <p>Amount on Stock: {singleCandle.quantity}</p>
+              <hr className="hr" />
+              <p>Description: {singleCandle.description}</p>
+              <Button
+                className="details-btn"
+                variant="outline-success"
+                onClick={() => addToCart(singleCandle, 1)}
+              >
+                ADD TO CART
+              </Button>
+            </div>
 
-            <Button
-              variant="outline-success"
-              onClick={() => addToCart(singleCandle, 1)}
-            >
-              ADD TO CART
-            </Button>
-
-            {/* <button onClick={this.handleDelete}>DELETE</button>
-            <Link to={`/candles/${singleCandle._id}/edit`}>
-              <button>EDIT</button>
-            </Link> */}
-            {/* both button links are the same, just diff. ways of 
-            doin it */}
             {isOwner && (
               <div>
                 <Button variant="outline-success" onClick={this.handleDelete}>

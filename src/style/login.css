@@ -1,11 +1,30 @@
-hr {
-  height: 42em;
-  width: 3px;
-}
 .login-container {
   text-align: center;
   margin: 20px 30px 30px 30px;
   line-height: 40px;
   font-family: Palatino Linotype;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.signup-container {
+  text-align: center;
+  margin: 20px 30px 30px 30px;
+  line-height: 40px;
+  font-family: Palatino Linotype;
+  max-width: 25em;
+  width: 29em;
+}
+.signin-container {
+  text-align: center;
+  margin: 20px 30px 30px 30px;
+  line-height: 40px;
+  font-family: Palatino Linotype;
+  max-width: 25em;
+  width: 29em;
+}
+
+.login-form {
+  width: 22em;
   display: flex;
 }

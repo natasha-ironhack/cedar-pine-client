@@ -59,10 +59,11 @@ export default class Signup extends Component {
     const { firstName, lastName, email, password } = this.state;
 
     return (
-      <div className="signup-container">
-      <h3>PERSONAL INFORMATION</h3>
-        <form onSubmit={this.handleSubmit}>
+      <div className="create-account-container">
+        <h3>PERSONAL INFORMATION</h3>
+        <form className="signup-form" onSubmit={this.handleSubmit}>
           <input
+            className="input"
             placeholder="First Name"
             type="text"
             name="firstName"
@@ -71,6 +72,7 @@ export default class Signup extends Component {
           />
           <br />
           <input
+            className="input"
             placeholder="Last Name"
             type="text"
             name="lastName"
@@ -79,6 +81,7 @@ export default class Signup extends Component {
           />
           <br />
           <input
+            className="input"
             placeholder="Email"
             type="text"
             name="email"
@@ -87,6 +90,7 @@ export default class Signup extends Component {
           />
           <br />
           <input
+            className="input"
             placeholder="Password"
             type="text"
             name="password"

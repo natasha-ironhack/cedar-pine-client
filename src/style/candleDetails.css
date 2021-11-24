@@ -1,21 +1,35 @@
 .candleDetails-container {
-    display: flex;
-    position: relative;
-    text-align: center;
-    margin: 20px 30px 30px 30px;
-    line-height: 40px;
-         font-family:Palatino Linotype;
-
+  display: flex;
+  position: relative;
+  text-align: center;
+  margin: 20px 30px 30px 30px;
+  line-height: 40px;
+  font-family: Palatino Linotype;
 }
 
 .candle {
-    display: flex;
-    position: relative;
-    text-align: center;
-    margin: 20px 30px 30px 30px;
-    line-height: 40px;
-    font-family: Palatino Linotype;
+  display: flex;
+  position: relative;
+  text-align: center;
+  margin: 20px 30px 30px 30px;
+  line-height: 40px;
+  font-family: Palatino Linotype;
+}
 
+.candles-details {
+  align-content: center;
+  display: flex;
+}
+
+.candle-img img {
+  max-width: 95%;
+  object-fit: contain;
+  /*! text-align: center; */
+}
+
+.candle-description {
+  /*! margin: 11px; */
+  line-height: 30px;
 }
 
 /* NOTE: Was looking at bath and body works individual candle detail

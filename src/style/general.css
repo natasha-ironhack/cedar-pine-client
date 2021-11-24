@@ -19,3 +19,19 @@ li {
 .candleImage {
   min-width: 300px;
 }
+
+.page-height {
+  height: 70vh;
+}
+
+.hr {
+  width: 42em;
+}
+
+.hr-vertical {
+  height: 32em !important;
+  width: 1px !important;
+}
+
+.general-button {
+}
