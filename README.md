@@ -31,21 +31,22 @@ BACKLOG:
 --Make footer stick to bottom of browser   DONE-ish
 --hide checkout button until after products are added to cart   DONE
 --after adding a candle, redirect back to candle page    DONE
+----fix payment info in url    DONE
+--for the edit page: make it so it's okay to only edit
+one part and it changes just that part    DONE
 
 --—candle filter    PARTIALLY DONE
 
 --make green outline for cedar and pine logo
---fix payment info in url
 --—button to fill in delivery address if same as billing address
---for the edit page: make it so it's okay to only edit
-one part and it changes just that part
+
 
 FRONT-END CLIENT ROUTES:
 -> / Homepage DONE!!!
 -> /candles/:id | candles detail page DONE!!!!
 -> /user | user profile DONE!!!!
 -> /cart (NOTE: i think it's /auth/cart?) DONE!!!!!
--> /checkOut PARTIALLY DONE
+-> /checkOut  DONE
 ->/confirmation DONE!
 
 -> 404
@@ -92,7 +93,7 @@ POST /contact-us/sent
 
 COMPONENTS:
 --NavBar DONE
---Account (sign up button / sign in) PARTIALLY DONE
+--Account (sign up button / sign in)  DONE
 --Shopping Cart DONE!
 --Checkout Page DONE!
 --Candles DONE!

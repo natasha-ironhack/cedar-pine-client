@@ -94,11 +94,11 @@ export default class Candles extends Component {
               </h1>
             )}
             {isOwner && (
-              <Link to={`/candles/create`}>
+              <Link to={`/candles/create`} className="candle-create-button">
                 <button>CREATE</button>
               </Link>
             )}
-
+            <br />
             {!isLoading &&
               listOfCandles.map((oneCandle) => {
                 return (

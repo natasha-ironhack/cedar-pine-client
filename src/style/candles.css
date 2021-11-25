@@ -10,6 +10,12 @@
    font-family: Palatino Linotype;
 }
 
+.candle-create-button {
+  display: flex;
+  justify-content: center;
+
+}
+
 .card-container {
   display: flex;
   /*! max-width: 92%; */
