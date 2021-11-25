@@ -1,54 +1,46 @@
 .home-container {
-   background-color: white !important;
+  background-color: white;
 }
 
-.home-container p{
-    text-align: center;
-    margin: 10px;
-    font-family: Palatino Linotype;
-}
-
-.newsletter {
-    display: flex;
-    justify-content: center;
-        /* text-align: center; */
-        font-family: Palatino Linotype;
-
+.home-container p {
+  text-align: center;
+  margin: 10px;
 }
 
 .card-container {
-       background-color: white !important;
-
+  background-color: white;
 }
 
-.home-navbar2 {
-    display: flex;
-    justify-content: space-evenly;
+.newsletter {
+  display: flex;
+  justify-content: center;
 }
 
-.home-navbar2 a {
-    display: flex;
-    justify-content: space-evenly;
-    color: black;
-}
 .home-introduction-container {
-        text-align: center;
-        margin: 20px 250px 30px 250px;
-        line-height: 20px;
-        PADDING: 5PX;
-        font-family: Palatino Linotype;
-        color: black;
+  text-align: center;
+  margin: 20px 250px 30px 250px;
+  line-height: 20px;
+  padding: 5px;
 }
 
 .home-links-container {
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 60px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 60px;
 }
 
-.text-on-image3 {
-    position: absolute;
-    right: 50%;
-    left: 50%;
-    bottom: 15%;
+.head-image img {
+  transition: all 0.2s ease-in-out;
+}
+.head-image img:hover {
+  transform: scale(1.1);
+}
+
+.home-introduction-container h3 {
+  font-size: 31px;
+}
+
+.home-introduction-container h4 {
+  font-size: 23px;
+  font-weight: lighter;
 }

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../style/home.css";
-// import "../style/general.css";
+import "../style/general.css";
+//
 import CarouselImage from "./CarouselImage";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
@@ -16,7 +17,6 @@ export default class Home extends Component {
   state = {
     isLoading: true,
   };
-
 
   componentDidMount() {
     //console.log(process.env.REACT_APP_SERVER_API);
@@ -48,19 +48,19 @@ export default class Home extends Component {
             )}
             {!isLoading && (
               <div>
-                <div className="home-introduction-container">
-                  <h5>Cedar & Pine</h5>
+                <div className="home-introduction-container ">
+                  <h3>Cedar & Pine</h3>
                   <hr />
                   <h3>
                     Cedar & Pine is an artisanal candle store located within the
                     Netherlands.
                   </h3>
                   <hr />
-                  <h5>
+                  <h4>
                     Whether you are looking for a classic lavender candle, a
                     seasonal candle, or want to try your hand at wax melts, you
                     will find it all with us.
-                  </h5>
+                  </h4>
                   <hr />
                 </div>
                 <div className="home-links-container">
@@ -94,11 +94,9 @@ export default class Home extends Component {
                         <br />
                       </Row>
                     </Container>
-
                   </div>
                 </div>
-                                    <Newsletter />
-
+                <Newsletter />
               </div>
             )}
           </div>

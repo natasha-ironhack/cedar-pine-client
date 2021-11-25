@@ -35,3 +35,10 @@ li {
 
 .general-button {
 }
+
+p,
+h2,
+h3,
+li {
+  font-family: Palatino Linotype;
+}
