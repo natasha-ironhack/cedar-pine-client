@@ -7,14 +7,9 @@ import "../style/home.css";
 import CarouselImage from "./CarouselImage";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-// import Box from "@mui/material/Box";
-// import LinearProgress from "@mui/material/LinearProgress";
-// import { DataGrid } from "@mui/x-data-grid";
-// import Button from "react-bootstrap/Button";
-// import Form from "react-bootstrap/Form";
-import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
+import Newsletter from "./Newsletter";
 
 //in front end don't have access to this. backend person does.
 export default class Home extends Component {
@@ -22,9 +17,6 @@ export default class Home extends Component {
     isLoading: true,
   };
 
-  // imageClick( {
-  //   .then
-  // })
 
   componentDidMount() {
     //console.log(process.env.REACT_APP_SERVER_API);
@@ -37,11 +29,6 @@ export default class Home extends Component {
 
     return (
       <div className="home-container">
-        {/* <div className="home-navbar2">
-          <NavLink to="/candles/all">Candles</NavLink>
-          <NavLink to="/waxmelts">Wax Melts</NavLink>
-          <NavLink to="/diffusers">Diffusers</NavLink>
-        </div> */}
         <p>
           *Exclusive: Click{" "}
           <a href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}>here</a> to
@@ -103,44 +90,15 @@ export default class Home extends Component {
                               thumbnail
                             />{" "}
                           </a>
-
-                          {/* <div class="text-on-image3">
-                            <h3>
-                              {" "}
-                              Learn how to make candles
-                              <Link to="https://www.candlescience.com/learning/how-to-make-a-soy-candle/">
-                                {" "}
-                                here.
-                              </Link>
-                              here!{" "}
-                            </h3>
-                          </div> */}
                         </Col>
                         <br />
                       </Row>
                     </Container>
+
                   </div>
                 </div>
+                                    <Newsletter />
 
-                {/* <div className="head-text">
-                    <div className="head-image">
-                      <img
-                        src={require("../ images / Header.png")}
-                        alt="Freedom Blog"
-                      />
-                    </div>
-                    <div class="text-on-image">
-                      <h3> Welcome to my Blog </h3>
-                      <p> FREEEEDOM </p>
-                    </div>
-                  </div> */}
-
-                {/* <img
-                    className="d-block w-100"
-                    src="/how-to-candle.jpg"
-                    alt="how-to-candle-pic"
-                    fluid
-                  /> */}
               </div>
             )}
           </div>

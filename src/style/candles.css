@@ -4,6 +4,12 @@
   width: 38% !important;
 } */
 
+.candle-page-container p {
+   text-align: center;
+   margin: 10px;
+   font-family: Palatino Linotype;
+}
+
 .card-container {
   display: flex;
   /*! max-width: 92%; */

@@ -25,6 +25,7 @@ import ContactConfirmation from "./components/ContactConfirmation";
 import Home from "./components/Home";
 import WaxMelts from "./components/WaxMelts";
 import Diffusers from "./components/Diffusers";
+// import Newsletter from "./components/Newsletter";
 
 // / import "@coreui/coreui/dist/css/coreui.min.css";
 
@@ -303,6 +304,8 @@ class App extends Component {
             render={(props) => <Diffusers {...props} />}
           />
         </Switch>
+
+        {/* <Newsletter /> */}
 
         <Footer />
       </div>

@@ -27,16 +27,16 @@ BACKLOG:
 --after logging in, redirect to user page DONE
 --random number on confirmation page DONE
 --put sign up and log in on same page DONE
+--put shopping cart on right side of browser   DONE
+--Make footer stick to bottom of browser   DONE-ish
+--hide checkout button until after products are added to cart   DONE
+--after adding a candle, redirect back to candle page    DONE
 
---hide checkout button until after products are added to cart
+--—candle filter    PARTIALLY DONE
+
 --make green outline for cedar and pine logo
---make instagram icon bigger
 --fix payment info in url
---put shopping cart on right side of browser
-—candle filter
---Make footer stick to bottom of browser
 --—button to fill in delivery address if same as billing address
---after adding a candle, redirect back to candle page
 --for the edit page: make it so it's okay to only edit
 one part and it changes just that part
 

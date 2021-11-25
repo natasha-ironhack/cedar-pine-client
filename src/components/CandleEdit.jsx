@@ -40,10 +40,11 @@ export class CandleEdit extends Component {
       });
   };
 
+  // below was previously process.env.REACT_APP_SERVER_API
   componentDidMount() {
     axios
       .get(
-        `${process.env.REACT_APP_SERVER_API}/candles/${this.props.match.params.id}`
+        `${process.env.REACT_APP_API_HOST}/candles/${this.props.match.params.id}`
       )
       .then((response) => {
         this.setState({

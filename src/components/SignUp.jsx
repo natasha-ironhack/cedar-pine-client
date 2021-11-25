@@ -39,6 +39,9 @@ export default class Signup extends Component {
         //(((when u get response of signup, saying we want to use that response and put
         //it on app.js, the mother component. and want to put that info on that state
         //b/c then all my comps might know about the user?)))
+      })
+      .then(() => {
+        this.props.history.push("/private");
       });
   };
   //other method for authService.signup:

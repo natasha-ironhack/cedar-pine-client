@@ -6,6 +6,8 @@ import Box from "@mui/material/Box";
 import "../style/general.css";
 import "../style/cart.css";
 import Button from "react-bootstrap/Button";
+import Table from "react-bootstrap/Table";
+import Payment from "./Payment";
 
 //in front end don't have access to this. backend person does.
 export default class Cart extends Component {
@@ -28,11 +30,6 @@ export default class Cart extends Component {
     const { cart, addToCart, decreaseFromCart } = this.props;
     const cartItems = Object.keys(cart);
     const cartIsEmpty = cartItems.length === 0;
-    // const invoiceSubtotal = this.subtotal(rows);
-    // const TAX_RATE = 0.07;
-
-    // const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-    // const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
     return (
       <div className="cart-container">
@@ -56,35 +53,62 @@ export default class Cart extends Component {
         {!isLoading &&
           cartItems.map((item) => {
             const { product, quantity } = cart[item];
-            console.log(quantity, "this is quantity");
             return (
               <div key={product._id}>
-                {/* do we need several LINK to show the number of candles chosen by the clien??? */}
-                <Link to={`/candles/${product._id}/details`}>
-                  Name: {product.name}
-                </Link>
-                Price: {product.currency || "€"}
-                {product.price / 100}
-                <button onClick={() => addToCart(product, 1)}>+</button>
-                Quantity: {quantity}
-                {/* <button onClick={() => this.handleClick(eachProduct)}>Buy</button>
-              { itemToBuy && itemToBuy._id === eachProduct._id && <Payment itemToBuy={itemToBuy}/> } */}
-                <Button
-                  variant="outline-success"
-                  onClick={() => decreaseFromCart(product, 1)}
-                >
-                  -
-                </Button>
-                <DeleteIcon
-                  onClick={() => decreaseFromCart(product, quantity)}
-                />
+                <Table striped bordered hover>
+                  <thead>
+                    <tr>
+                      {/* <th>#</th> */}
+                      <th>Product</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <Link to={`/candles/${product._id}/details`}>
+                          {product.name}
+                        </Link>
+                      </td>
+                      <td>
+                        {product.currency || "€"}
+                        {product.price / 100}
+                      </td>
+                      <td>
+                        <Button
+                          variant="outline-secondary"
+                          onClick={() => addToCart(product, 1)}
+                        >
+                          +
+                        </Button>
+                        Quantity: {quantity}
+                        <Button
+                          variant="outline-secondary"
+                          onClick={() => decreaseFromCart(product, 1)}
+                        >
+                          -
+                        </Button>
+                        <DeleteIcon
+                          onClick={() => decreaseFromCart(product, quantity)}
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </Table>
               </div>
             );
           })}
         {!cartIsEmpty && (
           <>
-            €{this.calculateTotalPrice(cart)}
-            <Link to="/checkout">Continue to Checkout</Link>
+            Total: €{this.calculateTotalPrice(cart)}
+            <br />
+            <Link to="/checkout">
+              Continue to Checkout
+              {/* {itemsToBuy && itemsToBuy._id === this.state.product._id && (
+                <Payment itemsToBuy={itemsToBuy} /> */}
+              {/* )} */}
+            </Link>
           </>
         )}
       </div>

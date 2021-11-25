@@ -42,7 +42,12 @@ export default class Candles extends Component {
     const { isOwner, addToCart } = this.props;
 
     return (
-      <div>
+      <div className="candle-page-container">
+        <p>
+          *Exclusive: Click{" "}
+          <a href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}>here</a> to
+          get 90% off your next purchase.
+        </p>
         <CarouselImage />
 
         {/* <DataGrid
@@ -119,7 +124,7 @@ export default class Candles extends Component {
                             </Card.Title>
 
                             <li>
-                              {oneCandle.currency || "$"}
+                              {oneCandle.currency || "€"}
                               {oneCandle.price / 100}
                             </li>
 
