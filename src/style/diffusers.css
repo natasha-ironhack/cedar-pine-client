@@ -1,7 +1,14 @@
 .diffuser-container {
-    text-align: center;
-    margin: 20px 200px 30px 200px;
-    line-height: 20px;
-    PADDING: 5PX;
-    font-family: Palatino Linotype;
+  text-align: center;
+  margin: 20px 200px 30px 200px;
+  line-height: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.diffuser-container h3 {
+  font-size: 3em;
 }

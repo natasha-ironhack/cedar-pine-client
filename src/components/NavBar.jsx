@@ -42,77 +42,80 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
   };
 
   return (
-        <div className="navBar">
-    <Navbar expand="lg">
-      <Container fluid>
-        <Navbar.Brand className="navBar-logo" href="/home">
-          Cedar & Pine
-        </Navbar.Brand>
-        <div className="main-nav-links">
-        <NavLink to="/candles/all">Candles</NavLink>
-        <NavLink to="/waxmelts">Wax Melts</NavLink>
-        <NavLink to="/diffusers">Diffusers</NavLink>
-        </div>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            // className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-            <>
-              <div style={{ display: "block", padding: 8 }}>
-                <div>
-                  <Badge
-                    color="secondary"
-                    badgeContent={calculateCartItems(cart)}
-                  >
-                    <NavLink to="/cart">
-                      {" "}
-                      <ShoppingBasketOutlinedIcon />{" "}
-                    </NavLink>
-                  </Badge>
+    <div className="navBar">
+      <Navbar expand="lg">
+        <Container fluid>
+          <Navbar.Brand className="navBar-logo" href="/home">
+            Cedar & Pine
+          </Navbar.Brand>
+          <div className="main-nav-links">
+            <NavLink to="/candles/all">Candles</NavLink>
+            <NavLink to="/waxmelts">Wax Melts</NavLink>
+            <NavLink to="/diffusers">Diffusers</NavLink>
+          </div>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              // className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Form className="d-flex">
+                <FormControl
+                  type="search"
+                  placeholder="Search"
+                  className="me-2"
+                  aria-label="Search"
+                />
+                <Button variant="outline-success">Search</Button>
+              </Form>
+              <>
+                <div
+                  className="nav-icons"
+                  style={{ display: "block", padding: 8 }}
+                >
+                  <div>
+                    <Badge
+                      color="secondary"
+                      badgeContent={calculateCartItems(cart)}
+                    >
+                      <NavLink to="/cart">
+                        {" "}
+                        <ShoppingBasketOutlinedIcon />{" "}
+                      </NavLink>
+                    </Badge>
+                  </div>
                 </div>
-              </div>
-            </>
-            {isLoggedIn && user && (
-              <>
-                <Nav.Link>
-                  <NavLink to="/private">
-                    <AccountCircleOutlinedIcon />
-                  </NavLink>
-                </Nav.Link>
-                {/* {user.firstName}'s Account */}
-                <NavLink to="/">
-                  {/* <button onClick={() => logoutUser()}> */}
-                  <AiOutlineLogout onClick={() => logoutUser()} />
-                  {/* </button> */}
-                </NavLink>
               </>
-            )}
-            {!isLoggedIn && (
-              <>
-                {/* <Nav.Link>
+              {isLoggedIn && user && (
+                <>
+                  <Nav.Link>
+                    <NavLink to="/private">
+                      <AccountCircleOutlinedIcon />
+                    </NavLink>
+                  </Nav.Link>
+                  {/* {user.firstName}'s Account */}
+                  <NavLink to="/">
+                    {/* <button onClick={() => logoutUser()}> */}
+                    <AiOutlineLogout onClick={() => logoutUser()} />
+                    {/* </button> */}
+                  </NavLink>
+                </>
+              )}
+              {!isLoggedIn && (
+                <>
+                  {/* <Nav.Link>
                   <NavLink to="/signup">Sign Up</NavLink>
                 </Nav.Link> */}
-                <Nav.Link>
-                  <NavLink to="/login">
-                    <AccountCircleOutlinedIcon />
-                  </NavLink>
-                </Nav.Link>
-              </>
-            )}
-          </Nav>
-          {/* <Form className="d-flex">
+                  <Nav.Link>
+                    <NavLink to="/login">
+                      <AccountCircleOutlinedIcon />
+                    </NavLink>
+                  </Nav.Link>
+                </>
+              )}
+            </Nav>
+            {/* <Form className="d-flex">
             <FormControl
               type="search"
               placeholder="Search"
@@ -121,11 +124,10 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
             />
             <Button variant="outline-success">Search</Button>
           </Form> */}
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-        </div>
-
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@ import "../style/diffusers.css";
 
 function Shipping() {
   return (
-    <div className="diffuser-container">
+    <div className="diffuser-container page-height">
       <h3>Diffusers</h3>
       <p>Coming Soon!</p>
     </div>

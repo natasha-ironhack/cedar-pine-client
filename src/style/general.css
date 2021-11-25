@@ -24,7 +24,7 @@ li {
   height: 70vh;
 }
 
-.hr {
+.hr-horizontal {
   width: 42em;
 }
 
@@ -33,12 +33,28 @@ li {
   width: 1px !important;
 }
 
-.general-button {
-}
-
 p,
 h2,
 h3,
 li {
   font-family: Palatino Linotype;
+}
+
+.general-button {
+  display: inline-block;
+  padding: 0.46em 1.6em;
+
+  border: 0.1em solid #000;
+  margin: 0 0.2em 0.2em 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  text-align: center;
+  transition: all 0.15s;
+}
+.general-button:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #000;
+  border-color: rgb(146, 109, 41);
 }

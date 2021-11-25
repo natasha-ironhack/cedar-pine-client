@@ -2,19 +2,13 @@
   text-align: center;
   margin: 20px 30px 30px 30px;
   line-height: 40px;
-  font-family: Palatino Linotype;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
 }
-.signup-container {
-  text-align: center;
-  margin: 20px 50px 30px 50px;
-  line-height: 40px;
-  font-family: Palatino Linotype;
-  max-width: 25em;
-  width: 29em;
-}
+
 .signin-container {
   text-align: center;
   margin: 20px 30px 30px 30px;
@@ -23,9 +17,17 @@
   max-width: 25em;
   width: 29em;
 }
-
 .login-form {
   width: 22em;
   margin: 30px 30px 30px 30px;
+}
 
+/* --- */
+.signup-container {
+  text-align: center;
+  margin: 20px 50px 30px 50px;
+  line-height: 40px;
+  font-family: Palatino Linotype;
+  max-width: 25em;
+  width: 29em;
 }

@@ -44,3 +44,9 @@
   font-size: 23px;
   font-weight: lighter;
 }
+
+#underline {
+  height: 1px;
+  width: 17em;
+  margin: auto;
+}

@@ -50,18 +50,16 @@ export default class Home extends Component {
               <div>
                 <div className="home-introduction-container ">
                   <h3>Cedar & Pine</h3>
-                  <hr />
+                  <hr id="underline" />
                   <h3>
                     Cedar & Pine is an artisanal candle store located within the
                     Netherlands.
                   </h3>
-                  <hr />
                   <h4>
                     Whether you are looking for a classic lavender candle, a
                     seasonal candle, or want to try your hand at wax melts, you
                     will find it all with us.
                   </h4>
-                  <hr />
                 </div>
                 <div className="home-links-container">
                   <div className="head-image">

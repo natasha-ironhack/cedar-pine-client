@@ -88,6 +88,10 @@ nav {
   padding: 23px;
 }
 
+.main-nav-links a:hover {
+  color: rgb(146, 109, 41);
+}
+
 .navBar-logo {
   margin-left: 15px;
 }

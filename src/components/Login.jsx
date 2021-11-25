@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import authService from "../services/auth-service";
 import { Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import "../style/general.css";
 import "../style/login.css";
 
@@ -58,11 +58,10 @@ export default class Login extends Component {
               value={password}
               onChange={this.handleChange}
             />
-
-            <button className="general-button" type="submit">
-              Login
-            </button>
           </form>
+          <button className="general-button" type="submit">
+            Login
+          </button>
         </div>
 
         <hr className="hr-vertical" />
