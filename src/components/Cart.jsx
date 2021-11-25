@@ -103,12 +103,10 @@ export default class Cart extends Component {
           <>
             Total: €{this.calculateTotalPrice(cart)}
             <br />
-            <Link to="/checkout">
-              Continue to Checkout
-              {/* {itemsToBuy && itemsToBuy._id === this.state.product._id && (
-                <Payment itemsToBuy={itemsToBuy} /> */}
-              {/* )} */}
-            </Link>
+            <Link to="/checkout">Continue to Checkout</Link>
+            {/* {itemsToBuy && itemsToBuy._id === this.state.product._id && (
+              <Payment itemsToBuy={itemsToBuy} />
+            )} */}
           </>
         )}
       </div>

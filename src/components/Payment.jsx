@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
   "pk_test_51JwpOZIoBhfXE7BSkJPbKd3J5DnIYK5FnxfypxHNQ5UCXrxNnpMr7sPR48avrzwD7olaEliC9jxTb4HMCttaeouW00kor1c4Em"
 );
 
-export default function Payment(itemsToBuy) {
+export default function Payment({cart}) {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function Payment(itemsToBuy) {
     fetch(`${process.env.REACT_APP_API_HOST}/payment/create-payment-intent`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: itemsToBuy }),
+      body: JSON.stringify({ items: cart }),
       //this info should come from props take from previous comnp or take from state
       //from state of previ component
       //one source of trut hfrom app.js

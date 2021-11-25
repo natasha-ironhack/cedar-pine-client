@@ -30,7 +30,8 @@ export class CandleEdit extends Component {
           weight,
           quantity,
           description,
-        }
+        },
+        { withCredentials: true }
       )
       .then(() => {
         this.props.history.push("/");

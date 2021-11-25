@@ -257,7 +257,7 @@ class App extends Component {
           <Route
             exact
             path="/payment"
-            render={(props) => <Payment {...props} />}
+            render={(props) => <Payment {...props} cart={cart} />}
           />
 
           <Route
