@@ -5,6 +5,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import "../style/general.css";
 import "../style/candleDetails.css";
+//
 import Button from "react-bootstrap/Button";
 
 class CandleDetails extends Component {
@@ -70,13 +71,13 @@ class CandleDetails extends Component {
               <p>Amount on Stock: {singleCandle.quantity}</p>
               <hr className="hr" />
               <p>Description: {singleCandle.description}</p>
-              <Button
-                className="details-btn"
+              <button
+                className="general-button"
                 variant="outline-success"
                 onClick={() => addToCart(singleCandle, 1)}
               >
                 ADD TO CART
-              </Button>
+              </button>
             </div>
 
             {isOwner && (
@@ -85,7 +86,9 @@ class CandleDetails extends Component {
                   DELETE
                 </Button>
                 <Link to={`/candles/${singleCandle._id}/edit`}>
-                  <Button variant="outline-success">EDIT</Button>
+                  <button className="general-button" variant="outline-success">
+                    EDIT
+                  </button>
                 </Link>
               </div>
             )}

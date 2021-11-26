@@ -2,9 +2,14 @@
   display: flex;
   position: relative;
   text-align: center;
-  margin: 20px 30px 30px 30px;
+  margin: 20px 30px 30px 66px;
   line-height: 40px;
-  font-family: Palatino Linotype;
+
+  /* line-height: 20px; */
+
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .candle {
@@ -13,7 +18,7 @@
   text-align: center;
   margin: 20px 30px 30px 30px;
   line-height: 40px;
-  font-family: Palatino Linotype;
+  /* font-family: Palatino Linotype; */
 }
 
 .candles-details {
@@ -22,7 +27,7 @@
 }
 
 .candle-img img {
-  max-width: 95%;
+  max-width: 90%;
   object-fit: contain;
   /*! text-align: center; */
 }
@@ -30,43 +35,21 @@
 .candle-description {
   /*! margin: 11px; */
   line-height: 30px;
+  width: 33em;
+  margin-left: 7em;
 }
 
-/* NOTE: Was looking at bath and body works individual candle detail
-page to see how to style it in a similar way */
+.waxmelts-container {
+  text-align: center;
+  margin: 20px 200px 30px 200px;
+  line-height: 20px;
 
-/* .pdp-main .product-cols-wrap {
-    max-width: 767px;
-    margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.pdp-main .product-col-1 {
-    float: left;
-    width: 350px;
-    margin-right: 1.9%;
+.waxmelts-container h3 {
+  font-size: 3em;
 }
-
-.pdp-main .product-primary-image {
-    max-width: 100%;
-    padding: 0;
-    text-align: center;
-    position: relative;
-}
-
-@media only screen and (max-width: 1023px) .pdp-main .product-col-2 {
-    width: 48.5%;
-}
-
-.pdp-main .product-col-2 {
-    float: right;
-    width: 51.5%;
-    max-width: 470px;
-}
-
-#primary h1 {
-    margin-bottom: 0;
-}
-
-.pdp-main #product-content {
-    margin-top: 1.0625em;
-} */

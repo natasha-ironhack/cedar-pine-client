@@ -1,6 +1,15 @@
 .contact-container {
-    text-align: center;
-    margin: 20px 350px 30px 350px;
-    line-height: 40px;
-    font-family: Palatino Linotype;
+  text-align: center;
+  margin: 20px 250px 30px 250px;
+  line-height: 20px;
+  font-family: Palatino Linotype;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-container h3 {
+  font-size: 3em;
 }

@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../style/general.css";
 import "../style/contact.css";
+//
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 
 function FAQ() {
   return (
-    <div className="contact-container">
+    <div className="contact-container page-height">
       <h3>Contact Us</h3>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -24,7 +24,9 @@ function FAQ() {
         </Form.Group>
       </Form>{" "}
       <Link to={`/contact-confirmation`}>
-        <Button variant="outline-success">Send a Message</Button>
+        <button className="general-button" variant="outline-success">
+          Send a Message
+        </button>
       </Link>
     </div>
   );

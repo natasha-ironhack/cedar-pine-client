@@ -1,15 +1,22 @@
 .create-account-container {
-    text-align: center;
-    margin: 20px 200px 30px 200px;
-    line-height: 30px;
-    PADDING: 5PX;
-    font-family: Palatino Linotype;
+  text-align: center;
+  margin: 20px 200px 30px 200px;
+  line-height: 20px;
+  padding: 5px;
+  /* font-family: Palatino Linotype; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .signup-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-        margin: 20px 200px 30px 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 20px 200px 30px 200px;
+}
 
+.create-account-container h3 {
+  font-size: 3em;
 }

@@ -42,7 +42,7 @@ export default class Candles extends Component {
     const { isOwner, addToCart } = this.props;
 
     return (
-      <div className="candle-page-container">
+      <div className="candle-page-container page-height">
         <p>
           *Exclusive: Click{" "}
           <a href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}>here</a> to

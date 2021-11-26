@@ -46,8 +46,8 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
       <Navbar expand="lg">
         <Container fluid>
           <Navbar.Brand className="navBar-logo" href="/home">
-            {/* Cedar & Pine */}
-              <img src="/logo6.png" className="logo" alt="logo" />
+            Cedar & Pine
+            {/* <img src="/logo6.png" className="logo" alt="logo" /> */}
           </Navbar.Brand>
           <div className="main-nav-links">
             <NavLink to="/candles/all">Candles</NavLink>

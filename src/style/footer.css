@@ -17,6 +17,14 @@
   color: white;
 }
 
+.customer-service .customer-service-link {
+  color: red;
+}
+
+.footer-card .customer-service .customer-service-link:hover {
+  color: purple;
+}
+
 .footer-container {
   display: flex;
   /*! margin: 22px; */

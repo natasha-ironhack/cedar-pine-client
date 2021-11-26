@@ -1,7 +1,7 @@
 .contactConfirmation-container {
-    text-align: center;
-    margin: 50px 250px 50px 250px;
-    padding: 20px;
-    line-height: 40px;
-    font-family: Palatino Linotype;
+  text-align: center;
+  margin: 50px 250px 50px 250px;
+  padding: 20px;
+  line-height: 40px;
+  /* font-family: Palatino Linotype; */
 }

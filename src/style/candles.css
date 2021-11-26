@@ -5,16 +5,10 @@
 } */
 
 .candle-page-container p {
-   text-align: center;
-   margin: 10px;
-   font-family: Palatino Linotype;
+  text-align: center;
+  margin: 10px;
+  font-family: Palatino Linotype;
 }
-
-/* .candle-create-button {
-  display: flex;
-  justify-content: center;
-
-} */
 
 .card-container {
   display: flex;

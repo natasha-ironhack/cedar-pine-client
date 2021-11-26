@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import authService from "../services/auth-service";
 import "../style/general.css";
 import "../style/sign-up.css";
+//
 
 export default class Signup extends Component {
   state = {
@@ -62,7 +63,7 @@ export default class Signup extends Component {
     const { firstName, lastName, email, password } = this.state;
 
     return (
-      <div className="create-account-container">
+      <div className="create-account-container page-height">
         <h3>PERSONAL INFORMATION</h3>
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <input

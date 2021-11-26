@@ -28,13 +28,19 @@ export default class Footer extends Component {
               <p>Customer Service </p>
 
               <li>
-                <Link to="/shipping">Shipping & Return</Link>
+                <Link className="customer-service-link" to="/shipping">
+                  Shipping & Return
+                </Link>
               </li>
               <li>
-                <Link to="/faq">FAQ</Link>
+                <Link className="customer-service-link" to="/faq">
+                  FAQ
+                </Link>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <Link className="customer-service-link" to="/contact-us">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
