@@ -36,13 +36,23 @@
   transform: scale(1.1);
 }
 
+.home-introduction-container {
+  text-align: center;
+  margin: 20px 325px 30px 325px;
+  line-height: 20px;
+  padding: 20px;
+}
+
 .home-introduction-container h3 {
-  font-size: 31px;
+  font-size: 23px;
+  font-weight: lighter;
+  margin-top: 20px;
 }
 
 .home-introduction-container h4 {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: lighter;
+  margin-top: 20px;
 }
 
 #underline {

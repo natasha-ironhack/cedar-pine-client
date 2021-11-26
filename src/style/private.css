@@ -4,5 +4,9 @@
     padding: 10px;
     line-height: 40px;
     font-family: Palatino Linotype;
+}
 
+.private-container h1{
+    display: flex;
+    justify-content: center;
 }

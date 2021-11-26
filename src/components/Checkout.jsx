@@ -10,6 +10,7 @@ import "../style/checkout.css";
 // import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Row";
 // import Button from "react-bootstrap/Row";
+// import MenuItem from "@mui/material/MenuItem";
 
 
 //in front end don't have access to this. backend person does.
@@ -22,7 +23,9 @@ export default class Checkout extends Component {
     postCode: "",
     city: "",
     email: "",
+    // countries: [{country: Netherlands}, {country: Belgium}, {country: Germany}],
   };
+
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
@@ -73,6 +76,7 @@ export default class Checkout extends Component {
       postCode,
       city,
       email,
+      countries
     } = this.state;
 
     return (
@@ -119,7 +123,13 @@ export default class Checkout extends Component {
               type="text"
               name="country"
               value={country}
-            />
+            >
+              {/* {countries.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))} */}
+            </TextField>
             <TextField
               required
               id="outlined-required"

@@ -1,7 +1,7 @@
 .newsletter-container {
     position: relative;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     width: 100%;
     /* margin: 20px 250px 30px 250px; */
     background-color: rgb(46, 56, 49);
@@ -11,6 +11,11 @@
     color: white;
             font-family: Palatino Linotype;
 
+}
+
+.newsletter-container-child {
+    margin-left: 90px;
+    margin-right: 50px;
 }
 
 .input-group {

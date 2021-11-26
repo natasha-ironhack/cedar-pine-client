@@ -4,10 +4,37 @@
     padding: 0% 10% 0% 10%;
     line-height: 25px;
         font-family: Palatino Linotype;
+}
 
+/* .aboutUs-container p{
+   margin: 20px 125px 35px 125px;
+} */
+
+.aboutUs-container hr {
+    width: 50%;
+    width: 17em;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .about-us-pic {
     width: auto;
-    height: 400px;
+    height: 350px;
+    margin-top: 10px;
 }
+
+.aboutUs-container-child {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px auto 50px auto;
+}
+
+.aboutUs-container-child p {
+    padding: 10px;
+}
+
+/* .aboutUs-container-child {
+    display: flex;
+    justify-content: space-around;
+} */

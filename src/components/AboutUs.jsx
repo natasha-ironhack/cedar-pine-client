@@ -9,6 +9,8 @@ function AboutUs() {
   return (
     <div className="aboutUs-container">
       <h3>About Cedar & Pine</h3>
+      <hr />
+      <div className="aboutUs-container-child">
       <p>
         Cedar & Pine was founded by two expats in the Netherlands. What brought
         them together was their love of fragrance and candles. Hoping to spread
@@ -19,6 +21,7 @@ function AboutUs() {
         store and products!
       </p>
       <img className="about-us-pic" src="/about-us-pic-4.jpg" alt="About Us" />
+    </div>
     </div>
   );
 }

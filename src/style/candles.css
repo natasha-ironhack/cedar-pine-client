@@ -10,11 +10,11 @@
    font-family: Palatino Linotype;
 }
 
-.candle-create-button {
+/* .candle-create-button {
   display: flex;
   justify-content: center;
 
-}
+} */
 
 .card-container {
   display: flex;
@@ -30,6 +30,11 @@
   /* align-items: center; */
   text-align: center;
   /*! align-content: center; */
+}
+
+.card-container h1 {
+  display: flex;
+  justify-content: center;
 }
 
 .candles-title {

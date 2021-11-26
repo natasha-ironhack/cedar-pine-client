@@ -78,7 +78,6 @@ export default class Home extends Component {
                           <Link to="/about-us">
                             <Image src="/about-us-home-pic.jpg" thumbnail />
                           </Link>
-                          {/* <Image src="/about-us-home-pic.jpg" thumbnail /> */}
                         </Col>
                         <Col xs={6} md={4}>
                           <a href="https://www.candlescience.com/learning/how-to-make-a-soy-candle/">

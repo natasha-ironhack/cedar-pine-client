@@ -28,20 +28,21 @@ export default class Newsletter extends Component {
       <div className="newsletter-container">
         <div>
           <h4>Subscribe to our newsletter!</h4>
-          <InputGroup className="mb-3">
-            <FormControl
-              placeholder="Email"
-              aria-label="email"
-              aria-describedby="basic-addon2"
-            />
-            <Button
-              variant="outline-secondary"
-              id="button-addon2"
-              // onClick={handleShow}
-            >
-              Subscribe
-            </Button>
-            {/* <Modal show={this.state.show} onHide={handleClose}>
+          <div className="newsletter-container-child">
+            <InputGroup className="mb-3">
+              <FormControl
+                placeholder="Email"
+                aria-label="email"
+                aria-describedby="basic-addon2"
+              />
+              <Button
+                variant="outline-secondary"
+                id="button-addon2"
+                // onClick={handleShow}
+              >
+                Subscribe
+              </Button>
+              {/* <Modal show={this.state.show} onHide={handleClose}>
               <Modal.Header closeButton>
                 <Modal.Title>Modal heading</Modal.Title>
               </Modal.Header>
@@ -57,7 +58,8 @@ export default class Newsletter extends Component {
                 </Button>
               </Modal.Footer>
             </Modal> */}
-          </InputGroup>
+            </InputGroup>
+          </div>
         </div>
         <hr className="newsletter-hr" />
       </div>

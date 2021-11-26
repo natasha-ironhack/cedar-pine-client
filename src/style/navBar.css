@@ -92,6 +92,9 @@ nav {
   color: rgb(146, 109, 41);
 }
 
-.navBar-logo {
+.navBar-logo .logo {
   margin-left: 15px;
+  /* margin-right: 15px; */
+  width: 100%;
+  height: 100%;
 }
