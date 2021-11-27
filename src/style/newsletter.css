@@ -1,35 +1,35 @@
 .newsletter-container {
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    width: 100%;
-    /* margin: 20px 250px 30px 250px; */
-    background-color: rgb(46, 56, 49);
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  max-width: 100%;
+  /* margin: 20px 250px 30px 250px; */
+  background-color: rgb(46, 56, 49);
 }
 
 .newsletter-container h4 {
-    color: white;
-            font-family: Palatino Linotype;
-
+  color: white;
+  font-family: Palatino Linotype;
+  text-align: center;
 }
 
 .newsletter-container-child {
-    margin-left: 90px;
-    margin-right: 50px;
+  margin-left: 90px;
+  margin-right: 50px;
 }
 
 .input-group {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    color: white;
-padding: 10px 300px 5px 300px;    /* width: 100%; */
-    /* margin: 10px 100px 10px 100px; */
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  color: white;
+  padding: 10px 300px 5px 300px; /* width: 100%; */
+  /* margin: 10px 100px 10px 100px; */
 }
 
 .newsletter-hr {
-    display: flex;
-    
-    width: 5px;
+  display: flex;
+
+  width: 5px;
 }

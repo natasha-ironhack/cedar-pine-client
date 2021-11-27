@@ -1,9 +1,3 @@
-/* .card-img,
-.card-img-bottom,
-.card-img-top {
-  width: 38% !important;
-} */
-
 .candle-page-container p {
   text-align: center;
   margin: 10px;
@@ -11,34 +5,51 @@
 }
 
 .card-container {
-  display: flex;
   /*! max-width: 92%; */
   /* width: 72%; */
-  background: peachpuff;
-  /*! object-fit: contain; */
   /*! height: 92vh; */
-  flex-wrap: wrap;
-  /*! justify-self: center; */
+  /*! align-content: center; */
+  object-fit: contain;
   flex-direction: row;
   justify-content: space-evenly;
-  /* align-items: center; */
   text-align: center;
-  /*! align-content: center; */
+  text-align: center;
+  margin: 20px 100px 30px 100px;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.card-container h1 {
+.card-container img {
+  width: 77%;
+  max-width: 80%;
+}
+/* .card-container h1 {
   display: flex;
   justify-content: center;
-}
+} */
 
 .candles-title {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 1em;
+  padding-bottom: 1em;
   font-family: Palatino Linotype;
+}
+
+.candles-filter {
+  margin: 0 140px 70px 140px;
 }
 
 .cards {
   width: 30%;
+  margin: 30px;
+}
+
+.cards a {
+  color: rgb(44, 41, 41);
+  transition: all 0.15s;
+}
+.cards a:hover {
+  color: rgb(146, 109, 41);
 }
 .card-img-top {
   object-fit: contain;

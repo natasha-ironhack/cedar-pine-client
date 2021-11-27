@@ -61,7 +61,7 @@ export default class Newsletter extends Component {
             </InputGroup>
           </div>
         </div>
-        <hr className="newsletter-hr" />
+        {/* <hr className="newsletter-hr" /> */}
       </div>
     );
   }

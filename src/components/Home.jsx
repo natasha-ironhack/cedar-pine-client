@@ -38,7 +38,7 @@ export default class Home extends Component {
         <div>
           <CarouselImage />
 
-          <div className="card-container">
+          <div className="home-card-container">
             {isLoading && (
               <h1>
                 <Box sx={{ display: "flex" }}>
@@ -49,7 +49,7 @@ export default class Home extends Component {
             {!isLoading && (
               <div>
                 <div className="home-introduction-container ">
-                  <h3>Cedar & Pine</h3>
+                  <h3 className="home-title">Cedar & Pine</h3>
                   <hr id="underline" />
                   <h3>
                     Cedar & Pine is an artisanal candle store located within the

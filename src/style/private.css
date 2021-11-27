@@ -1,12 +1,23 @@
 .private-container {
-    text-align: center;
-    margin: 20px 200px 30px 200px;
-    padding: 10px;
-    line-height: 40px;
-    font-family: Palatino Linotype;
+  text-align: center;
+  margin: 20px 200px 30px 200px;
+  padding: 10px;
+  line-height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.private-container h1{
-    display: flex;
-    justify-content: center;
+.private-container h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.private-container h2 {
+  font-size: 3em;
+}
+
+.private-container h3 {
+  font-size: 22px;
 }

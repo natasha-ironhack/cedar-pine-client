@@ -39,7 +39,7 @@ class Private extends Component {
     if (!this.props.isLoggedIn) return <Redirect to="/login" />;
 
     return (
-      <div className="private-container">
+      <div className="private-container page-height">
         {isLoading && (
           <h1>
             <Box sx={{ display: "flex" }}>
@@ -53,7 +53,9 @@ class Private extends Component {
             Welcome back {user.firstName}! {privateData.message} <br />
             <br />
             <Link to={`/candles/all`}>
-              <Button variant="outline-success">CANDLE COLLECTION</Button>
+              <button className="general-button" variant="outline-success">
+                CANDLE COLLECTION
+              </button>
             </Link>
             {/* <Button variant="outline-success">Success</Button>{" "} */}
           </h3>

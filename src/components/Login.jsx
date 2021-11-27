@@ -58,10 +58,10 @@ export default class Login extends Component {
               value={password}
               onChange={this.handleChange}
             />
+            <button className="general-button" type="submit">
+              Login
+            </button>
           </form>
-          <button className="general-button" type="submit">
-            Login
-          </button>
         </div>
 
         <hr className="hr-vertical" />

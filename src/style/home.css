@@ -23,6 +23,9 @@
   padding: 5px;
 }
 
+.home-introduction-container .home-title {
+  font-size: 35px;
+}
 .home-links-container {
   position: relative;
   padding-top: 20px;

@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../style/candles.css";
 import "../style/general.css";
+//
 import CarouselImage from "./CarouselImage";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
@@ -42,7 +43,7 @@ export default class Candles extends Component {
     const { isOwner, addToCart } = this.props;
 
     return (
-      <div className="candle-page-container page-height">
+      <div className="candle-page-container">
         <p>
           *Exclusive: Click{" "}
           <a href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}>here</a> to
@@ -64,26 +65,27 @@ export default class Candles extends Component {
 
         <div className="card">
           <h2 className="candles-title">CANDLES</h2>
-          <hr />
-
-          <Row className="g-2">
-            <Col md>
-              <Form.Select aria-label="Floating label select example">
-                <option>Filter</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </Form.Select>
-            </Col>
-            <Col md>
-              <Form.Select aria-label="Floating label select example">
-                <option>Sort</option>
-                <option value="1">Price: Low to High</option>
-                <option value="2">Price: High to Low</option>
-                <option value="3">Availability</option>
-              </Form.Select>
-            </Col>
-          </Row>
+          {/* <hr /> */}
+          <div className="candles-filter">
+            <Row className="g-2">
+              <Col md>
+                <Form.Select aria-label="Floating label select example">
+                  <option>Filter</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </Form.Select>
+              </Col>
+              <Col md>
+                <Form.Select aria-label="Floating label select example">
+                  <option>Sort</option>
+                  <option value="1">Price: Low to High</option>
+                  <option value="2">Price: High to Low</option>
+                  <option value="3">Availability</option>
+                </Form.Select>
+              </Col>
+            </Row>
+          </div>
 
           <div className="card-container">
             {isLoading && (
