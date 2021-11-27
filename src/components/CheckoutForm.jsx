@@ -97,15 +97,11 @@ export default function CheckoutForm() {
             )}
           </span>
         </button>
-        {
-          message
-          //  && (
-          //   <div id="payment-message">
-          //     {message} <Link to="/confirmation">Place an Order</Link>
-          //   </div>
-          // )
-        }
+        {message && <div id="payment-message">{message}</div>}
       </form>
     </div>
   );
 }
+
+  /* <Link to="/confirmation">Place an Order</Link> */
+
