@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import "../style/general.css";
+// import "../style/checkOutForm.css";
 import {
   PaymentElement,
   useStripe,
@@ -80,18 +81,28 @@ export default function CheckoutForm() {
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
-      <PaymentElement id="payment-element" />
-      <button disabled={isLoading || !stripe || !elements} id="submit">
-        <span id="button-text">
-          {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
-        </span>
-      </button>
-      {message && (
-        <div id="payment-message">
-          {message} <Link to="/confirmation">Place an Order</Link>
-        </div>
-      )}
-    </form>
+    <div className="check-out-form-container page-height">
+      <form id="payment-form" onSubmit={handleSubmit}>
+        <PaymentElement id="payment-element" />
+        <button
+          className="general-button"
+          disabled={isLoading || !stripe || !elements}
+          id="submit"
+        >
+          <span id="button-text">
+            {isLoading ? (
+              <div className="spinner" id="spinner"></div>
+            ) : (
+              "Pay now"
+            )}
+          </span>
+        </button>
+        {message && (
+          <div id="payment-message">
+            {message} <Link to="/confirmation">Place an Order</Link>
+          </div>
+        )}
+      </form>
+    </div>
   );
 }

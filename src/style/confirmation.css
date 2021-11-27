@@ -1,16 +1,33 @@
 .confirmation-container {
-     /* position: absolute; */
-     text-align: center;
-     margin: 20px 140px 30px 140px;
-    line-height: 20px;
-     padding: 2px;
-     font-family:Palatino Linotype;
+  text-align: center;
+  margin: 20px 140px 30px 140px;
+  line-height: 20px;
+  font-family: Palatino Linotype;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .confirmation-container h3 {
-    line-height: 50px;
+  line-height: 50px;
 }
 
 .confirmation-container h4 {
-    line-height: 50px;
+  line-height: 50px;
+}
+
+.waxmelts-container {
+  text-align: center;
+  margin: 20px 200px 30px 200px;
+  line-height: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.waxmelts-container h3 {
+  font-size: 3em;
 }

@@ -40,10 +40,15 @@ li {
   font-family: Palatino Linotype;
 }
 
+.general-button a {
+  color: black;
+}
+.general-button a:hover {
+  color: black;
+}
 .general-button {
   display: inline-block;
   padding: 0.46em 1.6em;
-
   border: 0.1em solid #000;
   margin: 0 0.2em 0.2em 0;
   border-radius: 4px;
@@ -52,6 +57,7 @@ li {
   background-color: #ffffff;
   text-align: center;
   transition: all 0.15s;
+  color: black;
 }
 .general-button:hover {
   text-shadow: 0 0 2em rgba(255, 255, 255, 1);

@@ -1,7 +1,18 @@
 .checkout-container {
-    text-align: center;
-    /* margin: 20px 200px 30px 200px; */
-    line-height: 40px;
-    font-family: Palatino Linotype;
-    border: 2px black;
+  text-align: center;
+  margin: 20px 90px 30px 90px;
+  line-height: 40px;
+  font-family: Palatino Linotype;
+  border: 2px black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.checkout-container h2 {
+  font-size: 3em;
+}
+
+.checkout-container h4 {
+  margin-top: 1em;
 }

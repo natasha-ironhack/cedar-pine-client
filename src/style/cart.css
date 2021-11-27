@@ -1,11 +1,26 @@
 .cart-container {
-    text-align: center;
-    margin: 20px 30px 30px 30px;
-    line-height: 40px;
-    font-family: Palatino Linotype;
-
+  text-align: center;
+  margin: 20px 200px 30px 200px;
+  line-height: 20px;
+  font-family: Palatino Linotype;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cart-link {
-    color: black !important;
+  color: black !important;
+}
+
+.cart-container h3 {
+  font-size: 3em;
+}
+
+.quantity-in-cart {
+  margin: 10px;
+}
+
+.delete-icon {
+  margin-left: 3px;
 }

@@ -3,7 +3,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
 import CheckoutForm from "./CheckoutForm";
-// import "./Payment.css";
+import "../style/general.css";
+import "../style/payment.css";
 
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
@@ -12,7 +13,7 @@ const stripePromise = loadStripe(
   "pk_test_51JwpOZIoBhfXE7BSkJPbKd3J5DnIYK5FnxfypxHNQ5UCXrxNnpMr7sPR48avrzwD7olaEliC9jxTb4HMCttaeouW00kor1c4Em"
 );
 
-export default function Payment({cart}) {
+export default function Payment({ cart }) {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function Payment({cart}) {
   };
 
   return (
-    <div className="App">
+    <div className="payment-container">
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
           <CheckoutForm />

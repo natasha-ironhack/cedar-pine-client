@@ -5,6 +5,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import "../style/general.css";
 import "../style/cart.css";
+//
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import Payment from "./Payment";
@@ -32,7 +33,7 @@ export default class Cart extends Component {
     const cartIsEmpty = cartItems.length === 0;
 
     return (
-      <div className="cart-container">
+      <div className="cart-container page-height">
         <h2 class="cart-title">My Cart</h2>
         {isLoading && (
           <Box sx={{ display: "flex" }}>
@@ -82,7 +83,7 @@ export default class Cart extends Component {
                         >
                           +
                         </Button>
-                        Quantity: {quantity}
+                        <span className="quantity-in-cart"> {quantity} </span>
                         <Button
                           variant="outline-secondary"
                           onClick={() => decreaseFromCart(product, 1)}
@@ -90,6 +91,7 @@ export default class Cart extends Component {
                           -
                         </Button>
                         <DeleteIcon
+                          className="delete-icon"
                           onClick={() => decreaseFromCart(product, quantity)}
                         />
                       </td>

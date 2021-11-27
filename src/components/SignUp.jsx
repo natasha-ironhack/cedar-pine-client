@@ -102,7 +102,7 @@ export default class Signup extends Component {
             onChange={this.handleChange}
           />
           <br />
-          <button type="submit" variant="contained">
+          <button className="general-button" type="submit" variant="contained">
             Create an Account
           </button>
         </form>

@@ -12,7 +12,6 @@ import "../style/checkout.css";
 // import Button from "react-bootstrap/Row";
 // import MenuItem from "@mui/material/MenuItem";
 
-
 //in front end don't have access to this. backend person does.
 export default class Checkout extends Component {
   state = {
@@ -25,7 +24,6 @@ export default class Checkout extends Component {
     email: "",
     // countries: [{country: Netherlands}, {country: Belgium}, {country: Germany}],
   };
-
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
@@ -76,12 +74,12 @@ export default class Checkout extends Component {
       postCode,
       city,
       email,
-      countries
+      countries,
     } = this.state;
 
     return (
-      <div className="checkout-container">
-        <h2>CHECKOUT</h2>
+      <div className="checkout-container ">
+        <h3>CHECKOUT</h3>
 
         <Box
           component="form"
@@ -221,7 +219,7 @@ export default class Checkout extends Component {
             <h4>METHOD OF PAYMENT</h4>
           </div> */}
         </Box>
-        <button type="submit">
+        <button className="general-button button-check-out" type="submit">
           <Link to="/payment">
             Go to Payment
             {/* {itemsToBuy && itemsToBuy._id === eachProduct._id && <Payment itemToBuy={itemToBuy}/>} */}

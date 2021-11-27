@@ -68,7 +68,9 @@ const NavBar = ({ isLoggedIn, user, setUser, cart }) => {
                   className="me-2"
                   aria-label="Search"
                 />
-                <Button variant="outline-success">Search</Button>
+                <button className="general-button" variant="outline-success">
+                  Search
+                </button>
               </Form>
               <>
                 <div

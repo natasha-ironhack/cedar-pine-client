@@ -31,7 +31,7 @@ export default class Confirmation extends Component {
     const { isLoading } = this.state;
 
     return (
-      <div className="confirmation-container">
+      <div className="confirmation-container page-height ">
         {isLoading && (
           <h1>
             <Box sx={{ display: "flex" }}>
@@ -43,13 +43,15 @@ export default class Confirmation extends Component {
         {!isLoading && (
           <div className="confirmation-container">
             <h3>CONFIRMATION MESSAGE</h3>
-            <h4>
+            <p>
               Your purchase was successful!
               <br />
               Please check your inbox for your confirmation email.
-              <br />
-              ORDER NUMBER: #{this.state.random}
-            </h4>
+              {/* <br /> */}
+            </p>
+            <h5>
+              ORDER NUMBER: <br /> #{this.state.random}
+            </h5>
           </div>
         )}
       </div>
